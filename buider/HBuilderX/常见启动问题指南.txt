@@ -1,0 +1,9 @@
+﻿
+HBuilderX常见启动问题指南：
+------------------------------
+
+如遇到HBuilderX启动不了的情况，请查看如下帖子
+
+windows:  http://ask.dcloud.net.cn/article/35583
+
+mac：http://ask.dcloud.net.cn/article/35756

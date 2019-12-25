@@ -1,0 +1,9 @@
+{
+    "asi": true,
+    "curly": false,
+    "esversion": 6,
+    "expr": true,
+    "latedef": "nofunc",
+    "undef": false,
+    "unused": false
+}

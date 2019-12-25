@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript>
+	<class type="carouselOption">
+		<properties>
+			<property name="interval" type="Number"/>
+			<property name="pause" type="String"/>
+			<property name="wrap" type="Boolean"/>
+		</properties>
+	</class>
+	<class type="popoverOption">
+		<properties>
+			<property name="animation" type="Boolean"/>
+			<property name="container" type="string|bool"/>
+			<property name="content" type="string|?"/>
+			<property name="delay" type="number|?"/>
+			<property name="html" type="Boolean"/>
+			<property name="placement" type="string|?"/>
+			<property name="selector" type="String"/>
+			<property name="template" type="String"/>
+			<property name="title" type="string|?"/>
+			<property name="trigger" type="String"/>
+		</properties>
+	</class>
+	<class type="modalOption">
+		<properties>
+			<property name="backdrop" type="boolean or the string 'static'"/>
+			<property name="keyboard" type="Boolean"/>
+			<property name="show" type="Boolean"/>
+		</properties>
+	</class>
+	<class type="collapseOption">
+		<properties>
+			<property name="parent" type="selector"/>
+		</properties>
+	</class>
+	<class type="affixOption">
+		<properties>
+			<property name="offset" type="number|?|?"/>
+		</properties>
+	</class>
+	<class type="tooltipOption">
+		<properties>
+			<property name="animation" type="Boolean"/>
+			<property name="container" type="string|bool"/>
+			<property name="delay" type="number|?"/>
+			<property name="html" type="Boolean"/>
+			<property name="placement" type="string|?"/>
+			<property name="selector" type="String"/>
+			<property name="template" type="String"/>
+			<property name="title" type="string|?"/>
+			<property name="trigger" type="String"/>
+		</properties>
+	</class>
+	<class type="jQuery">
+		<methods>
+			<method name="transition"  url="http://getbootstrap.com/javascript/#transitions">
+				<description>For simple transition effects, include transition.js once alongside the other JS files. If you're using the compiled (or minified) bootstrap.js, there is no need to include thisit's already there.</description>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="modal"  url="http://getbootstrap.com/javascript/#modals">
+				<description>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</description>
+				<parameters>
+					<parameter name="options" type="modalOption" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="dropdown"  url="http://getbootstrap.com/javascript/#dropdowns">
+				<description>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</description>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="scrollspy"  url="http://getbootstrap.com/javascript/#scrollspy">
+				<description>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</description>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="tab"  url="http://getbootstrap.com/javascript/#tabs">
+				<description>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</description>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="tooltip"  url="http://getbootstrap.com/javascript/#tooltips">
+				<description>Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage.</description>
+				<parameters>
+					<parameter name="options" type="tooltipOption" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="popover"  url="http://getbootstrap.com/javascript/#popovers">
+				<description>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</description>
+				<parameters>
+					<parameter name="options" type="popoverOption" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="alert"  url="http://getbootstrap.com/javascript/#alerts">
+				<description>Add dismiss functionality to all alert messages with this plugin.</description>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="button"  url="http://getbootstrap.com/javascript/#buttons">
+				<description>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</description>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="collapse"  url="http://getbootstrap.com/javascript/#collapse">
+				<description>Flexible plugin that utilizes a handful of classes for easy toggle behavior.</description>
+				<parameters>
+					<parameter name="options" type="collapseOption" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="carousel"  url="http://getbootstrap.com/javascript/#carousel">
+				<description>A slideshow component for cycling through elements, like a carousel. Nested carousels are not supported.</description>
+				<parameters>
+					<parameter name="options" type="carouselOption" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="affix"  url="http://getbootstrap.com/javascript/#affix">
+				<description>The affix plugin toggles position: fixed; on and off, emulating the effect found with position: sticky;. The subnavigation on the right is a live demo of the affix plugin.</description>
+				<parameters>
+					<parameter name="options" type="affixOption" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+</javascript>

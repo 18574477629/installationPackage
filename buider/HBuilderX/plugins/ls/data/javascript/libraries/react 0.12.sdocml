@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<javascript website="https://github.com/facebook/react/">
+	<aliases>
+		<alias name="React" type="React"/>
+		<alias name="ReactDOM" type="ReactDOM"/>
+		<alias type="Class&lt;React&gt;" name="react"/>
+		<alias type="Class&lt;ReactDOM&gt;" name="ReactDOM"/>
+	</aliases>
+	<class type="ReactDOM" superclass="Object">
+		<methods>
+			<method name="render" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="object" type="object" usage="">
+						<description>需要渲染的自定义组件</description>
+					</parameter>
+					<parameter name="DOM" type="Object" usage="">
+						<description>DOM</description>
+					</parameter>
+				</parameters>
+				<description>渲染DOM</description>
+			</method>
+		</methods>
+	</class>
+	<class type="React" superclass="Object">
+		<methods>
+			<method name="createClass" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="object" usage="required">
+						<description>React.createClass 方法用于生成一个组件类 HelloMessage。</description>
+					</parameter>
+				</parameters>
+				<description>React.createClass 方法用于生成一个组件类 HelloMessage。</description>
+			</method>
+			<method name="setProps" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextProps" type="object" usage="required">
+						<description>nextProps，将要设置的新属性，该状态会和当前的props合并</description>
+					</parameter>
+					<parameter name="callback" type="function" usage="required">
+						<description>callback，可选参数，回调函数。该函数会在setProps设置成功，且组件重新渲染后调用。</description>
+					</parameter>
+				</parameters>
+				<description>设置属性 || props相当于组件的数据流，它总是会从父组件向下传递至所有的子组件中。当和一个外部的JavaScript应用集成时，我们可能会需要向组件传递数据或通知React.render()组件需要重新渲染，可以使用setProps()。更新组件，我可以在节点上再次调用React.render()，也可以通过setProps()方法改变组件属性，触发组件重新渲染。</description>
+			</method>
+			<method name="setState" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextState" type="object" usage="required">
+						<description>nextState，将要设置的新状态，该状态会和当前的state合并</description>
+					</parameter>
+					<parameter name="callback" type="function" usage="required">
+						<description>callback，可选参数，回调函数。该函数会在setState设置成功，且组件重新渲染后调用。</description>
+					</parameter>
+				</parameters>
+				<description>设置状态 setState({mykey: 'my new value'}); || 不能在组件内部通过this.state修改状态，因为该状态会在调用setState()后被替换。setState()并不会立即改变this.state，而是创建一个即将处理的state。setState()并不一定是同步的，为了提升性能React会批量执行state和DOM渲染。setState()总是会触发一次组件重绘，除非在shouldComponentUpdate()中实现了一些条件渲染逻辑。</description>
+			</method>
+			<method name="replaceState" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextState" type="object" usage="required">
+						<description>nextState，将要设置的新状态，该状态会替换当前的state。</description>
+					</parameter>
+					<parameter name="callback" type="function" usage="required">
+						<description>callback，可选参数，回调函数。该函数会在replaceState设置成功，且组件重新渲染后调用。</description>
+					</parameter>
+				</parameters>
+				<description>替换状态 || eplaceState()方法与setState()类似，但是方法只会保留nextState中状态，原state不在nextState中的状态都会被删除。</description>
+			</method>
+			<method name="replaceProps" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextProps" type="object" usage="required">
+						<description>nextProps，将要设置的新属性，该属性会替换当前的props。</description>
+					</parameter>
+					<parameter name="callback" type="function" usage="required">
+						<description>callback，可选参数，回调函数。该函数会在replaceProps设置成功，且组件重新渲染后调用。</description>
+					</parameter>
+				</parameters>
+				<description>replaceProps()方法与setProps类似，但它会删除原有</description>
+			</method>
+			<method name="forceUpdate" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="callback" type="function" usage="required">
+						<description>callback，可选参数，回调函数。该函数会在组件render()方法调用后调用。||forceUpdate()方法会使组件调用自身的render()方法重新渲染组件，组件的子组件也会调用自己的render()。但是，组件重新渲染时，依然会读取this.props和this.state，如果状态没有改变，那么React只会更新DOM。forceUpdate()方法适用于this.props和this.state之外的组件重绘（如：修改了this.state后），通过该方法通知React需要调用render()一般来说，应该尽量避免使用forceUpdate()，而仅从this.props和this.state中读取状态并由React触发render()调用。</description>
+					</parameter>
+				</parameters>
+				<description>强制更新</description>
+			</method>
+			<method name="findDOMNode" scope="object">
+				<return-types>
+					<return-type type="DOMElement"/>
+				</return-types>
+				<parameters>
+					<parameter name="callback" type="function" usage="required">
+						<description>返回值：DOM元素DOMElement</description>
+					</parameter>
+				</parameters>
+				<description>如果组件已经挂载到DOM中，该方法返回对应的本地浏览器 DOM 元素。当render返回null 或 false时，this.findDOMNode()也会返回null。从DOM 中读取值的时候，该方法很有用，如：获取表单字段的值和做一些 DOM 操作。</description>
+			</method>
+			<method name="isMounted" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="callback" type="function" usage="">
+						<description>返回值：true或false，表示组件是否已挂载到DOM中</description>
+					</parameter>
+				</parameters>
+				<description>isMounted()方法用于判断组件是否已挂载到DOM中。可以使用该方法保证了setState()和forceUpdate()在异步场景下的调用不会出错。</description>
+			</method>
+			<method name="isValidElement" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="callback" type="function" usage="">
+						<description>返回值：true或false，验证对象是否是一个 ReactElement</description>
+					</parameter>
+				</parameters>
+				<description>boolean isValidElement(* object)</description>
+			</method>
+			<method name="getInitialState" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="object" usage="required"/>
+				</parameters>
+				<description>getInitialState 方法用于定义初始状态，也就是一个对象，这个对象可以通过 this.state 属性读取。当用户点击组件，导致状态变化，this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。</description>
+			</method>
+			<method name="getDefaultProps" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="object" usage="required"/>
+				</parameters>
+				<description>该方法在任何实例创建之前调用，因此不能依赖于 this.props</description>
+			</method>
+			<method name="initializeTouchEvents" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="shouldUseTouch" type="boolean" usage="required"/>
+				</parameters>
+				<description>initializeTouchEvents(boolean shouldUseTouch) || 配置 React 的事件系统，使 React 能处理移动设备的触摸（ touch ）事件。</description>
+			</method>
+			<method name="renderToString" scope="static">
+				<return-types>
+					<return-type type="string"/>
+				</return-types>
+				<parameters>
+					<parameter name="element" type="ReactElement" usage="required"/>
+				</parameters>
+				<description>string renderToString(ReactElement element)||把组件渲染成原始的 HTML 字符串。该方法应该仅在服务器端使用。React 将会返回一个 HTML 字符串。你可以在服务器端用此方法生成 HTML，然后将这些标记发送给客户端，这样可以获得更快的页面加载速度，并且有利于搜索引擎抓取页面，方便做 SEO。如果在一个节点上面调用 React.render()，并且该节点已经有了服务器渲染的标记，React 将会维护该节点，并且仅绑定事件处理器，保证有一个高效的首屏加载体验。</description>
+			</method>
+			<method name="statics" scope="static">
+				<return-types>
+					<return-type type="object"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="object" usage="required"/>
+				</parameters>
+				<description>statics 对象允许你定义静态的方法，这些静态的方法可以在组件类上调用。例如：
+				var MyComponent = React.createClass({
+				statics: {
+				customMethod: function(foo) {
+				return foo === 'bar';}
+				},render: function() {
+				
+				}});
+				MyComponent.customMethod('bar');  // true
+				</description>
+			</method>
+			<method name="componentWillMount" scope="static">
+				<return-types>
+					<return-type type="function"/>
+				</return-types>
+				<parameters>
+					<parameter name="" type="" usage="required"/>
+				</parameters>
+				<description>componentWillMount()||服务器端和客户端都只调用一次，在初始化渲染执行之前立刻调用。如果在这个方法内调用 setState，render() 将会感知到更新后的 state，将会执行仅一次，尽管 state 改变了。</description>
+			</method>
+			<method name="componentDidMount" scope="static">
+				<return-types>
+					<return-type type="function"/>
+				</return-types>
+				<parameters>
+					<parameter name="" type="" usage="required"/>
+				</parameters>
+				<description>在初始化渲染执行之后立刻调用一次，仅客户端有效（服务器端不会调用）。在生命周期中的这个时间点，组件拥有一个 DOM 展现，你可以通过 this.getDOMNode() 来获取相应 DOM 节点。如果想和其它 JavaScript 框架集成，使用 setTimeout 或者 setInterval 来设置定时器，或者发送 AJAX 请求，可以在该方法中执行这些操作。</description>
+			</method>
+			<method name="componentWillReceiveProps" scope="static">
+				<return-types>
+					<return-type type="function"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextProps" type="object" usage="required"/>
+				</parameters>
+				<description>
+				componentWillReceiveProps: function(nextProps) {
+				  this.setState({
+					likesIncreasing: nextProps.likeCount > this.props.likeCount
+				  });
+				}
+				在组件接收到新的 props 的时候调用。在初始化渲染的时候，该方法不会调用。用此函数可以作为 react 在 prop 传入之后， render() 渲染之前更新 state 的机会。老的 props 可以通过 this.props 获取到。在该函数中调用 this.setState() 将不会引起第二次渲染。
+				注意：对于 state，没有相似的方法： componentWillReceiveState。将要传进来的 prop 可能会引起 state 改变，反之则不然。如果需要在 state 改变的时候执行一些操作，请使用 componentWillUpdate。
+				</description>
+			</method>
+			<method name="shouldComponentUpdate " scope="static">
+				<return-types>
+					<return-type type="boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextProps" type="object" usage="required"/>
+					<parameter name="nextState" type="object" usage="required"/>
+				</parameters>
+				<description>
+				shouldComponentUpdate: function(nextProps, nextState) {
+				  return nextProps.id !== this.props.id;
+				}
+				在接收到新的 props 或者 state，将要渲染之前调用。该方法在初始化渲染的时候不会调用，在使用 forceUpdate 方法的时候也不会。如果确定新的 props 和 state 不会导致组件更新，则此处应该 返回 false。
+				如果 shouldComponentUpdate 返回 false，则 render() 将不会执行，直到下一次 state 改变。（另外，componentWillUpdate 和 componentDidUpdate 也不会被调用。）
+				默认情况下，shouldComponentUpdate 总会返回 true，在 state 改变的时候避免细微的 bug，但是如果总是小心地把 state 当做不可变的，在 render() 中只从 props 和 state 读取值，此时你可以覆盖 shouldComponentUpdate 方法，实现新老 props 和 state 的比对逻辑。
+				如果性能是个瓶颈，尤其是有几十个甚至上百个组件的时候，使用 shouldComponentUpdate 可以提升应用的性能。
+				</description>
+			</method>
+			<method name="componentWillUpdate" scope="static">
+				<return-types>
+					<return-type type="function"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextProps" type="object" usage="required"/>
+					<parameter name="nextState" type="object" usage="required"/>
+				</parameters>
+				<description>
+				componentWillUpdate(object nextProps, object nextState)
+				在接收到新的 props 或者 state 之前立刻调用。在初始化渲染的时候该方法不会被调用。使用该方法做一些更新之前的准备工作。
+				注意：你不能在该方法中使用 this.setState()。如果需要更新 state 来响应某个 prop 的改变，请使用 componentWillReceiveProps。
+				</description>
+			</method>
+			<method name="componentDidUpdate" scope="static">
+				<return-types>
+					<return-type type="function"/>
+				</return-types>
+				<parameters>
+					<parameter name="nextProps" type="object" usage="required"/>
+					<parameter name="nextState" type="object" usage="required"/>
+				</parameters>
+				<description>
+				componentDidUpdate(object prevProps, object prevState)
+				在组件的更新已经同步到 DOM 中之后立刻被调用。该方法不会在初始化渲染的时候调用。使用该方法可以在组件更新之后操作 DOM 元素。
+				注意：为了兼容 v0.9，DOM 节点会作为最后一个参数传入。如果使用这个方法，你仍然可以使用 this.getDOMNode() 来访问 DOM 节点
+				</description>
+			</method>
+			<method name="componentWillUnmount" scope="static">
+				<return-types>
+					<return-type type="function"/>
+				</return-types>
+				<parameters>
+					<parameter name="" type="" usage="required"/>
+				</parameters>
+				<description>
+				componentWillUnmount()
+				在组件从 DOM 中移除的时候立刻被调用。在该方法中执行任何必要的清理，比如无效的定时器，或者清除在 componentDidMount 中创建的 DOM 元素。
+				</description>
+			</method>
+		</methods>
+	</class>
+</javascript>

@@ -1,0 +1,12 @@
+{
+	"name":"vue文件模板",
+	"description":"vue文件模板",
+	"templates":[
+		{
+			"file": "简单模板.vue"
+		},
+		{
+			"file": "空白文件.vue"
+		}
+	]
+}

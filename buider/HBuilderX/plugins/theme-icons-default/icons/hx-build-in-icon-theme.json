@@ -1,0 +1,357 @@
+{
+	"fonts": [
+		{
+			"id": "fileiconfont",
+			"src": [
+				{
+					"path": "./fileiconfont.ttf",
+					"format": "ttf"
+				}
+			],
+			"weight": "normal",
+			"style": "normal"
+		}
+	],
+	"iconDefinitions": {
+		"_file": {
+			"fontCharacter": "\\E900",
+			"fontColor": "#BEBEBE"
+		},
+		"_file_light": {
+			"fontCharacter": "\\E900",
+			"fontColor": "#C1A766"
+		},
+		"_folder": {
+			"fontCharacter": "\\E905",
+			"fontColor": "#BEBEBE"
+		},
+		"_folder_light": {
+			"fontCharacter": "\\E905",
+			"fontColor": "#C1A766"
+		},
+		"_folder_expanded": {
+			"fontCharacter": "\\E906",
+			"fontColor": "#BEBEBE"
+		},
+		"_folder_expanded_light": {
+			"fontCharacter": "\\E906",
+			"fontColor": "#C1A766"
+		},
+		"_file_img": {
+			"fontCharacter": "\\E90A",
+			"fontColor": "#BEBEBE"
+		},
+		"_file_img_light": {
+			"fontCharacter": "\\E90A",
+			"fontColor": "#C1A766"
+		},
+		"_file_word": {
+			"fontCharacter": "\\E91A",
+			"fontColor": "#BEBEBE"
+		},
+		"_file_word_light": {
+			"fontCharacter": "\\E91A",
+			"fontColor": "#C1A766"
+		},
+		"_file_excel": {
+			"fontCharacter": "\\E91B",
+			"fontColor": "#BEBEBE"
+		},
+		"_file_excel_light": {
+			"fontCharacter": "\\E91B",
+			"fontColor": "#C1A766"
+		},
+		"_lang_css": {
+			"fontCharacter": "\\E908",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_css_light": {
+			"fontCharacter": "\\E908",
+			"fontColor": "#C1A766"
+		},
+		"_lang_js": {
+			"fontCharacter": "\\E901",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_js_light": {
+			"fontCharacter": "\\E901",
+			"fontColor": "#C1A766"
+		},
+		"_lang_json": {
+			"fontCharacter": "\\E90B",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_json_light": {
+			"fontCharacter": "\\E90B",
+			"fontColor": "#C1A766"
+		},
+		"_lang_md": {
+			"fontCharacter": "\\E90C",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_md_light": {
+			"fontCharacter": "\\E90C",
+			"fontColor": "#C1A766"
+		},
+		"_lang_vue": {
+			"fontCharacter": "\\E902",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_vue_light": {
+			"fontCharacter": "\\E902",
+			"fontColor": "#C1A766"
+		},
+		"_lang_html": {
+			"fontCharacter": "\\E909",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_html_light": {
+			"fontCharacter": "\\E909",
+			"fontColor": "#C1A766"
+		},
+		"_lang_c": {
+			"fontCharacter": "\\E910",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_c_light": {
+			"fontCharacter": "\\E910",
+			"fontColor": "#C1A766"
+		},
+		"_lang_cpp": {
+			"fontCharacter": "\\E911",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_cpp_light": {
+			"fontCharacter": "\\E911",
+			"fontColor": "#C1A766"
+		},
+		"_lang_java": {
+			"fontCharacter": "\\E912",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_java_light": {
+			"fontCharacter": "\\E912",
+			"fontColor": "#C1A766"
+		},
+		"_lang_less": {
+			"fontCharacter": "\\E913",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_less_light": {
+			"fontCharacter": "\\E913",
+			"fontColor": "#C1A766"
+		},
+		"_lang_php": {
+			"fontCharacter": "\\E914",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_php_light": {
+			"fontCharacter": "\\E914",
+			"fontColor": "#C1A766"
+		},
+		"_lang_python": {
+			"fontCharacter": "\\E915",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_python_light": {
+			"fontCharacter": "\\E915",
+			"fontColor": "#C1A766"
+		},
+		"_lang_scss": {
+			"fontCharacter": "\\E916",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_scss_light": {
+			"fontCharacter": "\\E916",
+			"fontColor": "#C1A766"
+		},
+		"_lang_stylus": {
+			"fontCharacter": "\\E917",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_stylus_light": {
+			"fontCharacter": "\\E917",
+			"fontColor": "#C1A766"
+		},
+		"_lang_typescript": {
+			"fontCharacter": "\\E919",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_typescript_light": {
+			"fontCharacter": "\\E919",
+			"fontColor": "#C1A766"
+		},
+		"_lang_xml": {
+			"fontCharacter": "\\E91C",
+			"fontColor": "#BEBEBE"
+		},
+		"_lang_xml_light": {
+			"fontCharacter": "\\E91C",
+			"fontColor": "#C1A766"
+		},
+		"_project_default": {
+			"fontCharacter": "\\E90F",
+			"fontColor": "#BEBEBE"
+		},
+		"_project_default_light": {
+			"fontCharacter": "\\E90F",
+			"fontColor": "#C1A766"
+		},
+		"_project_app": {
+			"fontCharacter": "\\E903",
+			"fontColor": "#BEBEBE"
+		},
+		"_project_app_light": {
+			"fontCharacter": "\\E903",
+			"fontColor": "#C1A766"
+		},
+		"_project_web": {
+			"fontCharacter": "\\E90E",
+			"fontColor": "#BEBEBE"
+		},
+		"_project_web_light": {
+			"fontCharacter": "\\E90E",
+			"fontColor": "#C1A766"
+		},
+		"_project_uniapp": {
+			"fontCharacter": "\\E90D",
+			"fontColor": "#BEBEBE"
+		},
+		"_project_uniapp_light": {
+			"fontCharacter": "\\E90D",
+			"fontColor": "#C1A766"
+		},
+		"_project_quickapp": {
+			"fontCharacter": "\\E904",
+			"fontColor": "#BEBEBE"
+		},
+		"_project_quickapp_light": {
+			"fontCharacter": "\\E904",
+			"fontColor": "#C1A766"
+		},
+		"_project_miniapp": {
+			"fontCharacter": "\\E907",
+			"fontColor": "#BEBEBE"
+		},
+		"_project_miniapp_light": {
+			"fontCharacter": "\\E907",
+			"fontColor": "#C1A766"
+		}
+	},
+	"file": "_file",
+	"folder": "_folder",
+	"folderExpanded": "_folder_expanded",
+	"fileExtensions": {
+		"png": "_file_img",
+		"jpg": "_file_img",
+		"jpeg": "_file_img",
+		"jpe": "_file_img",
+		"gif": "_file_img",
+		"wbmp": "_file_img",
+		"wbm": "_file_img",
+		"svg": "_file_img",
+		"webp": "_file_img",
+		"ico": "_file_img",
+		"icns": "_file_img",
+		"json": "_lang_json",
+		"css": "_lang_css",
+		"js": "_lang_js",
+		"md": "_lang_md",
+		"markdown": "_lang_md",
+		"vue": "_lang_vue",
+		"nvue": "_lang_vue",
+		"html": "_lang_html",
+		"htm": "_lang_html",
+		"doc": "_file_word",
+		"docx": "_file_word",
+		"xls": "_file_excel",
+		"xlsx": "_file_excel"
+	},
+	"projectType": {
+		"default": "_project_default",
+		"app": "_project_app",
+		"web": "_project_default",
+		"wap2app": "_project_web",
+		"uniapp": "_project_uniapp",
+		"vueuniapp": "_project_uniapp",
+		"quickapp": "_project_quickapp",
+		"miniapp": "_project_miniapp"
+	},
+	"languageIds": {
+		"css": "_lang_css",
+		"javascript": "_lang_js",
+		"json": "_lang_json",
+		"markdown": "_lang_md",
+		"vue": "_lang_vue",
+		"html": "_lang_html",
+		"c": "_lang_c",
+		"cpp": "_lang_cpp",
+		"java": "_lang_java",
+		"less": "_lang_less",
+		"php": "_lang_php",
+		"python": "_lang_python",
+		"scss": "_lang_scss",
+		"stylus": "_lang_stylus",
+		"typescript": "_lang_typescript",
+		"xml": "_lang_xml"
+	},
+	"light": {
+		"file": "_file_light",
+		"folder": "_folder_light",
+		"folderExpanded": "_folder_expanded_light",
+		"fileExtensions": {
+			"png": "_file_img_light",
+			"jpg": "_file_img_light",
+			"jpeg": "_file_img_light",
+			"jpe": "_file_img_light",
+			"gif": "_file_img_light",
+			"wbmp": "_file_img_light",
+			"wbm": "_file_img_light",
+			"svg": "_file_img_light",
+			"webp": "_file_img_light",
+			"ico": "_file_img_light",
+			"icns": "_file_img_light",
+			"json": "_lang_json_light",
+			"css": "_lang_css_light",
+			"js": "_lang_js_light",
+			"md": "_lang_md_light",
+			"markdown": "_lang_md_light",
+			"vue": "_lang_vue_light",
+			"nvue": "_lang_vue_light",
+			"html": "_lang_html_light",
+			"htm": "_lang_html_light",
+			"doc": "_file_word_light",
+			"docx": "_file_word_light",
+			"xls": "_file_excel_light",
+			"xlsx": "_file_excel_light"
+		},
+		"projectType": {
+			"default": "_project_default_light",
+			"app": "_project_app_light",
+			"web": "_project_default_light",
+			"wap2app": "_project_web_light",
+			"uniapp": "_project_uniapp_light",
+			"vueuniapp": "_project_uniapp_light",
+			"quickapp": "_project_quickapp_light",
+			"miniapp": "_project_miniapp_light"
+		},
+		"languageIds": {
+			"css": "_lang_css_light",
+			"javascript": "_lang_js_light",
+			"json": "_lang_json_light",
+			"markdown": "_lang_md_light",
+			"vue": "_lang_vue_light",
+			"html": "_lang_html_light",
+			"c": "_lang_c_light",
+			"cpp": "_lang_cpp_light",
+			"java": "_lang_java_light",
+			"less": "_lang_less_light",
+			"php": "_lang_php_light",
+			"python": "_lang_python_light",
+			"scss": "_lang_scss_light",
+			"stylus": "_lang_stylus_light",
+			"typescript": "_lang_typescript_light",
+			"xml": "_lang_xml_light"
+		}
+	}
+}

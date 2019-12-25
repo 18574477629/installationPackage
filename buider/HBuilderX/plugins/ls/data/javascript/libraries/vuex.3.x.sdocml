@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript website="https://vuex.vuejs.org/zh/">
+    <aliases>
+        <alias type="Class&lt;Vuex&gt;" name="Vuex"/>
+    </aliases>
+    <class type = "Vuex">
+        <properties>
+        </properties>
+        <methods>
+            <method name="Store" url="api/#vuex-store-构造器选项">
+                <description>
+                    <![CDATA[
+                        Vuex store 
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="options" type="Vuex_Store_Options" />
+                </parameters>
+                <return-types>
+                    <return-type type="Vuex.Store"/>
+                </return-types>
+            </method>
+            
+            <method name="mapState" url="api/#mapstate">
+                <description>
+                    <![CDATA[
+                        为组件创建计算属性以返回 Vuex store 中的状态。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="namespace" type="String" />
+                    <parameter name="map" type="String[]|Function" />
+                </parameters>
+                <return-types>
+                    <return-type type="Object"/>
+                </return-types>
+            </method>
+            
+            <method name="mapGetters" url="api/#mapgetters">
+                <description>
+                    <![CDATA[
+                        为组件创建计算属性以返回 getter 的返回值。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="namespace" type="String" />
+                    <parameter name="map" type="String[]" />
+                </parameters>
+                <return-types>
+                    <return-type type="Object"/>
+                </return-types>
+            </method>
+            <method name="mapActions" url="api/#mapactions">
+                <description>
+                    <![CDATA[
+                        创建组件方法分发 action。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="namespace" type="String" />
+                    <parameter name="map" type="String[]|Function" />
+                </parameters>
+                <return-types>
+                    <return-type type="Object"/>
+                </return-types>
+            </method>
+            <method name="mapMutations" url="api/#mapmutations">
+                <description>
+                    <![CDATA[
+                        创建组件方法提交 mutation。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="namespace" type="String" />
+                    <parameter name="map" type="String[]|Function" />
+                </parameters>
+                <return-types>
+                    <return-type type="Object"/>
+                </return-types>
+            </method>
+            <method name="createNamespacedHelpers" url="api/#createnamespacedhelpers">
+                <description>
+                    <![CDATA[
+创建基于命名空间的组件绑定辅助函数。其返回一个包含 mapState、mapGetters、mapActions 和 mapMutations 的对象。它们都已经绑定在了给定的命名空间上。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="namespace" type="String" />
+                </parameters>
+                <return-types>
+                    <return-type type="Object"/>
+                </return-types>
+            </method>
+        </methods>
+    </class>
+    <class type = "Vuex_Store_Options"  visibility="internal">
+        <properties>
+            <property name="state" type="Object|Function" url="api/#state">
+                <description>
+                    <![CDATA[
+                    Vuex store 实例的根 state 对象。
+                    ]]>
+                </description>
+            </property>
+            <property name="mutations" type="Map&lt;String,Function(Object)&gt;" url="api/#mutations">
+                <description>
+                    <![CDATA[
+                    在 store 上注册 mutation，处理函数总是接受 state 作为第一个参数（如果定义在模块中，则为模块的局部状态），payload 作为第二个参数（可选）。
+                    ]]>
+                </description>
+            </property>
+            <property name="actions" type="Map&lt;String,Function(VuexContext)&gt;|Function(VuexContext)" url="api/#actions">
+                <description>
+                    <![CDATA[
+                    在 store 上注册 action。处理函数总是接受 context 作为第一个参数，payload 作为第二个参数（可选）。
+                    ]]>
+                </description>
+            </property>
+            
+            <property name="getters" type="Object" url="api/#getters">
+                <description>
+                    <![CDATA[
+                    在 store 上注册 getter
+                    ]]>
+                </description>
+            </property>
+            <property name="modules" type="Object" url="api/#modules">
+                <description>
+                    <![CDATA[
+                    包含了子模块的对象，会被合并到 store
+                    ]]>
+                </description>
+            </property>
+            <property name="plugins" type="Function[]" url="api/#plugins">
+                <description>
+                    <![CDATA[
+一个数组，包含应用在 store 上的插件方法。这些插件直接接收 store 作为唯一参数，可以监听 mutation（用于外部地数据持久化、记录或调试）或者提交 mutation （用于内部数据，例如 websocket 或 某些观察者）
+                    ]]>
+                </description>
+            </property>
+            <property name="strict" type="Boolean" url="api/#strict">
+                <description>
+                    <![CDATA[
+使 Vuex store 进入严格模式，在严格模式下，任何 mutation 处理函数以外修改 Vuex state 都会抛出错误。
+                    ]]>
+                </description>
+            </property>
+        </properties>
+    </class>
+    
+    <class type = "VuexContext"  visibility="internal">
+        <properties>
+            <property name="state" type="Object">
+                <description>
+                    <![CDATA[
+                    等同于 `store.state`，若在模块中则为局部状态
+                    ]]>
+                </description>
+            </property>
+            <property name="rootState" type="Object">
+                <description>
+                    <![CDATA[
+                    等同于 `store.state`，只存在于模块中
+                    ]]>
+                </description>
+            </property>
+            
+            <property name="getters" type="Object">
+                <description>
+                    <![CDATA[
+                    等同于 `store.getters`
+                    ]]>
+                </description>
+            </property>
+            
+            <property name="rootGetters" type="Object">
+                <description>
+                    <![CDATA[
+                    等同于 `store.getters`，只存在于模块中
+                    ]]>
+                </description>
+            </property>
+        </properties>
+        <methods>
+            <method name="commit">
+                <description>
+                    <![CDATA[
+                        等同于 `store.commit`
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="type" type="String|Object|VuexMutationMethods" usage="required"/>
+                    <parameter name="payload" type="Object" />
+                    <parameter name="options" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>
+            <method name="dispatch">
+                <description>
+                    <![CDATA[
+                        等同于 `store.dispatch`
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="action" type="String|Object" usage="required"/>
+                    <parameter name="options" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>
+        </methods>
+    </class>
+    <class type = "Vuex.Store">
+        <constructors>
+            <constructor>
+                <parameters>
+                    <parameter name="options" type="Vuex_Store_Options" />
+                </parameters>
+                <return-types>
+                    <return-type type="Vuex.Store"/>
+                </return-types>
+            </constructor>
+        </constructors>
+        <properties>
+            <property name="state" type="Object" url="api/#state-2">
+                <description>
+                    <![CDATA[
+                    根状态，只读。
+                    ]]>
+                </description>
+            </property>
+            <property name="getters" type="Object" url="api/#getters-2">
+                <description>
+                    <![CDATA[
+                    暴露出注册的 getter，只读。
+                    ]]>
+                </description>
+            </property>
+        </properties>
+        <methods>
+            <method name="commit" url="api/#commit">
+                <description>
+                    <![CDATA[
+                        提交 mutation。options 里可以有 root: true，它允许在命名空间模块里提交根的 mutation。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="type" type="String|Object|VuexMutationMethods" usage="required"/>
+                    <parameter name="payload" type="Object" />
+                    <parameter name="options" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>
+            <method name="dispatch" url="api/#dispatch">
+                <description>
+                    <![CDATA[
+                        分发 action。options 里可以有 root: true，它允许在命名空间模块里分发根的 action。返回一个解析所有被触发的 action 处理器的 Promise。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="action" type="String|Object|VuexMutationMethods" usage="required"/>
+                    <parameter name="options" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>
+            <method name="replaceState" url="api/#replacestate">
+                <description>
+                    <![CDATA[
+                        替换 store 的根状态，仅用状态合并或时光旅行调试。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="state" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>
+            <method name="watch" url="api/#watch">
+                <description>
+                    <![CDATA[
+                        响应式地侦听 fn 的返回值，当值改变时调用回调函数。fn 接收 store 的 state 作为第一个参数，其 getter 作为第二个参数。最后接收一个可选的对象参数表示 Vue 的 vm.$watch 方法的参数。
+
+要停止侦听，调用此方法返回的函数即可停止侦听。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="fn" type="Function" />
+                    <parameter name="callback" type="Function" />
+                    <parameter name="options" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="Function"/>
+                </return-types>
+            </method>
+            <method name="subscribe" url="api/#subscribe">
+                <description>
+                    <![CDATA[
+                        订阅 store 的 mutation。通常用于插件。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="handler" type="Function" />
+                </parameters>
+                <return-types>
+                    <return-type type="Function"/>
+                </return-types>
+            </method>
+            <method name="subscribeAction" url="api/#subscribeaction">
+                <description>
+                    <![CDATA[
+                        订阅 store 的 action。通常用于插件。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="handler" type="Function" />
+                </parameters>
+                <return-types>
+                    <return-type type="Function"/>
+                </return-types>
+            </method>            
+            <method name="registerModule" url="api/#registermodule">
+                <description>
+                    <![CDATA[
+                        注册一个动态模块。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="path" type="String|String[]" />
+                    <parameter name="module" type="Module" />
+                    <parameter name="options" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>            
+            <method name="unregisterModule" url="api/#unregistermodule">
+                <description>
+                    <![CDATA[
+                        卸载一个动态模块。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="path" type="String|String[]" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>            
+            <method name="hotUpdate" url="api/#hotupdate">
+                <description>
+                    <![CDATA[
+                        热替换新的 action 和 mutation。
+                    ]]>
+                </description>
+                <parameters>
+                    <parameter name="newOptions" type="Object" />
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+            </method>
+        </methods>
+    </class>
+</javascript>

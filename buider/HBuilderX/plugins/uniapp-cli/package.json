@@ -1,0 +1,61 @@
+{
+  "name": "uniapp-cli",
+  "version": "2.4.6-2019121017",
+  "private": true,
+  "extensionDependencies": [
+    "npm",
+    "weapp-tools"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app-plus": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-h5": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-mp-alipay": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-mp-baidu": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-mp-qq": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-mp-toutiao": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-mp-weixin": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-stat": "^2.0.0-alpha-24420191128001",
+    "flyio": "^0.6.2",
+    "vue": "^2.6.10",
+    "vue-class-component": "^6.3.2",
+    "vue-property-decorator": "^7.2.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-typescript": "^7.2.0",
+    "@dcloudio/types": "^0.4.1",
+    "@dcloudio/uni-cli-shared": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/uni-template-compiler": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.0-alpha-24420191128001",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.0-alpha-24420191128001",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-typescript": "^3.3.0",
+    "@vue/cli-service": "^3.3.1",
+    "babel-plugin-import": "^1.11.0",
+    "caniuse-lite": "^1.0.30001011",
+    "less-loader": "^4.1.0",
+    "module-alias": "^2.1.0",
+    "postcss-comment": "^2.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "browserslist": [
+    "Android >= 4",
+    "ios >= 8"
+  ],
+  "_moduleAliases": {
+    "typescript": "../compile-typescript/node_modules/typescript",
+    "less": "../compile-less/node_modules/less",
+    "node-sass": "../compile-node-sass/node_modules/node-sass-china",
+    "stylus": "../compile-stylus/node_modules/stylus"
+  }
+}

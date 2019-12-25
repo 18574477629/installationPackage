@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript>
+	<aliases>
+		<alias type="Class&lt;angular&gt;" name="angular"/>
+	</aliases>
+	<class type="cacheObj">
+		<methods>
+			<method name="info">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="put">
+				<parameters>
+					<parameter name="key" type="String" usage="required"/>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="get">
+				<parameters>
+					<parameter name="key" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="remove">
+				<parameters>
+					<parameter name="key" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="removeAll">
+				<return-types/>
+			</method>
+			<method name="destroy">
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="eventObj">
+		<properties>
+			<property name="targetScope" type="service.$rootScope"/>
+			<property name="currentScope" type="service.$rootScope"/>
+			<property name="name" type="String"/>
+			<property name="defaultPrevented" type="Boolean"/>
+		</properties>
+		<methods>
+			<method name="stopPropagation">
+				<return-types/>
+			</method>
+			<method name="preventDefault">
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="directiveObj">
+		<methods>
+			<method name="controller" scope="static" url="https://docs.angularjs.org/api/ng/service/$compile#-require-">
+				<description>Controller constructor function. The controller is instantiated before the pre-linking phase and it is shared with other directives (see require attribute). This allows the directives to communicate with each other and augment each other's behavior.</description>
+				<return-types/>
+			</method>
+			<method name="compile" scope="static" url="https://docs.angularjs.org/api/ng/service/$compile#-transclude-">
+				<description>The compile function deals with transforming the template DOM. Since most directives do not do template transformation, it is not used often.</description>
+				<parameters>
+					<parameter name="tElement" type="Element" usage="required"/>
+					<parameter name="tAttrs" type="Attr" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="link" scope="static" url="https://docs.angularjs.org/api/ng/service/$compile#-link-">
+				<description>The link function is responsible for registering DOM listeners as well as updating the DOM. It is executed after the template has been cloned. This is where most of the directive logic will be put.</description>
+				<parameters>
+					<parameter name="scope" type="Object" usage="required"/>
+					<parameter name="iElement" type="Element" usage="required"/>
+					<parameter name="iAttrs" type="Attr" usage="required"/>
+					<parameter name="controller" type="Object" usage="required"/>
+					<parameter name="transcludeFn" type="Function" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="angular.Module" url="http://docs.angularjs.org/api/angular.Module">
+		<description>Interface for configuring angular modules.</description>
+		<properties>
+			<property name="requires" type="Array"/>
+			<property name="name" type="String"/>
+		</properties>
+		<methods>
+			<method name="provider">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="providerType" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="factory">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="providerType" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="service">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="constructor" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="value">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="object" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="constant">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="object" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="decorator">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="decorFn" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="animation">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="animationFactory" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="filter">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="filterFactory" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="controller">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="constructor" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="directive">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="directiveFactory" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="component">
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="config">
+				<parameters>
+					<parameter name="configFn" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="run">
+				<parameters>
+					<parameter name="initializationFn" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="Promise" url="http://docs.angularjs.org/api/ng.$q">
+		<description>Allow for interested parties to get access to the result of the deferred task when it completes.</description>
+		<methods>
+			<method name="then">
+				<parameters>
+					<parameter name="successCallback" type="Function" usage="required"/>
+					<parameter name="errorCallback" type="Function" usage="required"/>
+					<parameter name="notifyCallback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="catch">
+				<parameters>
+					<parameter name="errorCallback" type="Function" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="finally">
+				<parameters>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="success">
+				<parameters>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="error">
+				<parameters>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="Deferred" url="http://docs.angularjs.org/api/ng.$q">
+		<methods>
+			<method name="resolve">
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="reject">
+				<parameters>
+					<parameter name="reason" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="notify">
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+		<properties>
+			<property name="promise" type="Promise"/>
+		</properties>
+	</class>
+	<class type="ResourceClass" url="http://docs.angularjs.org/api/ngResource.$resource">
+		<properties>
+			<property name="$promise" type="Promise"/>
+		</properties>
+		<methods>
+			<method name="$save">
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="Resource" url="http://docs.angularjs.org/api/ngResource.$resource">
+		<methods>
+			<method name="get">
+				<parameters>
+					<parameter name="params" type="Object" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="ResourceClass"/>
+				</return-types>
+			</method>
+			<method name="save">
+				<parameters>
+					<parameter name="params" type="Object" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="ResourceClass"/>
+				</return-types>
+			</method>
+			<method name="query">
+				<parameters>
+					<parameter name="params" type="Object" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="ResourceClass"/>
+				</return-types>
+			</method>
+			<method name="remove">
+				<parameters>
+					<parameter name="params" type="Object" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="ResourceClass"/>
+				</return-types>
+			</method>
+			<method name="delete">
+				<parameters>
+					<parameter name="params" type="Object" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="ResourceClass"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service">
+		<methods>
+			<method name="$anchorScroll" scope="static" url="http://docs.angularjs.org/api/ng.$anchorScroll">
+				<description>Checks current value of $location.hash() and scroll to related element.</description>
+				<return-types/>
+			</method>
+			<method name="$cacheFactory" scope="static" url="http://docs.angularjs.org/api/ng.$cacheFactory">
+				<description>Factory that constructs cache objects and gives access to them.</description>
+				<parameters>
+					<parameter name="cacheId" type="String" usage="required"/>
+					<parameter name="options" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="cacheObj"/>
+				</return-types>
+			</method>
+			<method name="$compile" scope="static" url="http://docs.angularjs.org/api/ng.$compile">
+				<description>Compiles a piece of HTML string or DOM into a template and produces a template function.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="transclude" type="Function" usage="required"/>
+					<parameter name="maxPriority" type="Number" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="$controller" scope="static" url="http://docs.angularjs.org/api/ng.$controller">
+				<description>Instantiates controllers.</description>
+				<parameters>
+					<parameter name="controller" type="Function" usage="required"/>
+					<parameter name="locals" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="$exceptionHandler" scope="static" url="http://docs.angularjs.org/api/ng.$exceptionHandler">
+				<description>Any uncaught exception in angular expressions is delegated to this service.</description>
+				<parameters>
+					<parameter name="exception" type="Error" usage="required"/>
+					<parameter name="cause" type="String" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="$filter" scope="static" url="http://docs.angularjs.org/api/ng.$filter">
+				<description>Retrieve a filter function.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="$interpolate" scope="static" url="http://docs.angularjs.org/api/ng.$interpolate">
+				<description>Compiles a string with markup into an interpolation function.</description>
+				<parameters>
+					<parameter name="text" type="String" usage="required"/>
+					<parameter name="mustHaveExpression" type="Boolean" usage="optional"/>
+					<parameter name="trustedContext" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="$parse" scope="static" url="http://docs.angularjs.org/api/ng.$parse">
+				<description>Converts Angular expression into a function.</description>
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="$resource" scope="static" url="http://docs.angularjs.org/api/ngResource.$resource">
+				<description>Creates a resource object that lets you interact with RESTful server-side data sources.</description>
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="paramDefaults" type="Object" usage="optional"/>
+					<parameter name="actions" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Resource"/>
+				</return-types>
+			</method>
+			<method name="$sanitize" scope="static" url="http://docs.angularjs.org/api/ngSanitize.$sanitize">
+				<description>Sanitize HTML input.</description>
+				<parameters>
+					<parameter name="string" type="None" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+		</methods>
+		<properties>
+			<property name="$window" type="Object"/>
+		</properties>
+	</class>
+	<class type="service.$animate" url="http://docs.angularjs.org/api/ng.$animate">
+		<description>Rudimentary DOM manipulation functions to insert, remove, move elements within the DOM.</description>
+		<methods>
+			<method name="addClass" scope="static" url="http://docs.angularjs.org/api/ng.$animate#addClass">
+				<description>Adds the provided className CSS class value to the provided element.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="className" type="String" usage="required"/>
+					<parameter name="done" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="enter" scope="static" url="http://docs.angularjs.org/api/ng.$animate#enter">
+				<description>Inserts the element into the DOM either after the after element or within the parent element.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="parent" type="Element" usage="required"/>
+					<parameter name="after" type="Element" usage="required"/>
+					<parameter name="done" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="leave" scope="static" url="http://docs.angularjs.org/api/ng.$animate#leave">
+				<description>Removes the element from the DOM.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="done" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="move" scope="static" url="http://docs.angularjs.org/api/ng.$animate#move">
+				<description>Moves element to be placed either after the after element or inside of the parent element.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="parent" type="Element" usage="required"/>
+					<parameter name="after" type="Element" usage="required"/>
+					<parameter name="done" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="removeClass" scope="static" url="http://docs.angularjs.org/api/ng.$animate#removeClass">
+				<description>Removes the provided className CSS class value from the provided element.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="className" type="String" usage="required"/>
+					<parameter name="done" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$http" url="http://docs.angularjs.org/api/ng.$http">
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="config" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="service.$q"/>
+				</return-types>
+			</constructor>
+		</constructors>
+		<description>Facilitates communication with remote HTTP servers.</description>
+		<methods>
+			<method name="delete">
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="config" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="get">
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="config" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="head">
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="config" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="jsonp">
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="config" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="post">
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="data" type="Object" usage="required"/>
+					<parameter name="config" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="put">
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="data" type="Object" usage="required"/>
+					<parameter name="config" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$locale" url="http://docs.angularjs.org/api/ng.$locale">
+		<properties>
+			<property name="id" type="String"/>
+		</properties>
+	</class>
+	<class type="service.$location" url="http://docs.angularjs.org/api/ng.$location">
+		<description>Parses the URL in the browser address bar.</description>
+		<methods>
+			<method name="absUrl" scope="static" url="http://docs.angularjs.org/api/ng.$location#absUrl">
+				<description>Return full url representation.</description>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="hash" scope="static" url="http://docs.angularjs.org/api/ng.$location#hash">
+				<description>Get or set the hash fragment.</description>
+				<parameters>
+					<parameter name="value" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="host" scope="static" url="http://docs.angularjs.org/api/ng.$location#host">
+				<description>Return host of current url.</description>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="path" scope="static" url="http://docs.angularjs.org/api/ng.$location#path">
+				<description>Get or set the URL path.</description>
+				<parameters>
+					<parameter name="value" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="port" scope="static" url="http://docs.angularjs.org/api/ng.$location#port">
+				<description>Returns the port of the current url.</description>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="protocol" scope="static" url="http://docs.angularjs.org/api/ng.$location#protocol">
+				<description>Return protocol of current url.</description>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="replace" scope="static" url="http://docs.angularjs.org/api/ng.$location#replace">
+				<description>Changes to $location during current $digest will be replacing current history record, instead of adding new one.</description>
+				<return-types/>
+			</method>
+			<method name="search" scope="static" url="http://docs.angularjs.org/api/ng.$location#search">
+				<description>Get or set the URL query.</description>
+				<parameters>
+					<parameter name="search" type="String" usage="required"/>
+					<parameter name="paramValue" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="url" scope="static" url="http://docs.angularjs.org/api/ng.$location#url">
+				<description>Get or set the current url.</description>
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="replace" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$log" url="http://docs.angularjs.org/api/ng.$log">
+		<description>Simple service for logging.</description>
+		<methods>
+			<method name="debug" scope="static" url="http://docs.angularjs.org/api/ng.$log#debug">
+				<description>Write a debug message.</description>
+				<parameters>
+					<parameter name="message" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="error" scope="static" url="http://docs.angularjs.org/api/ng.$log#error">
+				<description>Write an error message.</description>
+				<parameters>
+					<parameter name="message" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="info" scope="static" url="http://docs.angularjs.org/api/ng.$log#info">
+				<description>Write an info message.</description>
+				<parameters>
+					<parameter name="message" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="log" scope="static" url="http://docs.angularjs.org/api/ng.$log#log">
+				<description>Write a log message.</description>
+				<parameters>
+					<parameter name="message" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="warn" scope="static" url="http://docs.angularjs.org/api/ng.$log#warn">
+				<description>Write a warning message.</description>
+				<parameters>
+					<parameter name="message" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$q" url="http://docs.angularjs.org/api/ng.$q">
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="executor" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</constructor>
+		</constructors>
+		<description>A promise/deferred implementation.</description>
+		<methods>
+			<method name="all" scope="static" url="http://docs.angularjs.org/api/ng.$q#all">
+				<description>Combines multiple promises into a single promise.</description>
+				<parameters>
+					<parameter name="promises" type="Array&lt;Promise&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="defer" scope="static" url="http://docs.angularjs.org/api/ng.$q#defer">
+				<description>Creates a Deferred object which represents a task which will finish in the future.</description>
+				<return-types>
+					<return-type type="Deferred"/>
+				</return-types>
+			</method>
+			<method name="reject" scope="static" url="http://docs.angularjs.org/api/ng.$q#reject">
+				<description>Creates a promise that is resolved as rejected with the specified reason.</description>
+				<parameters>
+					<parameter name="reason" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+			<method name="when" scope="static" url="http://docs.angularjs.org/api/ng.$q#when">
+				<description>Wraps an object that might be a value or a (3rd party) then-able promise into a $q promise.</description>
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$rootScope" url="http://docs.angularjs.org/api/ng.$rootScope">
+		<methods>
+			<method name="$apply" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$apply">
+				<description>Execute an expression in angular from outside of the angular framework.</description>
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="$broadcast" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$broadcast">
+				<description>Dispatches an event name downwards to all child scopes.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="eventObj"/>
+				</return-types>
+			</method>
+			<method name="$destroy" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$destroy">
+				<description>Removes the current scope (and all of its children) from the parent scope.</description>
+				<return-types/>
+			</method>
+			<method name="$digest" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$digest">
+				<description>Processes all of the watchers of the current scope and its children.</description>
+				<return-types/>
+			</method>
+			<method name="$emit" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit">
+				<description>Dispatches an event name upwards through the scope hierarchy.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="eventObj"/>
+				</return-types>
+			</method>
+			<method name="$eval" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$eval">
+				<description>Executes the expression on the current scope and returns the result.</description>
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="$evalAsync" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$evalAsync">
+				<description>Executes the expression on the current scope at a later point in time.</description>
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="$new" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$new">
+				<description>Creates a new child scope.</description>
+				<parameters>
+					<parameter name="isolate" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="service.$rootScope"/>
+				</return-types>
+			</method>
+			<method name="$on" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$on">
+				<description>Listens on events of a given type.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="listener" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="$watch" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$watch">
+				<description>Registers a listener callback to be executed whenever the watchExpression changes.</description>
+				<parameters>
+					<parameter name="watchExpression" type="String" usage="required"/>
+					<parameter name="listener" type="Function" usage="optional"/>
+					<parameter name="objectEquality" type="Boolean" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="$watchCollection" scope="static" url="http://docs.angularjs.org/api/ng.$rootScope.Scope#$watchCollection">
+				<description>Shallow watches the properties of an object and fires whenever any of the properties.</description>
+				<parameters>
+					<parameter name="obj" type="String" usage="required"/>
+					<parameter name="listener" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$sce">
+		<properties>
+			<property name="HTML" type="String"/>
+			<property name="CSS" type="String"/>
+			<property name="URL" type="String"/>
+			<property name="RESOURCE_URL" type="String"/>
+			<property name="JS" type="String"/>
+		</properties>
+		<methods>
+			<method name="getTrusted">
+				<parameters>
+					<parameter name="type" type="String" usage="required"/>
+					<parameter name="maybeTrusted" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="getTrustedCss">
+				<parameters>
+					<parameter name="maybeTrusted" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="getTrustedHtml">
+				<parameters>
+					<parameter name="maybeTrusted" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="getTrustedJs">
+				<parameters>
+					<parameter name="maybeTrusted" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="getTrustedResourceUrl">
+				<parameters>
+					<parameter name="maybeTrusted" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="getTrustedUrl">
+				<parameters>
+					<parameter name="maybeTrusted" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="parse">
+				<parameters>
+					<parameter name="type" type="String" usage="required"/>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="parseAsCss">
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="parseAsHtml">
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="parseAsJs">
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="parseAsResourceUrl">
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="parseAsUrl">
+				<parameters>
+					<parameter name="expression" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="trustAs">
+				<parameters>
+					<parameter name="type" type="String" usage="required"/>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="trustAsHtml">
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="trustAsJs">
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="trustAsResourceUrl">
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="trustAsUrl">
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="isEnabled">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$templateCache" superclass="cacheObj"/>
+	<class type="service.$timeout" url="http://docs.angularjs.org/api/ng.$timeout">
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="fn" type="Function" usage="required"/>
+					<parameter name="delay" type="Number" usage="optional"/>
+					<parameter name="invokeApply" type="Boolean" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Promise"/>
+				</return-types>
+			</constructor>
+		</constructors>
+		<description>Angular's wrapper for window.setTimeout.</description>
+		<methods>
+			<method name="cancel">
+				<parameters>
+					<parameter name="promise" type="Promise" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$injector" url="http://docs.angularjs.org/api/AUTO.$injector">
+		<description>Retrieve object instances as defined by provider.</description>
+		<methods>
+			<method name="annotate" scope="static" url="http://docs.angularjs.org/api/AUTO.$injector#annotate">
+				<description>Returns an array of service names which the function is requesting for injection.</description>
+				<parameters>
+					<parameter name="f" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;String&gt;"/>
+				</return-types>
+			</method>
+			<method name="get" scope="static" url="http://docs.angularjs.org/api/AUTO.$injector#get">
+				<description>Return an instance of a service.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="has" scope="static" url="http://docs.angularjs.org/api/AUTO.$injector#has">
+				<description>Allows the user to query if the particular service exist.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="instantiate" scope="static" url="http://docs.angularjs.org/api/AUTO.$injector#instantiate">
+				<description>Create a new instance of JS type.</description>
+				<parameters>
+					<parameter name="type" type="Function" usage="required"/>
+					<parameter name="locals" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="invoke" scope="static" url="http://docs.angularjs.org/api/AUTO.$injector#invoke">
+				<description>Invoke the method and supply the method arguments from the $injector.</description>
+				<parameters>
+					<parameter name="type" type="Function" usage="required"/>
+					<parameter name="self" type="Object" usage="optional"/>
+					<parameter name="locals" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$provide" url="http://docs.angularjs.org/api/AUTO.$provide">
+		<description>Use $provide to register new providers with the $injector.</description>
+		<methods>
+			<method name="constant" scope="static" url="http://docs.angularjs.org/api/AUTO.$provide#constant">
+				<description>A constant value.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="decorator" scope="static" url="http://docs.angularjs.org/api/AUTO.$provide#decorator">
+				<description>Decoration of service, allows the decorator to intercept the service instance creation.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="decorator" type="Function" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="factory" scope="static" url="http://docs.angularjs.org/api/AUTO.$provide#factory">
+				<description>A short hand for configuring services if only $get method is required.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="providerFunction" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="provider" scope="static" url="http://docs.angularjs.org/api/AUTO.$provide#provider">
+				<description>Register a provider for a service.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="providerType" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="service" scope="static" url="http://docs.angularjs.org/api/AUTO.$provide#provider">
+				<description>Register a provider for a service.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="constructor" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="value" scope="static" url="http://docs.angularjs.org/api/AUTO.$providevalue">
+				<description>A short hand for configuring services if the $get method is a constant.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="object" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="service.$cookies" url="http://docs.angularjs.org/api/ngCookies.$cookies">
+		<description>Provides read/write access to browser's cookies.</description>
+		<properties>
+			<property name="text" type="String"/>
+		</properties>
+	</class>
+	<class type="service.$route" url="http://docs.angularjs.org/api/ngRoute.$route">
+		<description>Deep-link URLs to controllers and views.</description>
+		<methods>
+			<method name="reload" scope="static" url="http://docs.angularjs.org/api/ngRoute.$route#reload">
+				<description>Reload the current route even if $location hasn't changed.</description>
+				<return-types/>
+			</method>
+		</methods>
+		<properties>
+			<property name="routes" type="Array&lt;Object&gt;"/>
+		</properties>
+	</class>
+	<class type="service.$route.current" url="http://docs.angularjs.org/api/ngRoute.$route#current">
+		<description>Reference to the current route definition.</description>
+		<properties>
+			<property name="controller" type="Object"/>
+			<property name="locals" type="Object"/>
+		</properties>
+	</class>
+	<class type="service.$swipe" url="http://docs.angularjs.org/api/ngTouch.$swipe">
+		<description>A service that abstracts the messier details of hold-and-drag swipe behavior.</description>
+		<methods>
+			<method name="bind" scope="static" url="http://docs.angularjs.org/api/ngTouch.$swipe#bind">
+				<description>Abstracts the messier details of hold-and-drag swipe behavior.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="handlers" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="angular">
+		<methods>
+			<method name="bind" scope="static" url="http://docs.angularjs.org/api/angular.bind">
+				<description>Returns a function which calls function fn bound to self.</description>
+				<parameters>
+					<parameter name="self" type="Object" usage="required"/>
+					<parameter name="fn" type="Function" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="bootstrap" scope="static" url="http://docs.angularjs.org/api/angular.bootstrap">
+				<description>Use this function to manually start up angular application.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+					<parameter name="modules" type="Array&lt;String&gt;" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="service.$injector"/>
+				</return-types>
+			</method>
+			<method name="copy" scope="static" url="http://docs.angularjs.org/api/angular.copy">
+				<description>Creates a deep copy of source, which should be an object or an array.</description>
+				<parameters>
+					<parameter name="source" type="Object" usage="required"/>
+					<parameter name="target" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="element" scope="static" url="http://docs.angularjs.org/api/angular.element">
+				<description>Wraps a raw DOM element or HTML string as a jQuery element.</description>
+				<parameters>
+					<parameter name="element" type="Element" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="jQuery.fn"/>
+				</return-types>
+			</method>
+			<method name="equals" scope="static" url="http://docs.angularjs.org/api/angular.equals">
+				<description>Determines if two objects or two values are equivalent.</description>
+				<parameters>
+					<parameter name="o1" type="Object" usage="required"/>
+					<parameter name="o2" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="extend" scope="static" url="http://docs.angularjs.org/api/angular.extend">
+				<description>Extends the destination object dst by copying all of the properties from the src object(s) to dst.</description>
+				<parameters>
+					<parameter name="dst" type="Object" usage="required"/>
+					<parameter name="src" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="forEach" scope="static" url="http://docs.angularjs.org/api/angular.forEach">
+				<description>Invokes the iterator function once for each item in obj collection, which can be either an object or an array.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="fromJson" scope="static" url="http://docs.angularjs.org/api/angular.fromJson">
+				<description>Deserializes a JSON string.</description>
+				<parameters>
+					<parameter name="json" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="identity" scope="static" url="http://docs.angularjs.org/api/angular.identity">
+				<description>A function that returns its first argument.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="injector" scope="static" url="http://docs.angularjs.org/api/angular.injector">
+				<description>Creates an injector function</description>
+				<parameters>
+					<parameter name="modules" type="Array&lt;String&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="service.$injector"/>
+				</return-types>
+			</method>
+			<method name="isArray" scope="static" url="http://docs.angularjs.org/api/angular.isArray">
+				<description>Determines if a reference is an Array.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isDate" scope="static" url="http://docs.angularjs.org/api/angular.isDate">
+				<description>Determines if a reference is a date.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isDefined" scope="static" url="http://docs.angularjs.org/api/angular.isDefined">
+				<description>Determines if a reference is defined.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isElement" scope="static" url="http://docs.angularjs.org/api/angular.isElement">
+				<description>Determines if a reference is a DOM element.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isFunction" scope="static" url="http://docs.angularjs.org/api/angular.isFunction">
+				<description>Determines if a reference is a function.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isNumber" scope="static" url="http://docs.angularjs.org/api/angular.isNumber">
+				<description>Determines if a reference is a number.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isObject" scope="static" url="http://docs.angularjs.org/api/angular.isObject">
+				<description>Determines if a reference is an object.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isString" scope="static" url="http://docs.angularjs.org/api/angular.isString">
+				<description>Determines if a reference is a string.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isUndefined" scope="static" url="http://docs.angularjs.org/api/angular.isUndefined">
+				<description>Determines if a reference is undefined.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="lowercase" scope="static" url="http://docs.angularjs.org/api/angular.lowercase">
+				<description>Converts the specified string to lowercase.</description>
+				<parameters>
+					<parameter name="val" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="module" scope="static" url="http://docs.angularjs.org/api/angular.module">
+				<description>A global place for creating, registering and retrieving Angular modules.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="deps" type="Array&lt;String&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="angular.Module"/>
+				</return-types>
+			</method>
+			<method name="noop" scope="static" url="http://docs.angularjs.org/api/angular.noop">
+				<description>A function that performs no operations.</description>
+				<return-types/>
+			</method>
+			<method name="toJson" scope="static" url="http://docs.angularjs.org/api/angular.toJson">
+				<description>Serializes input into a JSON-formatted string.</description>
+				<parameters>
+					<parameter name="val" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="uppercase" scope="static" url="http://docs.angularjs.org/api/angular.uppercase">
+				<description>Converts the specified string to uppercase.</description>
+				<parameters>
+					<parameter name="string" type="None" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+		</methods>
+		<properties>
+			<property name="Module" type="Module"/>
+		</properties>
+	</class>
+	<class type="angular.version" url="http://docs.angularjs.org/api/angular.version">
+		<properties>
+			<property name="full" type="String"/>
+			<property name="major" type="Number"/>
+			<property name="minor" type="Number"/>
+			<property name="dot" type="Number"/>
+			<property name="codename" type="String"/>
+		</properties>
+	</class>
+</javascript>

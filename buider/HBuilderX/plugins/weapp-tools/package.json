@@ -1,0 +1,33 @@
+{
+  "name": "weapp-tools",
+  "version": "1.0.1-2019111320",
+  "description": "weapp-tools",
+  "extensionDependencies": [
+    "npm"
+  ],
+  "scripts": {
+    "clear": "rm -rf lib/*",
+    "lint": "eslint src --fix",
+    "dev": "npm run lint && rollup -c rollup.config.js",
+    "build": "npm run lint && rollup -c rollup.config.production.js"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "chalk": "^2.4.1",
+    "esprima": "^4.0.0",
+    "fs-extra": "^1.0.0",
+    "glob": "^7.1.2",
+    "merge": "^1.2.0",
+    "source-map": "~0.6.1",
+    "strip-json-comments": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-vue-libs": "^2.1.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "@import": {
+        "body": [
+            "@import \"$1\""
+        ],
+        "prefix": "@import"
+    },
+    "@extend": {
+        "body": [
+            "@extend $0"
+        ],
+        "prefix": "@extend"
+    },
+    "@media": {
+        "body": [
+            "@media print",
+            "\t$0"
+        ],
+        "prefix": "@media"
+    },
+    "@font-face": {
+        "body": [
+            "@font-face",
+            "\tfont-family $1",
+            "\tfont-style $2",
+            "\tsrc url($3)$0"
+        ],
+        "prefix": "@font-face"
+    },
+    "@keyframes": {
+        "body": [
+            "@keyframes $0"
+        ],
+        "prefix": "@keyframes"
+    }
+}

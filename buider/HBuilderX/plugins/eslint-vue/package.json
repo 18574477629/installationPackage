@@ -1,0 +1,115 @@
+{
+	"name": "eslint-vue",
+	"id": "eslint-vue",
+	"version": "1.0.1-2019090219",
+	"external": {
+		"type": "node",
+		"programPath": "${pluginPath}",
+		"executable": "/node_modules/.bin/eslint",
+		"programName": "eslint",
+		"commands": [
+			{
+				"id": "default-eslint-vue",
+				"name": "eslint-vue",
+                "enable":"!project.hasESLintVue && (langId == 'vue')",
+				"command": [
+					"${programPath}",
+					"--no-eslintrc",
+					"-c",
+					"${pluginPath}/.eslintrc.js",
+					"${file}"
+				],
+				"extensions": "vue,nvue",
+				"key": "",
+				"showInParentMenu": false,
+				"onDidSaveExecution": true,
+				"isBackground": true,
+				"contributeTo": "validation",
+				"problemMatcher": "$vue-lint"
+			},
+            {
+            	"id": "project-eslint-vue",
+            	"name": "eslint-vue",
+                "enable":"project.hasESLintVue && (langId == 'vue')",
+            	"command": [
+            		"${projectDir}/node_modules/.bin/eslint",
+            		"${file}"
+            	],
+            	"extensions": "vue|nvue",
+            	"showInParentMenu": false,
+            	"onDidSaveExecution": true,
+            	"isBackground": true,
+            	"contributeTo": "validation",
+            	"fixCommand":"ExternalCommand:project-eslint-vue-fix",
+            	"problemMatcher": "$vue-lint"
+            },
+            {
+            	"id": "project-eslint-vue-fix",
+            	"name": "eslint-vue-fix",
+                "enable":"project.hasESLintVue && (langId == 'vue')",
+            	"command": [
+            		"${projectDir}/node_modules/.bin/eslint",
+            		"${file}",
+            		"--fix"
+            	],
+            	"extensions": "/",
+            	"showInParentMenu": false,
+            	"onDidSaveExecution": false,
+            	"isBackground": true,
+            	"contributeTo": "validation",
+            	"problemMatcher": "$vue-lint"
+            }
+		]
+	},
+	"configurationFiles": [
+		".eslintrc.js"
+	],
+	"contributes": {
+		"menus":{
+				"menubar/tool":[
+					{
+						"command":"ExternalCommand:project-eslint-vue-fix",
+						"title":"ESLint一键修复",
+						"group":"group.validation",
+						"when":"project.hasESLintVue && (langId == 'vue')"
+					}
+				]
+		},
+		"problemMatchers": [
+			{
+				"name": "vue-lint",
+				"owner": "vue",
+				"pattern": [
+					{
+						"regexp": "^([^\\s].*)$",
+						"file": 1
+					},
+					{
+						"regexp": "^\\s+(\\d+):(\\d+)\\s+(error|warning|info)\\s+(.*)$",
+						"line": 1,
+						"column": 2,
+						"severity": 3,
+						"message": 4,
+						"code": 5,
+						"loop": true
+					}
+				]
+			}
+		]
+	},
+	"dependencies": {
+		"eslint": "^5.0.1",
+		"eslint-config-standard": "^11.0.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-node": "^6.0.1",
+		"eslint-plugin-promise": "^3.8.0",
+		"eslint-plugin-standard": "^3.1.0",
+		"eslint-plugin-vue": "^4.5.0",
+		"eslint-plugin-html": "^4.0.5"
+	},
+	"extensionDependencies": [
+		"npm"
+	],
+	"description": "vue-lint插件用于校验vue文件",
+	"devDependencies": {}
+}

@@ -1,0 +1,5 @@
+{
+	"name": "launcher",
+  	"version": "1.0.0.2019121022",
+  	"extensionDependencies":["node_modules"]
+}

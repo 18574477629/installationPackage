@@ -1,0 +1,25 @@
+{
+	"name": "theme-defaults",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"categories": [ "Themes" ],
+	"version": "1.0.0.qualifier",
+	"publisher": "vscode",
+	"engines": { "vscode": "*" },
+	"contributes": {
+		"themes": [
+			{
+				"label": "Monokai",
+				"uiTheme": "black",
+				"path": "./themes/dark_defaults.json",
+				"iconFolder":"./themes/black"
+			},
+			{
+				"label": "Default",
+				"uiTheme": "default",
+				"path": "./themes/light_defaults.json",
+				"iconFolder":"./themes/default"
+			}
+		]
+	}
+}

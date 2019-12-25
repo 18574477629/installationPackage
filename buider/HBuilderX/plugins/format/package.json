@@ -1,0 +1,40 @@
+{
+    "name": "jsbeautify",
+    "version": "1.0.0-2019090219",
+    "external": {
+        "type": "node"
+    },
+    "contributes": {
+        "formator": {
+            "name": "jsbeautify",
+            "class": "js_beautify.js",
+            "filetypes": [
+                "json",
+                "js",
+                "njs",
+                "html",
+                "css",
+                "vue",
+                "nvue",
+                "ux",
+                "nml",
+                "nss",
+                "wxml",
+                "qml",
+                "qss",
+                "wxss",
+                "sjs",
+                "ttml",
+                "ttss",
+                "acss",
+                "swan"
+            ]
+        }
+    },
+    "configurationFiles": [
+        "jsbeautifyrc.js"
+    ],
+    "dependencies": {
+        "js-beautify": "^1.8.8"
+    }
+}

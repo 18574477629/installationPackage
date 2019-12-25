@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript>
+	<class type="selectableOption">
+		<properties>
+			<property name="appendTo" type="Selector"/>
+			<property name="autoRefresh" type="Boolean"/>
+			<property name="cancel" type="Selector"/>
+			<property name="classes" type="Object"/>
+			<property name="delay" type="Number"/>
+			<property name="distance" type="Number"/>
+			<property name="filter" type="Selector"/>
+			<property name="tolerance" type="String"/>
+		</properties>
+	</class>
+	<class type="droppableOption">
+		<properties>
+			<property name="accept" type="Selector"/>
+			<property name="activeClass" type="String"/>
+			<property name="addClasses" type="Boolean"/>
+			<property name="classes" type="Object"/>
+			<property name="greedy" type="Boolean"/>
+			<property name="hoverClass" type="String"/>
+			<property name="scope" type="String"/>
+			<property name="tolerance" type="String"/>
+		</properties>
+	</class>
+	<class type="autocompleteOption">
+		<properties>
+			<property name="appendTo" type="Selector"/>
+			<property name="autoFocus" type="Boolean"/>
+			<property name="classes" type="Object"/>
+			<property name="delay" type="Number"/>
+			<property name="minLength" type="Number"/>
+			<property name="position" type="Object"/>
+			<property name="source" type="Array&lt;Object&gt;"/>
+		</properties>
+	</class>
+	<class type="tooltipOption">
+		<properties>
+			<property name="classes" type="Object"/>
+			<property name="items" type="Selector"/>
+			<property name="position" type="Object"/>
+			<property name="tooltipClass" type="String"/>
+			<property name="track" type="Boolean"/>
+		</properties>
+		<methods>
+			<method name="content" scope="static" url="null">
+				<description>The content of the tooltip.
+
+					When changing this option, you likely need to also change the items option.</description>
+				<parameters>
+					<parameter name="event" type="Event" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="spinnerOption">
+		<properties>
+			<property name="classes" type="Object"/>
+			<property name="culture" type="String"/>
+			<property name="icons" type="Object"/>
+			<property name="incremental" type="Boolean"/>
+			<property name="max" type="number|string"/>
+			<property name="min" type="number|string"/>
+			<property name="numberFormat" type="String"/>
+			<property name="page" type="Number"/>
+			<property name="step" type="number|string"/>
+		</properties>
+	</class>
+	<class type="draggableOption">
+		<properties>
+			<property name="addClasses" type="Boolean"/>
+			<property name="appendTo" type="jQuery|+Element|+Selector|string"/>
+			<property name="axis" type="String"/>
+			<property name="cancel" type="Selector"/>
+			<property name="classes" type="Object"/>
+			<property name="connectToSortable" type="Selector"/>
+			<property name="containment" type="Selector|+Element|string|[?]"/>
+			<property name="cursor" type="String"/>
+			<property name="cursorAt" type="Object"/>
+			<property name="delay" type="Number"/>
+			<property name="distance" type="Number"/>
+			<property name="grid" type="Array&lt;Object&gt;"/>
+			<property name="handle" type="Selector|+Element"/>
+			<property name="helper" type="String"/>
+			<property name="iframeFix" type="bool|+Selector"/>
+			<property name="opacity" type="Number"/>
+			<property name="refreshPositions" type="Boolean"/>
+			<property name="revert" type="Boolean"/>
+			<property name="revertDuration" type="Number"/>
+			<property name="scope" type="String"/>
+			<property name="scroll" type="Boolean"/>
+			<property name="scrollSensitivity" type="Number"/>
+			<property name="scrollSpeed" type="Number"/>
+			<property name="snap" type="bool|+Selector"/>
+			<property name="snapMode" type="String"/>
+			<property name="snapTolerance" type="Number"/>
+			<property name="stack" type="Selector"/>
+			<property name="zIndex" type="Number"/>
+		</properties>
+	</class>
+	<class type="tabsOption">
+		<properties>
+			<property name="active" type="bool|number"/>
+			<property name="classes" type="Object"/>
+			<property name="collapsible" type="Boolean"/>
+			<property name="disabled" type="bool|[?]"/>
+			<property name="event" type="String"/>
+			<property name="heightStyle" type="String"/>
+		</properties>
+	</class>
+	<class type="menuOption">
+		<properties>
+			<property name="classes" type="Object"/>
+			<property name="icons" type="Object"/>
+			<property name="items" type="String"/>
+			<property name="menus" type="String"/>
+			<property name="position" type="Object"/>
+			<property name="role" type="String"/>
+		</properties>
+	</class>
+	<class type="resizableOption">
+		<properties>
+			<property name="alsoResize" type="Selector|+jQuery|+Element"/>
+			<property name="animate" type="Boolean"/>
+			<property name="animateDuration" type="number|string"/>
+			<property name="animateEasing" type="String"/>
+			<property name="aspectRatio" type="bool|number"/>
+			<property name="autoHide" type="Boolean"/>
+			<property name="cancel" type="Selector"/>
+			<property name="containment" type="Selector|+Element|string"/>
+			<property name="classes" type="Object"/>
+			<property name="delay" type="Number"/>
+			<property name="distance" type="Number"/>
+			<property name="ghost" type="Boolean"/>
+			<property name="grid" type="Array&lt;Object&gt;"/>
+			<property name="handles" type="string|?"/>
+			<property name="helper" type="String"/>
+			<property name="maxHeight" type="Number"/>
+			<property name="maxWidth" type="Number"/>
+			<property name="minHeight" type="Number"/>
+			<property name="minWidth" type="Number"/>
+		</properties>
+	</class>
+	<class type="buttonOption">
+		<properties>
+			<property name="classes" type="Object"/>
+			<property name="icons" type="Object"/>
+			<property name="label" type="String"/>
+			<property name="text" type="Boolean"/>
+		</properties>
+	</class>
+	<class type="progressbarOption">
+		<properties>
+			<property name="classes" type="Object"/>
+			<property name="max" type="Number"/>
+			<property name="value" type="number|bool"/>
+		</properties>
+	</class>
+	<class type="datepickerOption">
+		<properties>
+			<property name="altField" type="Selector|+jQuery|+Element"/>
+			<property name="altFormat" type="String"/>
+			<property name="appendText" type="String"/>
+			<property name="autoSize" type="Boolean"/>
+			<property name="buttonImage" type="String"/>
+			<property name="buttonImageOnly" type="Boolean"/>
+			<property name="buttonText" type="String"/>
+			<property name="changeMonth" type="Boolean"/>
+			<property name="changeYear" type="Boolean"/>
+			<property name="closeText" type="String"/>
+			<property name="constrainInput" type="Boolean"/>
+			<property name="currentText" type="String"/>
+			<property name="dateFormat" type="String"/>
+			<property name="dayNames" type="Array&lt;Object&gt;"/>
+			<property name="dayNamesMin" type="Array&lt;Object&gt;"/>
+			<property name="dayNamesShort" type="Array&lt;Object&gt;"/>
+			<property name="defaultDate" type="Date|number|string"/>
+			<property name="duration" type="number|string"/>
+			<property name="firstDay" type="Number"/>
+			<property name="gotoCurrent" type="Boolean"/>
+			<property name="hideIfNoPrevNext" type="Boolean"/>
+			<property name="isRTL" type="Boolean"/>
+			<property name="maxDate" type="Date|number|string"/>
+			<property name="minDate" type="Date|number|string"/>
+			<property name="monthNames" type="Array&lt;Object&gt;"/>
+			<property name="monthNamesShort" type="Array&lt;Object&gt;"/>
+			<property name="navigationAsDateFormat" type="Boolean"/>
+			<property name="nextText" type="String"/>
+			<property name="numberOfMonths" type="number|[?]"/>
+			<property name="prevText" type="String"/>
+			<property name="selectOtherMonths" type="Boolean"/>
+			<property name="shortYearCutoff" type="number|string"/>
+			<property name="showAnim" type="String"/>
+			<property name="showButtonPanel" type="Boolean"/>
+			<property name="showCurrentAtPos" type="Number"/>
+			<property name="showMonthAfterYear" type="Boolean"/>
+			<property name="showOn" type="String"/>
+			<property name="showOptions" type="Object"/>
+			<property name="showOtherMonths" type="Boolean"/>
+			<property name="showWeek" type="Boolean"/>
+			<property name="stepMonths" type="Number"/>
+			<property name="weekHeader" type="String"/>
+			<property name="yearRange" type="String"/>
+			<property name="yearSuffix" type="String"/>
+		</properties>
+		<methods>
+			<method name="calculateWeek" scope="static" url="null">
+				<description>A function to calculate the week of the year for a given date. The default implementation uses the ISO 8601 definition: weeks start on a Monday; the first week of the year contains the first Thursday of the year.</description>
+				<return-types/>
+			</method>
+			<method name="beforeShow" scope="static" url="null">
+				<description>A function that takes an input field and current datepicker instance and returns an options object to update the datepicker with. It is called just before the datepicker is displayed.</description>
+				<return-types/>
+			</method>
+			<method name="beforeShowDay" scope="static" url="null">
+				<description>A function that takes a date as a parameter and must return an array with:
+
+					[0]: true/false indicating whether or not this date is selectable
+					[1]: a CSS class name to add to the date's cell or "" for the default presentation
+					[2]: an optional popup tooltip for this date
+
+					The function is called for each day in the datepicker before it is displayed.</description>
+				<return-types/>
+			</method>
+			<method name="onChangeMonthYear" scope="static" url="null">
+				<description>Called when the datepicker moves to a new month and/or year. The function receives the selected year, month (1-12), and the datepicker instance as parameters. this refers to the associated input field.</description>
+				<return-types/>
+			</method>
+			<method name="onClose" scope="static" url="null">
+				<description>Called when the datepicker is closed, whether or not a date is selected. The function receives the selected date as text ("" if none) and the datepicker instance as parameters. this refers to the associated input field.</description>
+				<return-types/>
+			</method>
+			<method name="onSelect" scope="static" url="null">
+				<description>Called when the datepicker is selected. The function receives the selected date as text and the datepicker instance as parameters. this refers to the associated input field.</description>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="dialogOption">
+		<properties>
+			<property name="appendTo" type="Selector"/>
+			<property name="autoOpen" type="Boolean"/>
+			<property name="buttons" type="Object"/>
+			<property name="classes" type="Object"/>
+			<property name="closeOnEscape" type="Boolean"/>
+			<property name="closeText" type="String"/>
+			<property name="dialogClass" type="String"/>
+			<property name="draggable" type="Boolean"/>
+			<property name="height" type="number|string"/>
+			<property name="maxHeight" type="Number"/>
+			<property name="maxWidth" type="Number"/>
+			<property name="minHeight" type="Number"/>
+			<property name="minWidth" type="Number"/>
+			<property name="modal" type="Boolean"/>
+			<property name="position" type="Object"/>
+			<property name="resizable" type="Boolean"/>
+			<property name="title" type="String"/>
+			<property name="width" type="Number"/>
+		</properties>
+	</class>
+	<class type="sliderOption">
+		<properties>
+			<property name="animate" type="bool|string|number"/>
+			<property name="classes" type="Object"/>
+			<property name="max" type="Number"/>
+			<property name="min" type="Number"/>
+			<property name="orientation" type="String"/>
+			<property name="range" type="bool|string"/>
+			<property name="step" type="Number"/>
+			<property name="value" type="Number"/>
+			<property name="values" type="Array&lt;Object&gt;"/>
+		</properties>
+	</class>
+	<class type="buttonsetOption">
+		<properties>
+			<property name="items" type="Selector"/>
+		</properties>
+	</class>
+	<class type="selectmenuOption">
+		<properties>
+			<property name="appendTo" type="Selector"/>
+			<property name="classes" type="Object"/>
+			<property name="icons" type="Object"/>
+			<property name="position" type="Object"/>
+			<property name="width" type="number|bool"/>
+		</properties>
+	</class>
+	<class type="accordionOption">
+		<properties>
+			<property name="active" type="bool|number"/>
+			<property name="animate" type="bool|number|string|?"/>
+			<property name="classes" type="Object"/>
+			<property name="collapsible" type="Boolean"/>
+			<property name="event" type="String"/>
+			<property name="header" type="Selector"/>
+			<property name="heightStyle" type="String"/>
+			<property name="icons" type="Object"/>
+		</properties>
+	</class>
+	<class type="sortableOption">
+		<properties>
+			<property name="appendTo" type="jQuery|+Element|+Selector|string"/>
+			<property name="axis" type="String"/>
+			<property name="cancel" type="Selector"/>
+			<property name="classes" type="Object"/>
+			<property name="connectWith" type="Selector"/>
+			<property name="containment" type="Element|+Selector|string"/>
+			<property name="cursor" type="String"/>
+			<property name="cursorAt" type="Object"/>
+			<property name="delay" type="Number"/>
+			<property name="distance" type="Number"/>
+			<property name="dropOnEmpty" type="Boolean"/>
+			<property name="forceHelperSize" type="Boolean"/>
+			<property name="forcePlaceholderSize" type="Boolean"/>
+			<property name="grid" type="Array&lt;Object&gt;"/>
+			<property name="handle" type="Selector|+Element"/>
+			<property name="helper" type="String"/>
+			<property name="items" type="Selector"/>
+			<property name="opacity" type="Number"/>
+			<property name="placeholder" type="String"/>
+			<property name="revert" type="bool|number"/>
+			<property name="scroll" type="Boolean"/>
+			<property name="scrollSensitivity" type="Number"/>
+			<property name="scrollSpeed" type="Number"/>
+			<property name="tolerance" type="String"/>
+			<property name="zIndex" type="Number"/>
+		</properties>
+	</class>
+	<class type="mouseOption">
+		<properties>
+			<property name="cancel" type="Selector"/>
+			<property name="delay" type="Number"/>
+			<property name="distance" type="Number"/>
+		</properties>
+	</class>
+	<class type="jQuery">
+		<methods>
+			<method name="widget" scope="static" url="null">
+				<description>The name of the widget to create, including the namespace.</description>
+				<parameters>
+					<parameter name="name" type="String" usage="required"/>
+					<parameter name="base" type="Function" usage="required"/>
+					<parameter name="prototype" type="PlainObject" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="jQuery.fn">
+		<methods>
+			<method name="accordion">
+				<description>Convert a pair of headers and content panels into an accordion.</description>
+				<parameters>
+					<parameter name="options" type="accordionOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="addClass">
+				<description>Adds the specified class(es) to each of the set of matched elements while animating all style changes.</description>
+				<parameters>
+					<parameter name="className" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="autocomplete">
+				<description>Autocomplete enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.</description>
+				<parameters>
+					<parameter name="options" type="autocompleteOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="button">
+				<description>Themeable buttons.</description>
+				<parameters>
+					<parameter name="options" type="buttonOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="buttonset">
+				<description>Themeable button sets.</description>
+				<parameters>
+					<parameter name="options" type="buttonsetOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="cssClip">
+				<description>Getter/setter for an object version of the CSS clip property.</description>
+				<parameters>
+					<parameter name="dimensions" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="datepicker">
+				<description>Select a date from a popup or inline calendar</description>
+				<parameters>
+					<parameter name="options" type="datepickerOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="dialog">
+				<description>Open content in an interactive overlay.</description>
+				<parameters>
+					<parameter name="options" type="dialogOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="disableSelection">
+				<description>Disable selection of text content within the set of matched elements.</description>
+				<return-types/>
+			</method>
+			<method name="draggable">
+				<description>Allow elements to be moved using the mouse.</description>
+				<parameters>
+					<parameter name="options" type="draggableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="droppable">
+				<description>Create targets for draggable elements.</description>
+				<parameters>
+					<parameter name="options" type="droppableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="effect">
+				<description>Apply an animation effect to an element.</description>
+				<parameters>
+					<parameter name="effect" type="String" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="enableSelection">
+				<description>Enable selection of text content within the set of matched elements.</description>
+				<return-types/>
+			</method>
+			<method name="focus">
+				<description>Asynchronously set focus to an element.</description>
+				<parameters>
+					<parameter name="delay" type="Number" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="hide">
+				<description>Hide the matched elements, using custom effects.</description>
+				<parameters>
+					<parameter name="effect" type="String" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="menu">
+				<description>Themeable menu with mouse and keyboard interactions for navigation.</description>
+				<parameters>
+					<parameter name="options" type="menuOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="mouse">
+				<description>The base interaction layer.</description>
+				<parameters>
+					<parameter name="options" type="mouseOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="position">
+				<description>Position an element relative to another.</description>
+				<parameters>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="progressbar">
+				<description>Display status of a determinate or indeterminate process.</description>
+				<parameters>
+					<parameter name="options" type="progressbarOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="removeClass">
+				<description>Removes the specified class(es) from each of the set of matched elements while animating all style changes.</description>
+				<parameters>
+					<parameter name="className" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="removeUniqueId">
+				<description>Remove ids that were set by .uniqueId() for the set of matched elements.</description>
+				<return-types/>
+			</method>
+			<method name="resizable">
+				<description>Change the size of an element using the mouse.</description>
+				<parameters>
+					<parameter name="options" type="resizableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="scrollParent">
+				<description>Get the closest ancestor element that is scrollable.</description>
+				<return-types/>
+			</method>
+			<method name="selectable">
+				<description>Use the mouse to select elements, individually or in a group.</description>
+				<parameters>
+					<parameter name="options" type="selectableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="selectmenu">
+				<description>Duplicates and extends the functionality of a native HTML select element to overcome the limitations of the native control.</description>
+				<parameters>
+					<parameter name="options" type="selectmenuOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="show">
+				<description>Display the matched elements, using custom effects.</description>
+				<parameters>
+					<parameter name="effect" type="String" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="slider">
+				<description>Drag a handle to select a numeric value.</description>
+				<parameters>
+					<parameter name="options" type="sliderOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="sortable">
+				<description>Reorder elements in a list or grid using the mouse.</description>
+				<parameters>
+					<parameter name="options" type="sortableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="spinner">
+				<description>Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.</description>
+				<parameters>
+					<parameter name="options" type="spinnerOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="switchClass">
+				<description>Adds and removes the specified class(es) to each of the set of matched elements while animating all style changes.</description>
+				<parameters>
+					<parameter name="removeClassName" type="String" usage="required"/>
+					<parameter name="addClassName" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="tabs">
+				<description>A single content area with multiple panels, each associated with a header in a list.</description>
+				<parameters>
+					<parameter name="options" type="tabsOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="toggle">
+				<description>Display or hide the matched elements, using custom effects.</description>
+				<parameters>
+					<parameter name="effect" type="String" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="toggleClass">
+				<description>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument, while animating all style changes.</description>
+				<parameters>
+					<parameter name="className" type="String" usage="required"/>
+					<parameter name="switch" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="tooltip">
+				<description>Customizable, themeable tooltips, replacing native tooltips.</description>
+				<parameters>
+					<parameter name="options" type="tooltipOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="transfer">
+				<description>Transfers the outline of an element to another element</description>
+				<parameters>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="uniqueId">
+				<description>Generate and apply a unique id for the set of matched elements.</description>
+				<return-types/>
+			</method>
+			<method name="zIndex">
+				<description>Set the z-index for an element.</description>
+				<parameters>
+					<parameter name="zIndex" type="Number" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+</javascript>

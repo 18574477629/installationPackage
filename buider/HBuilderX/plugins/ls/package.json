@@ -1,0 +1,5 @@
+{
+	"name": "ls",
+  	"version": "1.0.8.2019112517",
+  	"extensionDependencies":["node"]
+}

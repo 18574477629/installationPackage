@@ -1,0 +1,18 @@
+{
+	"name": "hx-explorer-icons",
+	"id":"hx-explorer-icons",
+	"private": true,
+	"version": "1.0.0.qualifier",
+	"displayName": "HbuilderX File Icon Theme",
+	"description": "资源管理器图标",
+	"publisher": "hbuilderx",
+	"contributes": {
+		"iconThemes": [
+			{
+				"id": "hx-file-icons",
+				"label": "HBuilderX图标",
+				"path": "./icons/hx-build-in-icon-theme.json"
+			}
+		]
+	}
+}

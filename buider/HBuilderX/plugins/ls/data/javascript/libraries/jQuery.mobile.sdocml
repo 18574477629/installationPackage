@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript>
+	<class type="textinputOption">
+		<properties>
+			<property name="autogrow" type="Boolean"/>
+			<property name="keyupTimeoutBuffer" type="Number"/>
+			<property name="clearBtn" type="Boolean"/>
+			<property name="clearBtnText" type="String"/>
+			<property name="corners" type="Boolean"/>
+			<property name="preventFocusZoom" type="Boolean"/>
+			<property name="wrapperClass" type="String"/>
+		</properties>
+	</class>
+	<class type="footerOption"/>
+	<class type="tableOption">
+		<properties>
+			<property name="classes.reflowTable" type="String"/>
+			<property name="classes.cellLabels" type="String"/>
+			<property name="initSelector" type="CSS selector string"/>
+			<property name="classes.table" type="String"/>
+		</properties>
+	</class>
+	<class type="listviewOption">
+		<properties>
+			<property name="autodividers" type="Boolean"/>
+			<property name="countTheme" type="String"/>
+			<property name="dividerTheme" type="String"/>
+			<property name="filter" type="Boolean"/>
+			<property name="filterPlaceholder" type="String"/>
+			<property name="filterReveal" type="String"/>
+			<property name="filterTheme" type="String"/>
+			<property name="icon" type="String"/>
+			<property name="inset" type="Boolean"/>
+			<property name="splitIcon" type="String"/>
+			<property name="splitTheme" type="String"/>
+		</properties>
+		<methods>
+			<method name="autodividersSelector" scope="static" >
+				<description>This option is provided by the listview.autodividers extension.
+					The value of this option is a function that returns a string. It receives a jQuery collection object containing an element. It computes the returned string from the element. The function is called for each list item in sequence, and a divider is created whenever the function returns a value for a list item that is different from the value it returned for the previous list item.
+					The function may return null for a given list item. In that case, no new divider is created even if the value returned for the previous list item was something other than null.
+					The default value of this option is a function that returns the capitalized first letter of the list item text:
+
+					function defaultAutodividersSelector( elt ) {
+					// look for the text in the given element
+					var text = $.trim( elt.text() ) || null;
+
+					if ( !text ) {
+					return null;
+					}
+
+					// create the text for the divider (first uppercased letter)
+					text = text.slice( 0, 1 ).toUpperCase();
+
+					return text;
+					}</description>
+				<return-types/>
+			</method>
+			<method name="filterCallback" scope="static" >
+				<description>This option is deprecated in 1.4.0 and will be removed in 1.5.0. It is now implemented in the filterable widget.
+					The function to determine which rows to hide when the search filter textbox changes. The function accepts two arguments -- the text of the list item (or data-filtertext value if present), and the search string. Return true to hide the item, false to leave it visible.
+
+					$( document ).on( "mobileinit", function() {
+					$.mobile.listview.prototype.options.filterCallback = function( text, searchValue ) {
+					// only show items that *begin* with the search string
+					return text.toLowerCase().substring( 0, searchValue.length ) !== searchValue;
+					};
+					});</description>
+				<parameters>
+					<parameter name="event" type="Event" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="navbarOption">
+		<properties>
+			<property name="iconpos" type="String"/>
+		</properties>
+	</class>
+	<class type="buttonOption">
+		<properties>
+			<property name="corners" type="Boolean"/>
+			<property name="icon" type="String"/>
+			<property name="iconpos" type="String"/>
+			<property name="iconshadow" type="Boolean"/>
+			<property name="inline" type="Boolean"/>
+			<property name="shadow" type="Boolean"/>
+			<property name="wrapperClass" type="String"/>
+		</properties>
+	</class>
+	<class type="checkboxradioOption">
+		<properties>
+			<property name="iconpos" type="String"/>
+		</properties>
+	</class>
+	<class type="collapsibleOption">
+		<properties>
+			<property name="collapseCueText" type="String"/>
+			<property name="collapsed" type="Boolean"/>
+			<property name="collapsedIcon" type="string|bool"/>
+			<property name="corners" type="Boolean"/>
+			<property name="expandCueText" type="String"/>
+			<property name="expandedIcon" type="String"/>
+			<property name="heading" type="String"/>
+			<property name="iconpos" type="String"/>
+			<property name="inset" type="Boolean"/>
+			<property name="mini" type="Boolean"/>
+			<property name="theme" type="String"/>
+		</properties>
+	</class>
+	<class type="dialogOption">
+		<properties>
+			<property name="closeBtn" type="String"/>
+			<property name="closeBtnText" type="String"/>
+			<property name="corners" type="Boolean"/>
+			<property name="overlayTheme" type="String"/>
+		</properties>
+	</class>
+	<class type="sliderOption">
+		<properties>
+			<property name="highlight" type="Boolean"/>
+			<property name="trackTheme" type="String"/>
+		</properties>
+	</class>
+	<class type="panelOption">
+		<properties>
+			<property name="animate" type="Boolean"/>
+			<property name="classes.animate" type="String"/>
+			<property name="classes.contentFixedToolbar" type="String"/>
+			<property name="classes.contentFixedToolbarClosed" type="String"/>
+			<property name="classes.contentFixedToolbarOpen" type="String"/>
+			<property name="classes.contentWrap" type="String"/>
+			<property name="classes.contentWrapClosed" type="String"/>
+			<property name="classes.contentWrapOpen" type="String"/>
+			<property name="classes.modal" type="String"/>
+			<property name="classes.modalOpen" type="String"/>
+			<property name="classes.pagePanel" type="String"/>
+			<property name="classes.pagePanelOpen" type="String"/>
+			<property name="classes.panel" type="String"/>
+			<property name="classes.panelClosed" type="String"/>
+			<property name="classes.panelFixed" type="String"/>
+			<property name="classes.panelInner" type="String"/>
+			<property name="classes.panelOpen" type="String"/>
+			<property name="dismissible" type="Boolean"/>
+			<property name="display" type="String"/>
+			<property name="position" type="String"/>
+			<property name="positionFixed" type="Boolean"/>
+			<property name="swipeClose" type="Boolean"/>
+			<property name="theme" type="String"/>
+		</properties>
+	</class>
+	<class type="rangesliderOption">
+		<properties>
+			<property name="highlight" type="Boolean"/>
+			<property name="trackTheme" type="String"/>
+		</properties>
+	</class>
+	<class type="pageOption">
+		<properties>
+			<property name="closeBtn" type="String"/>
+			<property name="closeBtnText" type="String"/>
+			<property name="contentTheme" type="String"/>
+			<property name="corners" type="Boolean"/>
+			<property name="dialog" type="Boolean"/>
+			<property name="domCache" type="Boolean"/>
+			<property name="keepNative" type="Selector"/>
+			<property name="keepNativeDefault" type="Selector"/>
+			<property name="overlayTheme" type="String"/>
+			<property name="theme" type="String"/>
+		</properties>
+	</class>
+	<class type="collapsiblesetOption">
+		<properties>
+			<property name="collapsedIcon" type="String"/>
+			<property name="corners" type="Boolean"/>
+			<property name="expandedIcon" type="String"/>
+			<property name="iconpos" type="String"/>
+			<property name="initSelector" type="String"/>
+			<property name="inset" type="Boolean"/>
+			<property name="mini" type="Boolean"/>
+		</properties>
+	</class>
+	<class type="flipswitchOption">
+		<properties>
+			<property name="corners" type="Boolean"/>
+			<property name="offText" type="String"/>
+			<property name="onText" type="String"/>
+		</properties>
+	</class>
+	<class type="controlgroupOption">
+		<properties>
+			<property name="corners" type="Boolean"/>
+			<property name="excludeInvisible" type="Boolean"/>
+			<property name="shadow" type="Boolean"/>
+			<property name="theme" type="String"/>
+			<property name="type" type="String"/>
+		</properties>
+	</class>
+	<class type="popupOption">
+		<properties>
+			<property name="arrow" type="string|bool"/>
+			<property name="corners" type="Boolean"/>
+			<property name="dismissible" type="Boolean"/>
+			<property name="history" type="Boolean"/>
+			<property name="overlayTheme" type="String"/>
+			<property name="positionTo" type="String"/>
+			<property name="shadow" type="Boolean"/>
+			<property name="theme" type="String"/>
+			<property name="tolerance" type="String"/>
+			<property name="transition" type="String"/>
+		</properties>
+	</class>
+	<class type="fixedtoolbarOption"/>
+	<class type="loaderOption">
+		<properties>
+			<property name="html" type="String"/>
+			<property name="text" type="String"/>
+			<property name="textonly" type="Boolean"/>
+			<property name="textVisible" type="Boolean"/>
+		</properties>
+	</class>
+	<class type="filterableOption">
+		<properties>
+			<property name="children" type="String"/>
+			<property name="filterPlaceholder" type="String"/>
+			<property name="filterReveal" type="Boolean"/>
+			<property name="filterTheme" type="String"/>
+			<property name="input" type="string|+jQuery|+Element"/>
+		</properties>
+		<methods>
+			<method name="filterCallback" scope="static" >
+				<description>A function that will be called to determine whether an element in the list of children is considered to be filtered. It must return true if the element is to be filtered, and it must return false if the element is to be shown. The function is called once for each of the DOM elements and its context is set to the DOM element for which a decision is needed. Thus, the keyword this refers to the DOM element for which it must be decided whether it should be shown.
+					The default value of this attribute is a function that will examine each child for the presence of the data-filtertext attribute. If such an attribute is found, the function returns true if the string contained in the function's searchValue parameter cannot be found inside the value of the data-filtertext attribute. If no such attribute is found, the text content of the child is searched for the presence of the value of the function's searchValue parameter, and the function returns true if the search fails.
+					For backwards compatibility with the jQuery Mobile 1.3 listview filter extension, the function provided as the default value of this attribute will never hide listview dividers, however, this behavior is deprecated as of jQuery Mobile 1.4.0 and will be removed in jQuery Mobile 1.5.0.
+					You can provide a custom callback if you need to process the children in special ways.</description>
+				<parameters>
+					<parameter name="index" type="Number" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="headerOption"/>
+	<class type="selectmenuOption">
+		<properties>
+			<property name="corners" type="Boolean"/>
+			<property name="dividerTheme" type="String"/>
+			<property name="hidePlaceholderMenuItems" type="Boolean"/>
+			<property name="icon" type="String"/>
+			<property name="iconpos" type="String"/>
+			<property name="iconshadow" type="Boolean"/>
+			<property name="inline" type="Boolean"/>
+			<property name="nativeMenu" type="Boolean"/>
+			<property name="preventFocusZoom" type="Boolean"/>
+			<property name="shadow" type="Boolean"/>
+			<property name="overlayTheme" type="String"/>
+		</properties>
+	</class>
+	<class type="toolbarOption">
+		<properties>
+			<property name="addBackBtn" type="Boolean"/>
+			<property name="backBtnText" type="String"/>
+			<property name="backBtnTheme" type="String"/>
+			<property name="disablePageZoom" type="Boolean"/>
+			<property name="fullscreen" type="Boolean"/>
+			<property name="hideDuringFocus" type="String"/>
+			<property name="position" type="String"/>
+			<property name="tapToggle" type="Boolean"/>
+			<property name="tapToggleBlacklist" type="String"/>
+			<property name="trackPersistentToolbars" type="Boolean"/>
+			<property name="transition" type="String"/>
+			<property name="updatePagePadding" type="Boolean"/>
+			<property name="visibleOnPageShow" type="Boolean"/>
+		</properties>
+		<methods>
+			<method name="supportBlacklist" scope="static" >
+				<description>This option is provided by the fixedToolbar extension.
+					The value of this option is a function that will return true on platforms where  widgets should not be displayed as fixed.
+					The default value of this option is a function that returns true whenever the value of $.support.fixedPosition is false.</description>
+				<parameters>
+					<parameter name="tbPage" type="jQuery" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="table-columntoggleOption">
+		<properties>
+			<property name="columnBtnTheme" type="String"/>
+			<property name="columnBtnText" type="String"/>
+			<property name="columnPopupTheme" type="String"/>
+			<property name="classes.columnToggleTable" type="String"/>
+			<property name="classes.columnBtn" type="String"/>
+			<property name="classes.popup" type="String"/>
+			<property name="classes.priorityPrefix" type="String"/>
+		</properties>
+	</class>
+	<class type="pagecontainerOption">
+		<properties>
+			<property name="theme" type="String"/>
+		</properties>
+	</class>
+	<class type="jQuery"/>
+	<class type="jQuery.mobile">
+		<methods>
+			<method name="changePage" scope="static" >
+				<description>Programmatically change from one page to another.
+
+					Note:  is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the pagecontainer widget's change() method instead.</description>
+				<parameters>
+					<parameter name="to" type="string|?" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="degradeInputsWithin" scope="static" >
+				<description>Alter the input type of form widgets.</description>
+				<parameters>
+					<parameter name="target" type="Element" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="getDocumentBase" scope="static" >
+				<description>Utility method for retrieving the original document base URL.
+
+					Note:  is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the jQuery.mobile.path.getDocumentBase() method instead.</description>
+				<parameters>
+					<parameter name="asParsedObject" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="getDocumentUrl" scope="static" >
+				<description>Retrieve the URL of the original document.
+
+					Note:  is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the jQuery.mobile.path.getDocumentUrl() method instead.</description>
+				<parameters>
+					<parameter name="asParsedObject" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="getInheritedTheme" scope="static" >
+				<description>Retrieves the theme of the nearest parent that has a theme assigned.</description>
+				<parameters>
+					<parameter name="el" type="jQuery" usage="required"/>
+					<parameter name="defaultTheme" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="loadPage" scope="static" >
+				<description>Load an external page, enhance its content, and insert it into the DOM.
+
+					Note:  is deprecated as of jQuery Mobile 1.4.0 and will be removed in 1.5.0. Use the pagecontainer widget's load() method instead.</description>
+				<parameters>
+					<parameter name="url" type="string|?" usage="required"/>
+					<parameter name="options" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="navigate" scope="static" >
+				<description>Alter the url and track history. Works for browsers with and without the new history API.</description>
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+					<parameter name="data" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="silentScroll" scope="static" >
+				<description>Scroll to a particular Y position without triggering scroll event listeners.</description>
+				<parameters>
+					<parameter name="yPos" type="Number" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="jQuery.mobile.path">
+		<methods>
+			<method name="get" scope="static" >
+				<description>Utility method for determining the directory portion of an URL.</description>
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="getDocumentBase" scope="static" >
+				<description>Utility method for retrieving the original document base URL.</description>
+				<parameters>
+					<parameter name="asParsedObject" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="getDocumentUrl" scope="static" >
+				<description>Utility method for retrieving the URL of the original document.</description>
+				<parameters>
+					<parameter name="asParsedObject" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="getLocation" scope="static" >
+				<description>Utility method for safely retrieving the current location.</description>
+				<return-types/>
+			</method>
+			<method name="isAbsoluteUrl" scope="static" >
+				<description>Utility method for determining if a URL is absolute.</description>
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="isRelativeUrl" scope="static" >
+				<description>Utility method for determining if a URL is a relative variant.</description>
+				<parameters>
+					<parameter name="url" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="isSameDomain" scope="static" >
+				<description>Utility method for determining if a URL has the same domain.</description>
+				<parameters>
+					<parameter name="absUrl1" type="String" usage="required"/>
+					<parameter name="absUrl2" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="makePathAbsolute" scope="static" >
+				<description>Utility method for converting a relative file or directory path into an absolute path.</description>
+				<parameters>
+					<parameter name="relPath" type="String" usage="required"/>
+					<parameter name="absPath" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="makeUrlAbsolute" scope="static" >
+				<description>Utility method for converting a relative URL to an absolute URL.</description>
+				<parameters>
+					<parameter name="relUrl" type="String" usage="required"/>
+					<parameter name="absUrl" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="parseLocation" scope="static" >
+				<description>Utility method for retrieving the current location as a parsed object.</description>
+				<return-types/>
+			</method>
+			<method name="parseUrl" scope="static" >
+				<description>Utility method for parsing a URL and its relative variants into an object that makes accessing the components of the URL easy.</description>
+				<parameters>
+					<parameter name="Url" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="jQuery">
+		<methods>
+			<method name="button"  >
+				<description>Creates a button widget</description>
+				<parameters>
+					<parameter name="options" type="buttonOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="buttonMarkup"  >
+				<description>Adds button styling to an element</description>
+				<parameters>
+					<parameter name="options" type="Object" usage="required"/>
+					<parameter name="overwriteClasses" type="Boolean" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="checkboxradio"  >
+				<description>Creates a checkboxradio widget</description>
+				<parameters>
+					<parameter name="options" type="checkboxradioOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="collapsible"  >
+				<description>Creates a collapsible block of content</description>
+				<parameters>
+					<parameter name="options" type="collapsibleOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="collapsibleset"  >
+				<description>Creates a set of collapsible blocks of content</description>
+				<parameters>
+					<parameter name="options" type="collapsiblesetOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="controlgroup"  >
+				<description>Groups buttons together.</description>
+				<parameters>
+					<parameter name="options" type="controlgroupOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="dialog"  >
+				<description>Opens content in an interactive overlay.</description>
+				<parameters>
+					<parameter name="options" type="dialogOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="enhanceWithin"  >
+				<description>Enhance all the children of all elements in the set of matched elements.</description>
+				<return-types/>
+			</method>
+			<method name="fieldcontain"  >
+				<description>Adds field container styling to an element</description>
+				<return-types/>
+			</method>
+			<method name="filterable"  >
+				<description>Makes the children of an element filterable.</description>
+				<parameters>
+					<parameter name="options" type="filterableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="fixedtoolbar"  >
+				<description>See Toolbar Widget</description>
+				<parameters>
+					<parameter name="options" type="fixedtoolbarOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="flipswitch"  >
+				<description>Creates a  widget</description>
+				<parameters>
+					<parameter name="options" type="flipswitchOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="footer"  >
+				<description>See Toolbar Widget</description>
+				<parameters>
+					<parameter name="options" type="footerOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="header"  >
+				<description>See Toolbar Widget</description>
+				<parameters>
+					<parameter name="options" type="headerOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="jqmData"  >
+				<description>Store arbitrary data associated with the specified element. Returns the value that was set.</description>
+				<return-types/>
+			</method>
+			<method name="jqmEnhanceable"  >
+				<description>Filter method to respect data-enhance=false parent elements during manual enhancement.</description>
+				<return-types/>
+			</method>
+			<method name="jqmHijackable"  >
+				<description>For users that wish to respect data-ajax=false parent elements during custom form and link binding jQuery Mobile provides the $.fn.jqmHijackable filter method.</description>
+				<return-types/>
+			</method>
+			<method name="jqmRemoveData"  >
+				<description>Remove a previously-stored piece of data.</description>
+				<return-types/>
+			</method>
+			<method name="listview"  >
+				<description>Creates a listview widget</description>
+				<parameters>
+					<parameter name="options" type="listviewOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="loader"  >
+				<description>Handles the task of displaying the loading dialog when jQuery Mobile pulls in content via Ajax.</description>
+				<parameters>
+					<parameter name="options" type="loaderOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="navbar"  >
+				<description>Creates a navbar widget</description>
+				<parameters>
+					<parameter name="options" type="navbarOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="page"  >
+				<description>Primary unit of content.</description>
+				<parameters>
+					<parameter name="options" type="pageOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="pagecontainer"  >
+				<description>Manages a collection of pages.</description>
+				<parameters>
+					<parameter name="options" type="pagecontainerOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="panel"  >
+				<description>Creates a panel widget</description>
+				<parameters>
+					<parameter name="options" type="panelOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="popup"  >
+				<description>Opens content in a popup.</description>
+				<parameters>
+					<parameter name="options" type="popupOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="rangeslider"  >
+				<description>Creates a rangeslider widget</description>
+				<parameters>
+					<parameter name="options" type="rangesliderOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="selectmenu"  >
+				<description>Creates a select menu widget</description>
+				<parameters>
+					<parameter name="options" type="selectmenuOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="slider"  >
+				<description>Creates a slider widget</description>
+				<parameters>
+					<parameter name="options" type="sliderOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="table-columntoggle"  >
+				<description>Creates a responsive table in column toggle mode</description>
+				<parameters>
+					<parameter name="options" type="table_columntoggleOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="table"  >
+				<description>Creates a responsive table</description>
+				<parameters>
+					<parameter name="options" type="tableOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="textinput"  >
+				<description>Creates a  widget for textinput, textarea or search input</description>
+				<parameters>
+					<parameter name="options" type="textinputOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="toolbar"  >
+				<description>Adds toolbars to the top and/or bottom of the page.</description>
+				<parameters>
+					<parameter name="options" type="toolbarOption" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+</javascript>

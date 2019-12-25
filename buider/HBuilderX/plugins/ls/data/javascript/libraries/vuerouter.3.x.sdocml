@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript website="https://router.vuejs.org/zh/">
+    <class type="router.exports" superclass="None">
+        <methods/>
+        <properties>
+            <property name="VueRouter" type="VueRouter" scope="static">
+                <description></description>
+            </property>
+            <property name="RouterOptions" type="RouterOptions" scope="static">
+                <description></description>
+            </property>
+            <property name="PathToRegexpOptions" type="PathToRegexpOptions" scope="static">
+                <description></description>
+            </property>
+            <property name="RouteConfig" type="RouteConfig" scope="static">
+                <description></description>
+            </property>
+            <property name="RouteRecord" type="RouteRecord" scope="static">
+                <description></description>
+            </property>
+            <property name="Location" type="Location" scope="static">
+                <description></description>
+            </property>
+            <property name="Route" type="Route" scope="static">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="VueRouter" superclass="None">
+        <constructors>
+            <constructor>
+                <parameters>
+                    <parameter name="options" type="RouterOptions" />
+                </parameters>
+                <return-types>
+                    <return-type type="VueRouter"/>
+                </return-types>
+            </constructor>
+        </constructors>
+        <properties>
+            <property name="app" type="Vue" url="api/#router-app">
+                <description>
+                    <![CDATA[
+                        配置了router的Vue根实例。
+                    ]]>
+                </description>
+            </property>
+            <property name="mode" type="String" url="api/#router-mode">
+                <description>
+                    <![CDATA[
+                        路由使用的模式。
+                    ]]>
+                </description>
+                <values>
+                  <value name="hash" description="使用 URL hash 值来作路由。支持所有浏览器，包括不支持 HTML5 History Api 的浏览器。" />
+                  <value name="history" description="依赖 HTML5 History API 和服务器配置。" />
+                  <value name="abstract" description="支持所有 JavaScript 运行环境，如 Node.js 服务器端。如果发现没有浏览器的 API，路由会自动强制进入这个模式。" />
+                </values>
+            </property>
+            <property name="currentRoute" type="Route" url="api/#router-currentroute">
+                <description>
+                    <![CDATA[
+                        当前路由对应的路由信息对象。
+                    ]]>
+                </description>
+            </property>
+            <property name="$route" type="Route">
+                <description>
+                    <![CDATA[
+                        当前路由对应的路由信息对象。
+                    ]]>
+                </description>
+            </property>
+        </properties>
+        <methods>
+            <method name="beforeEach" url="api/#router-beforeeach">
+                <parameters>
+                    <parameter name="guard" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        注册一个全局前置守卫。
+                    ]]>
+                </description>
+            </method>
+            <method name="beforeResolve" url="api/#router-beforeresolve">
+                <parameters>
+                    <parameter name="guard" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        注册一个全局解析守卫。
+                    ]]>
+                </description>
+            </method>
+            <method name="afterEach">
+                <parameters>
+                    <parameter name="hook" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        注册一个全局后置钩子。
+                    ]]>
+                </description>
+            </method>
+            <method name="push">
+                <parameters>
+                    <parameter name="location" type="String|Location"/>
+                    <parameter name="onComplete" type="Function"/>
+                    <parameter name="onAbort" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        导航到URL, 此方法会向history栈添加一个新的记录。
+                    ]]>
+                </description>
+            </method>
+            <method name="replace">
+                <parameters>
+                    <parameter name="location" type="String|Location"/>
+                    <parameter name="onComplete" type="Function"/>
+                    <parameter name="onAbort" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        替换掉当前的 history 记录,它不会向 history 添加新记录。
+                    ]]>
+                </description>
+            </method>
+            <method name="go">
+                <parameters>
+                    <parameter name="n" type="Number"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        在history记录中前进或后退多少步,类似window.history.go(n)。
+                    ]]>
+                </description>
+            </method>
+            <method name="back">
+                <parameters/>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        在history记录中后退一步。
+                    ]]>
+                </description>
+            </method>
+            <method name="forward">
+                <parameters/>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        在history记录中前进一步。
+                    ]]>
+                </description>
+            </method>
+            <method name="getMatchedComponents">
+                <parameters>
+                    <parameter name="to" type="String|Location|Route"/>
+                </parameters>
+                <return-types>
+                    <return-type type="Array&lt;any&gt;"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        返回目标位置或是当前路由匹配的组件数组 (是数组的定义/构造类，不是实例)。通常在服务端渲染的数据预加载时使用。
+                    ]]>
+                </description>
+            </method>
+            <method name="onReady">
+                <parameters>
+                    <parameter name="cb" type="Function"/>
+                    <parameter name="errorCb" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        在路由完成初始导航时调用。
+                    ]]>
+                </description>
+            </method>
+            <method name="onError">
+                <parameters>
+                    <parameter name="cb" type="Function"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        在路由导航过程中出错时被调用。
+                    ]]>
+                </description>
+            </method>
+            <method name="addRoutes">
+                <parameters>
+                    <parameter name="routes" type="Array&lt;RouteConfig&gt;"/>
+                </parameters>
+                <return-types>
+                    <return-type type="void"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        动态添加路由规则。
+                    ]]>
+                </description>
+            </method>
+            <method name="resolve">
+                <parameters>
+                    <parameter name="location" type="String|Location"/>
+                    <parameter name="current" type="Route"/>
+                    <parameter name="append" type="Boolean"/>
+                </parameters>
+                <return-types>
+                    <return-type type="Object"/>
+                </return-types>
+                <description>
+                    <![CDATA[
+                        解析目标位置。
+                    ]]>
+                </description>
+            </method>
+        </methods>
+    </class>
+    <class type="RouterOptions" superclass="None">
+        <methods/>
+        <properties>
+            <property name="routes" type="Array&lt;RouteConfig&gt;">
+                <description>
+                </description>
+            </property>
+            <property name="mode" type="String">
+                <description>
+                    <![CDATA[
+                        路由模式。
+                    ]]>
+                </description>
+            </property>
+            <property name="fallback" type="Boolean">
+                <description>
+                    <![CDATA[
+                        当浏览器不支持 history.pushState 控制路由是否应该回退到 hash 模式。默认值为 true。
+                    
+                        在 IE9 中，设置为 false 会使得每个 router-link 导航都触发整页刷新。它可用于工作在 IE9 下的服务端渲染应用，因为一个 hash 模式的 URL 并不支持服务端渲染。
+                    ]]>
+                </description>
+            </property>
+            <property name="base" type="String">
+                <description>
+                    <![CDATA[
+                        应用的基路径。
+                    ]]>
+                </description>
+            </property>
+            <property name="linkActiveClass" type="String" url="api/#router-link">
+                <description>
+                    <![CDATA[
+                        全局配置 <router-link> 的默认“激活 class 类名”。
+                    ]]>
+                </description>
+            </property>
+            <property name="linkExactActiveClass" type="String" url="api/#router-link">
+                <description>
+                    <![CDATA[
+                        全局配置 <router-link> 精确激活的默认的 class。
+                    ]]>
+                </description>
+            </property>
+            <property name="parseQuery" type="Function">
+                <description>
+                    <![CDATA[
+                        提供自定义查询字符串的解析/反解析函数。覆盖默认行为。
+                    ]]>
+                </description>
+            </property>
+            <property name="stringifyQuery" type="Function">
+                <description>
+                </description>
+            </property>
+            <property name="scrollBehavior" type="Function" url="https://router.vuejs.org/zh/guide/advanced/scroll-behavior.html#%E5%BC%82%E6%AD%A5%E6%BB%9A%E5%8A%A8">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="PathToRegexpOptions" superclass="None">
+        <methods/>
+        <properties>
+            <property name="sensitive" type="Boolean">
+                <description></description>
+            </property>
+            <property name="strict" type="Boolean">
+                <description></description>
+            </property>
+            <property name="end" type="Boolean">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="ComponentOptions.model">
+        <properties>
+            <property name="prop" type="String" url="api/#model">
+            </property>
+            <property name="event" type="String" url="api/#model">
+            </property>
+        </properties>
+    </class>
+    <class type="ComponentOptions">
+        <properties>
+            <property name="data" type="Object|Function"  url="api/#data">
+                <description>
+                    <![CDATA[
+                        Vue 实例的数据对象。
+                    ]]>
+                </description>
+                <example>
+<![CDATA[
+<pre>
+var data = { a: 1 }
+
+// 直接创建一个实例
+var vm = new Vue({
+  data: data
+})
+vm.a // => 1
+vm.$data === data // => true
+
+// Vue.extend() 中 data 必须是函数
+var Component = Vue.extend({
+  data: function () {
+    return { a: 1 }
+  }
+})
+</pre>
+]]>
+                </example>
+            </property>
+            <property name="props" type="String[]|Object" url="api/#props">
+                <description>
+                    <![CDATA[
+                        props 可以是数组或对象，用于接收来自父组件的数据。props 可以是简单的数组，或者使用对象作为替代，对象允许配置高级选项，如类型检测、自定义校验和设置默认值。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+// 简单语法
+Vue.component('props-demo-simple', {
+  props: ['size', 'myMessage']
+})
+
+// 对象语法，提供校验
+Vue.component('props-demo-advanced', {
+  props: {
+    // 检测类型
+    height: Number,
+    // 检测类型 + 其他验证
+    age: {
+      type: Number,
+      default: 0,
+      required: true,
+      validator: function (value) {
+        return value >= 0
+      }
+    }
+  }
+})
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="propsData" type="Object" url="api/#propsData">
+                <description>
+                    <![CDATA[
+                        创建实例时传递 props。主要作用是方便测试。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+var Comp = Vue.extend({
+  props: ['msg'],
+  template: '<div>{{ msg }}</div>'
+})
+
+var vm = new Comp({
+  propsData: {
+    msg: 'hello'
+  }
+})
+</pre>
+                    ]]>
+                </example>
+            </property> 
+            <property name="computed" type="Object" url="api/#computed">
+                <description>
+                    <![CDATA[
+                        计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的 this 上下文自动地绑定为 Vue 实例。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+var vm = new Vue({
+  data: { a: 1 },
+  computed: {
+    // 仅读取
+    aDouble: function () {
+      return this.a * 2
+    },
+    // 读取和设置
+    aPlus: {
+      get: function () {
+        return this.a + 1
+      },
+      set: function (v) {
+        this.a = v - 1
+      }
+    }
+  }
+})
+vm.aPlus   // => 2
+vm.aPlus = 3
+vm.a       // => 2
+vm.aDouble // => 4
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="methods" type="Object" url="api/#methods">
+                <description>
+                    <![CDATA[
+                        methods 将被混入到 Vue 实例中。可以直接通过 VM 实例访问这些方法，或者在指令表达式中使用。方法中的 this 自动绑定为 Vue 实例。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        注意，不应该使用箭头函数来定义 method 函数 (例如 plus: () => this.a++)。理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，this.a 将是 undefined。
+                    ]]>
+                </remarks>
+                <example>
+                    <![CDATA[
+<pre>
+var vm = new Vue({
+  data: { a: 1 },
+  methods: {
+    plus: function () {
+      this.a++
+    }
+  }
+})
+vm.plus()
+vm.a // 2
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="watch" type="Object" url="api/#watch">
+                <description>
+                    <![CDATA[
+                        一个对象，键是需要观察的表达式，值是对应回调函数。值也可以是方法名，或者包含选项的对象。Vue 实例将会在实例化时调用 $watch()，遍历 watch 对象的每一个属性。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        注意，不应该使用箭头函数来定义 watcher 函数 (例如 searchQuery: newValue => this.updateAutocomplete(newValue))。理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，this.updateAutocomplete 将是 undefined。
+                    ]]>
+                </remarks>
+                <example>
+<![CDATA[
+<pre>
+var vm = new Vue({
+  data: {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: {
+      f: {
+        g: 5
+      }
+    }
+  },
+  watch: {
+    a: function (val, oldVal) {
+      console.log('new: %s, old: %s', val, oldVal)
+    },
+    // 方法名
+    b: 'someMethod',
+    // 深度 watcher
+    c: {
+      handler: function (val, oldVal) { /* ... */ },
+      deep: true
+    },
+    // 该回调将会在侦听开始之后被立即调用
+    d: {
+      handler: function (val, oldVal) { /* ... */ },
+      immediate: true
+    },
+    e: [
+      function handle1 (val, oldVal) { /* ... */ },
+      function handle2 (val, oldVal) { /* ... */ }
+    ],
+    // watch vm.e.f's value: {g: 5}
+    'e.f': function (val, oldVal) { /* ... */ }
+  }
+})
+vm.a = 2 // => new: 2, old: 1
+</pre>
+]]>
+                </example>
+            </property>
+            <property name="el" type="Element|SelectorString|String" url="api/#el">
+                <description>
+                    <![CDATA[
+                        提供一个在页面上已存在的 DOM 元素作为 Vue 实例的挂载目标。可以是 CSS 选择器，也可以是一个 HTMLElement 实例。
+                    ]]>
+                </description>
+            </property>
+            <property name="template" type="HTMLString" url="api/#template">
+                <description>
+                    <![CDATA[
+                        一个字符串模板作为 Vue 实例的标识使用。模板将会 替换 挂载的元素。挂载元素的内容都将被忽略，除非模板的内容有分发插槽。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        如果 Vue 选项中包含渲染函数，该模板将被忽略。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="renderError" type="Function(Function)" url="api/#renderError">
+                <description>
+                    <![CDATA[
+                        <b>2.2.0 新增。只在开发者环境下工作。</b>当 render 函数遭遇错误时，提供另外一种渲染输出。其错误将会作为第二个参数传递到 renderError。这个功能配合 hot-reload 非常实用。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+new Vue({
+  render (h) {
+    throw new Error('oops')
+  },
+  renderError (h, err) {
+    return h('pre', { style: { color: 'red' }}, err.stack)
+  }
+}).$mount('#app')
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="render" type="Function(Function)" url="api/#render">
+                <description>
+                    <![CDATA[
+                        字符串模板的代替方案，允许你发挥 JavaScript 最大的编程能力。该渲染函数接收一个 createElement 方法作为第一个参数用来创建 VNode。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        Vue 选项中的 render 函数若存在，则 Vue 构造函数不会从 template 选项或通过 el 选项指定的挂载元素中提取出的 HTML 模板编译渲染函数。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="staticRenderFns" type="Array&lt;Function&gt;">
+            </property>
+            <property name="beforeCreate" type="Function" url="api/#beforeCreate">
+                <description>
+                    <![CDATA[
+                        在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
+                    ]]>
+                </description>
+            </property>
+            <property name="created" type="Function" url="api/#created">
+                <description>
+                    <![CDATA[
+                        在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。
+                    ]]>
+                </description>
+            </property>
+            <property name="beforeDestroy" type="Function" url="api/#beforeDestroy">
+                <description>
+                    <![CDATA[
+                        实例销毁之前调用。在这一步，实例仍然完全可用。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="destroyed" type="Function" url="api/#destroyed">
+                <description>
+                    <![CDATA[
+                        Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="beforeMount" type="Function" url="api/#beforeMount">
+                <description>
+                    <![CDATA[
+                        在挂载开始之前被调用：相关的 render 函数首次被调用。该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </description>
+            </property>
+            <property name="mounted" type="Function" url="api/#mounted">
+                <description>
+                    <![CDATA[
+                        el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </remarks>
+                <example>
+                    <![CDATA[
+<pre>
+<b>注意</b> mounted 不会承诺所有的子组件也都一起被挂载。
+如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：
+
+    mounted: function () {
+      this.$nextTick(function () {
+        // Code that will run only after the
+        // entire view has been rendered
+      })
+    }
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="beforeUpdate" type="Function" url="api/#beforeUpdate">
+                <description>
+                    <![CDATA[
+                        数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用，因为只有初次渲染会在服务端进行。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="updated" type="Function" url="api/#updated">
+                <description>
+                    <![CDATA[
+                        由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="activated" type="Function" url="api/#activated">
+                <description>
+                    <![CDATA[
+                        keep-alive 组件激活时调用。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="deactivated" type="Function" url="api/#deactivated">
+                <description>
+                    <![CDATA[
+                        keep-alive 组件停用时调用。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        该钩子在服务器端渲染期间不被调用。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="errorCaptured" type="Function(Error,Vue,String)" url="api/#errorCaptured">
+                <description>
+                    <![CDATA[
+                        <b>2.5.0+ 新增</b>当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返回 false 以阻止该错误继续向上传播。
+                    ]]>
+                </description>
+            </property>
+            <property name="directives" type="Object" url="api/#directives">
+                <description>
+                    <![CDATA[
+                        包含 Vue 实例可用指令的哈希表。
+                    ]]>
+                </description>
+            </property>
+            <property name="components" type="Map&lt;String,ComponentOptions&gt;" url="api/#components">
+                <description>
+                    <![CDATA[
+                        包含 Vue 实例可用组件的哈希表。
+                    ]]>
+                </description>
+            </property>
+            <property name="transitions" type="Object">
+            </property>
+            <property name="filters" type="Object" url="api/#filters">
+                <description>
+                    <![CDATA[
+                        包含 Vue 实例可用过滤器的哈希表。
+                    ]]>
+                </description>
+            </property>
+            <property name="provide" type="Object" url="api/#provide-inject">
+                <description>
+                    <![CDATA[
+                        需要和inject一起使用
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        provide 和 inject 主要为高阶插件/组件库提供用例。并不推荐直接用于应用程序代码中。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="inject" type="Object" url="api/#provide-inject">
+                <description>
+                    <![CDATA[
+                        需要和provide一起使用
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        provide 和 inject 主要为高阶插件/组件库提供用例。并不推荐直接用于应用程序代码中。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="model" type="ComponentOptions.model" url="api/#model">
+                <description>
+                    <![CDATA[
+                        允许一个自定义组件在使用 v-model 时定制 prop 和 event。默认情况下，一个组件上的 v-model 会把 value 用作 prop 且把 input 用作 event，但是一些输入类型比如单选框和复选框按钮可能想使用 value prop 来达到不同的目的。使用 model 选项可以回避这些情况产生的冲突。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+Vue.component('my-checkbox', {
+  model: {
+    prop: 'checked',
+    event: 'change'
+  },
+  props: {
+    // this allows using the `value` prop for a different purpose
+    value: String,
+    // use `checked` as the prop which take the place of `value`
+    checked: {
+      type: Number,
+      default: 0
+    }
+  },
+  // ...
+})
+</pre>
+<pre>
+<my-checkbox v-model="foo" value="some value"></my-checkbox>
+</pre>
+<pre>
+上述代码相当于：
+<my-checkbox
+  :checked="foo"
+  @change="val => { foo = val }"
+  value="some value">
+</my-checkbox>
+</pre>
+
+                    ]]>
+                </example>
+            </property>
+            <property name="parent" type="Vue" url="api/#parent">
+                <description>
+                    <![CDATA[
+                        指定已创建的实例之父实例，在两者之间建立父子关系。子实例可以用 this.$parent 访问父实例，子实例被推入父实例的 $children 数组中。
+                    ]]>
+                </description>
+                <remarks>
+                    节制地使用 $parent 和 $children - 它们的主要目的是作为访问组件的应急方法。更推荐用 props 和 events 实现父子组件通信
+                </remarks>
+            </property>
+            <property name="mixins" type="ComponentOptions" url="api/#mixins">
+                <description>
+                    <![CDATA[
+                        mixins 选项接受一个混入对象的数组。这些混入实例对象可以像正常的实例对象一样包含选项，他们将在 Vue.extend() 里最终选择使用相同的选项合并逻辑合并。举例：如果你的混入包含一个钩子而创建组件本身也有一个，两个函数将被调用。
+Mixin 钩子按照传入顺序依次调用，并在调用组件自身的钩子之前被调用。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+var mixin = {
+  created: function () { console.log(1) }
+}
+var vm = new Vue({
+  created: function () { console.log(2) },
+  mixins: [mixin]
+})
+// => 1
+// => 2
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="name" type="String" url="api/#name">
+                <description>
+                    <![CDATA[
+                        允许组件模板递归地调用自身。注意，组件在全局用 Vue.component() 注册时，全局 ID 自动作为组件的 name。
+
+指定 name 选项的另一个好处是便于调试。有名字的组件有更友好的警告信息。另外，当在有 vue-devtools，未命名组件将显示成 <AnonymousComponent>，这很没有语义。通过提供 name 选项，可以获得更有语义信息的组件树。
+                    ]]>
+                </description>
+            </property>
+            <property name="extends" type="Object" url="api/#extends">
+                <description>
+                    <![CDATA[
+                        允许声明扩展另一个组件(可以是一个简单的选项对象或构造函数)，而无需使用 Vue.extend。这主要是为了便于扩展单文件组件。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+var CompA = { ... }
+
+// 在没有调用 `Vue.extend` 时候继承 CompA
+var CompB = {
+  extends: CompA,
+  ...
+}
+</pre>
+                    ]]>
+                </example>
+            </property>
+            <property name="delimiters" type="String[]" url="api/#delimiters">
+                <description>
+                    <![CDATA[
+                        改变纯文本插入分隔符。
+                    ]]>
+                </description>
+                <example>
+                    <![CDATA[
+<pre>
+new Vue({
+  delimiters: ['${', '}']
+})
+
+// 分隔符变成了 ES6 模板字符串的风格
+</pre>  
+                    ]]>
+                </example>
+            </property>
+            <property name="functional" type="Boolean" url="api/#functional">
+                <description>
+                    <![CDATA[
+                        使组件无状态 (没有 data ) 和无实例 (没有 this 上下文)。他们用一个简单的 render 函数返回虚拟节点使他们更容易渲染。
+                    ]]>
+                </description>
+            </property>
+            <property name="inheritAttrs" type="Boolean" url="api/#inheritAttrs">
+                <description>
+                    <![CDATA[
+                        默认情况下父作用域的不被认作 props 的特性绑定 (attribute bindings) 将会“回退”且作为普通的 HTML 特性应用在子组件的根元素上。当撰写包裹一个目标元素或另一个组件的组件时，这可能不会总是符合预期行为。通过设置 inheritAttrs 到 false，这些默认行为将会被去掉。而通过 (同样是 2.4 新增的) 实例属性 $attrs 可以让这些特性生效，且可以通过 v-bind 显性的绑定到非根元素上。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        这个选项不影响 class 和 style 绑定。
+                    ]]>
+                </remarks>
+            </property>
+            <property name="comments" type="Boolean" url="api/#comments">
+                <description>
+                    <![CDATA[
+                        当设为 true 时，将会保留且渲染模板中的 HTML 注释。默认行为是舍弃它们。
+                    ]]>
+                </description>
+                <remarks>
+                    <![CDATA[
+                        这个选项只在完整构建版本中的浏览器内编译时可用。
+                    ]]>
+                </remarks>
+            </property>
+        </properties>
+    </class>
+    <class type="RouteConfig" superclass="None">
+        <methods/>
+        <properties>
+            <property name="path" type="String">
+                <description></description>
+            </property>
+            <property name="name" type="String">
+                <description></description>
+            </property>
+            <property name="component" type="ComponentOptions">
+                <description></description>
+            </property>
+            <property name="components" type="Dictionary">
+                <description></description>
+            </property>
+            <property name="redirect" type="String|Location">
+                <description></description>
+            </property>
+            <property name="alias" type="String|Array&lt;String&gt;">
+                <description></description>
+            </property>
+            <property name="children" type="Array&lt;RouteConfig&gt;">
+                <description></description>
+            </property>
+            <property name="meta" type="any">
+                <description></description>
+            </property>
+            <property name="beforeEnter" type="Function">
+                <description></description>
+            </property>
+            <property name="props" type="Boolean|Object|Function">
+                <description></description>
+            </property>
+            <property name="caseSensitive" type="Boolean">
+                <description></description>
+            </property>
+            <property name="pathToRegexpOptions" type="PathToRegexpOptions">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="RouteRegExp" superclass="RegExp">
+        <properties>
+            <property name="keys" type="Array&lt;Object&gt;">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="RouteRecord" superclass="None">
+        <methods/>
+        <properties>
+            <property name="path" type="String">
+                <description></description>
+            </property>
+            <property name="regex" type="RouteRegExp">
+                <description></description>
+            </property>
+            <property name="components" type="Dictionary">
+                <description></description>
+            </property>
+            <property name="instances" type="Dictionary">
+                <description></description>
+            </property>
+            <property name="name" type="String">
+                <description></description>
+            </property>
+            <property name="parent" type="RouteRecord">
+                <description></description>
+            </property>
+            <property name="redirect" type="String|Location">
+                <description></description>
+            </property>
+            <property name="matchAs" type="String">
+                <description></description>
+            </property>
+            <property name="meta" type="any">
+                <description></description>
+            </property>
+            <property name="beforeEnter" type="Function">
+                <description></description>
+            </property>
+            <property name="props" type="Boolean|Object|Function|Dictionary">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="Location" superclass="None">
+        <methods/>
+        <properties>
+            <property name="name" type="String">
+                <description></description>
+            </property>
+            <property name="path" type="String">
+                <description></description>
+            </property>
+            <property name="hash" type="String">
+                <description></description>
+            </property>
+            <property name="query" type="Dictionary">
+                <description></description>
+            </property>
+            <property name="params" type="Dictionary">
+                <description></description>
+            </property>
+            <property name="append" type="Boolean">
+                <description></description>
+            </property>
+            <property name="replace" type="Boolean">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="Route" superclass="None">
+        <methods/>
+        <properties>
+            <property name="path" type="String">
+                <description>
+                    <![CDATA[
+                        当前路由的路径。
+                    ]]>
+                </description>
+            </property>
+            <property name="name" type="String">
+                <description>
+                    <![CDATA[
+                        当前路由的名称。
+                    ]]>
+                </description>
+            </property>
+            <property name="hash" type="String">
+                <description>
+                    <![CDATA[
+                        当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。 
+                    ]]>
+                </description>
+            </property>
+            <property name="query" type="Dictionary">
+                <description>
+                    <![CDATA[
+                        URL 查询参数。
+                    ]]>
+                </description>
+            </property>
+            <property name="params" type="Dictionary">
+                <description>
+                    <![CDATA[
+                        一个 key/value 对象，包含了动态片段和全匹配片段，如果没有路由参数，就是一个空对象。
+                    ]]>
+                </description>
+            </property>
+            <property name="fullPath" type="String">
+                <description>
+                    <![CDATA[
+                       完成解析后的 URL，包含查询参数和 hash 的完整路径。 
+                    ]]>
+                    完成解析后的 URL，包含查询参数和 hash 的完整路径。
+                </description>
+            </property>
+            <property name="matched" type="Array&lt;RouteRecord&gt;">
+                <description>
+                    <![CDATA[
+                        一个数组，包含当前路由的所有嵌套路径片段的路由记录 。
+                    ]]>
+                </description>
+            </property>
+            <property name="redirectedFrom" type="String" url="https://router.vuejs.org/zh/guide/essentials/redirect-and-alias.html#%E9%87%8D%E5%AE%9A%E5%90%91">
+                <description>
+                    <![CDATA[
+                        如果存在重定向，即为重定向来源的路由的名字。
+                    ]]>
+                </description>
+            </property>
+            <property name="meta" type="any">
+                <description></description>
+            </property>
+        </properties>
+    </class>
+    <class type="Global" superclass="None">
+      <methods/>
+	  <properties/>
+    </class>
+    <class type="Vue">
+        <properties>
+            <property name="$router" type="VueRouter">
+                <description>
+                </description>
+            </property>
+            <property name="$route" type="Route">
+                <description>
+                </description>
+            </property>
+        </properties>
+    </class>
+</javascript>

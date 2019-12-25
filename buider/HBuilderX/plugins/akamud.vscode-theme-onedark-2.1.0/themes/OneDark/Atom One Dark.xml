@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colorscheme name="Atom One Dark">
+    <colors>
+        <color type="widget_background">#352C28</color>
+        <color type="caret">#568AF2</color>
+        <color type="caretLine">#2C313C</color>
+        <color type="selection">#515C6A</color>
+        <color type="indentguide">#3C4049</color>
+        <color type="whitespace">#282C35</color>
+        <color type="linenumber">#4B5364</color>
+        <color type="hyperlink">#4ccfff</color>
+	      <color type="indicator_sameword">#C27142</color>
+        <color type="indicator_matchtag">#888888</color>
+        <color type="indicator_searchresult">#0078ff</color>
+        <color type="searchbar_foreground">#ECECEC</color>
+        <color type="searchbar_foreground_notfinded">#6B7FE3</color>
+        <color type="quick_search_item_icon_selected">#FFFFFF</color>
+        <color type="quick_search_item_icon">#FFFFFF</color>
+        <color type="console_foreground">#FFFFFF</color>
+        <color type="console_background">#282C35</color>
+        <color type="console_warn">#FFFF00</color>
+        <color type="console_error">#cc666e</color>
+        <color type="console_time">#A9A9A9</color>
+        <color type="console_ad">#ffbc86</color>
+        <color type="fileverctrl_status_modified">#9ED5DD</color>
+        <color type="fileverctrl_status_untracked">#FAC277</color>
+        <color type="fileverctrl_status_added">#59A4D5</color>
+        <color type="fileverctrl_status_marktext">#535353</color>
+        <color type="logview_action_modified">#BC5000</color>
+        <color type="logview_action_deleted">#0000A9</color>
+        <color type="logview_action_added">#1A8FEA</color>
+    </colors>
+    <styles>
+        <style name="Comment" foreground="#858c99" />
+        <style name="Property" foreground="#98C379" />
+        <style name="DocComment" foreground="#5C6370" />
+        <style name="DocKeyword" foreground="#5C6370" />
+        <style name="Number" foreground="#D19A66" />
+        <style name="String" foreground="#98C379" />
+        <style name="Character" foreground="#F92672" />
+        <style name="Keyword" foreground="#C678DD" />
+        <style name="FUNCTION" foreground="#61AFEF" />
+        <style name="ControlKeyWord" foreground="#F92672" />
+        <style name="CLASS" foreground="#66D9EF" italic="true" />
+        <style name="PUNCTUATION" foreground="#98C379" />
+        <style name="URI" foreground="#3e4b53" underline="true" /> 
+    </styles>
+    <languages>
+  <language id="c">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPEWORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="cpp">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+   <language id="yaml">
+        <styleInfo id="0" desc="DEFAULT" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+        <styleInfo id="2" desc="IDENTIFIER" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+        <styleInfo id="1" desc="COMMENT" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="2" fontSize=""/>
+        <styleInfo id="3" desc="INSTRUCTION WORD" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="" keywordClass="instre1"/>
+        <styleInfo id="4" desc="NUMBER" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+        <styleInfo id="5" desc="REFERENCE" fgColor="268BD2" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+        <styleInfo id="6" desc="DOCUMENT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+        <styleInfo id="7" desc="TEXT" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+        <styleInfo id="8" desc="ERROR" fgColor="D33682" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+      </language>
+  <language id="json">
+          <styleInfo id="0" desc="DEFAULT" styleRef="Comment"/>
+          <styleInfo id="1" desc="NUMBER" styleRef="Number"/>
+          <styleInfo id="2" desc="SCE_JSON_STRING"   fgColor="98C379"/>
+          <styleInfo id="4" desc="SCE_JSON_PROPERTYNAME" fgColor="E06C75"/>
+          <styleInfo id="6" desc="SCE_JSON_LINECOMMENT" styleRef="Comment"/>
+          <styleInfo id="7" desc="SCE_JSON_BLOCKCOMMENT" styleRef="Comment"/>
+		  <styleInfo id="8"  fgColor="ABB2BF"/>
+		  <styleInfo id="9" desc="SCE_JSON_URI" fgColor="56B6C2"/>
+          <styleInfo id="11" desc="SCE_JSON_KEYWORD" fgColor="56B6C2"  />
+          <styleInfo id="13" desc="SCE_JSON_ERROR" styleRef="Comment" />
+      </language>
+  <language id="java">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="28" desc="FUNC" fgColor="61AFEF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="cs">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="rc">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="tcl">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="objc">
+    <styleInfo id="19" desc="DIRECTIVE" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="11" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="20" desc="QUALIFIER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="sql">
+    <styleInfo id="5" desc="KEYWORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="STRING2" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="html">
+    <styleInfo id="32" desc="SCE_H_PUNCTUATION" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="9" desc="COMMENT" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="3" desc="ATTRIBUTE" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="0" desc="DEFAULT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="21" desc="SGMLDEFAULT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="47" fgColor="C678DD"/>
+    <styleInfo id="53" fgColor="56B6C2"/>
+	<styleInfo id="45" desc="NUMBER" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="48" desc="DOUBLESTRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="49" desc="SINGLESTRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="50" desc="SYMBOLS" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="68" fgColor="E06C75"/>
+	<styleInfo id="69" fgColor="98C379"/>
+    <styleInfo id="5" desc="NUMBER" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="CDATA" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="4" desc="ATTRIBUTEUNKNOWN" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="1" desc="TAG" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="2" desc="TAGUNKNOWN" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="TAGEND" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="OPERATOR" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="43" desc="COMMENTLINE" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="44" desc="COMMENTDOC" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="133" desc="CLASS" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="143" desc="PSEUDOCLASS" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="140" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="140" desc="UNKNOWN_IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="141" desc="VALUE" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="54" desc="KEYWORD"  fgColor="C678DD"/>
+	<styleInfo id="6" desc="DOUBLESTRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo desc="SCE_HCSS_TAG" id="131" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" />
+	<styleInfo desc="SCE_HCSS_DEFAULT" id="130" styleRef="DEFAULT"/>
+	  <styleInfo desc="SCE_HCSS_ID" id="132" styleRef="ATTRIBUTE"/>
+	  <styleInfo desc="SCE_HCSS_DOUBLESTRING" id="135" styleRef="STRING"/>
+	  <styleInfo desc="SCE_HCSS_SINGLESTRING" id="136" styleRef="STRING"/>
+	  <styleInfo desc="SCE_HCSS_NUMBER" id="137" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	  <styleInfo desc="SCE_HCSS_ATTR" id="139" styleRef="ATTRIBUTE"/>
+	  <styleInfo desc="SCE_HCSS_KEYWORD" id="142" styleRef="PROPERTY"/>
+	  <styleInfo desc="SCE_HCSS_ATRULE" id="144" styleRef="PROPERTY"/>
+	  <styleInfo desc="SCE_HCSS_WORD" id="155" styleRef="DEFAULT"/>
+	</language>
+  <language id="php">
+    <styleInfo id="18" desc="QUESTION MARK" fgColor="BE5046" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="118" desc="DEFAULT" fgColor="61AFEF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="16" desc="USER-DEFINED" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="119" desc="STRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="126" desc="STRING VARIABLE" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="120" desc="SIMPLESTRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="121" desc="WORD" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="122" desc="NUMBER" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="123" desc="VARIABLE" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="124" desc="COMMENT" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="2" fontSize="11"/>
+    <styleInfo id="125" desc="COMMENTLINE" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="2" fontSize="11"/>
+    <styleInfo id="127" desc="OPERATOR" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="javascript">
+    <styleInfo id="16" desc="TYPE WORD" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+	<styleInfo id="6" desc="STRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="10" desc="OPERATOR" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="5" desc="Primary Keyword"  fgColor="C678DD"/>
+	<styleInfo id="7" desc="CHARACTER" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="14" desc="REGEX" fgColor="E6DB74" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="1" desc="COMMENT" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="2" desc="COMMENT LINE" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="3" desc="COMMENT DOC" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="15" desc="COMMENT LINE DOC" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="28" desc="FUNCTION" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+	<styleInfo id="11" desc="DEFAULT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="19" desc="SCE_C_GLOBALCLASS" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="9" desc="PREPROCESSOR" fgColor="5C6370" bgColor="272822" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="26" fgColor="E06963" />
+    <styleInfo id="29"   fgColor="C678DD" />
+  </language>
+  <language id="asp">
+    <styleInfo id="81" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="82" desc="COMMENTLINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="83" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="84" desc="WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="85" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="87" desc="STRINGEOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="86" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="ASPSYBOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="16" desc="SCRIPTTYPE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="xml">
+   <styleInfo id="12" desc="XMLSTART" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="13" desc="XMLEND" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="0" desc="DEFAULT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="32" desc="DEFAULT" fgColor="ABB2BF"/>
+	<styleInfo id="33" desc="DEFAULT" fgColor="ABB2BF"/>
+	<styleInfo id="9" desc="COMMENT" fgColor="5C6370" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="5" desc="NUMBER" fgColor="AE81FF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="6" desc="DOUBLESTRING" fgColor="98C379" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="7" desc="SINGLESTRING" fgColor="#FF0000" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="1" desc="TAG" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="11" desc="TAGEND" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="2" desc="TAGUNKNOWN" fgColor="E06C75" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="3" desc="ATTRIBUTE" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="4" desc="ATTRIBUTEUNKNOWN" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="21" desc="SGMLDEFAULT" fgColor="E6DB74" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="17" desc="CDATA" fgColor="AE81FF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+	<styleInfo id="10" desc="ENTITY" fgColor="AE81FF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10"/>
+  </language>
+  <language id="ini">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="SECTION" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="ASSIGNMENT" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="DEFVAL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="props">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="ASSIGNMENT" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="DEFVAL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="diff">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMAND" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="HEADER" fgColor="FFFF80" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="POSITION" fgColor="8080FF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="DELETED" fgColor="F1E309" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="ADDED" fgColor="00FF00" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="nfo">
+    <styleInfo id="32" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontSize="" fontStyle="0"/>
+  </language>
+  <language id="makefile">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="TARGET" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="IDEOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="vb">
+    <styleInfo id="7" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="WORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="4" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="DATE" fgColor="9DF39F" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="css">
+    <styleInfo id="0" desc="DEFAULT" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="1" desc="TAG" fgColor="E06C75" bgColor="282C35" fontName="Batang" fontStyle="0" fontSize="11"/>
+	<styleInfo id="2" desc="CLASS" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="3" desc="PSEUDOCLASS" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="4" desc="UNKNOWN_PSEUDOCLASS" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="5" desc="OPERATOR" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="6" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1"/>
+	<styleInfo id="7" desc="UNKNOWN_IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="8" desc="VALUE" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="9" desc="COMMENT" fgColor="858c99" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="10" desc="ID" fgColor="D19A66" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="11" desc="IMPORTANT" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="12" desc="DIRECTIVE" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+	<styleInfo id="13" fgColor="98C379" />
+	<styleInfo id="16" fgColor="D19A66" />
+	<styleInfo id="24" fgColor="D19A66" />
+	<styleInfo id="25" fgColor="56B6C2" />
+	<styleInfo id="26" fgColor="E06963" />
+    <styleInfo id="29"   fgColor="C678DD" />
+  </language>
+  <language id="pascal">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="7" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="ASM" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="2" fontSize="11"/>
+    <styleInfo id="4" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="perl">
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="1" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="SCALAR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="ARRAY" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="HASH" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="SYMBOL TABLE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="PUNCTUATION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="POD" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="ERROR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="19" desc="LONGQUOTE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="21" desc="DATASECTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="REGSUBST" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="20" desc="BACKTICKS" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="python">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENTLINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="KEYWORDS" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="6" desc="TRIPLE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="TRIPLEDOUBLE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="CLASSNAME" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="DEFNAME" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="COMMENTBLOCK" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="STRINGEOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="batch">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="KEYWORDS" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="3" desc="LABEL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="HIDE SYBOL" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="COMMAND" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="VARIABLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="lua">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="LITERALSTRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="FUNC1" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="14" desc="FUNC2" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="15" desc="FUNC3" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+  </language>
+  <language id="tex">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="SPECIAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="GROUP" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="SYMBOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="COMMAND" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="TEXT" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="nsis">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENTLINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="STRING DOUBLE QUOTE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING LEFT QUOTE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="STRING RIGHT QUOTE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="FUNCTION" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="6" desc="VARIABLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="7" desc="LABEL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="8" desc="USER DEFINED" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="9" desc="SECTION" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="SUBSECTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="IF DEFINE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="MACRO" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="STRING VAR" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="SECTION GROUP" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="16" desc="PAGE EX" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="FUNCTION DEFINITIONS" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="actionscript">
+    <styleInfo id="11" desc="DEFAULT" fgColor="9AC57B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="20" desc="FUNCTION" fgColor="9AC57B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="16" desc="TYPE WORD" fgColor="9AC57B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="VERBATIM" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="REGEX" fgColor="F1E309" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT DOC" fgColor="FFFF80" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="FFFF80" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="COMMENT DOC KEYWORD" fgColor="9AC57B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="COMMENT DOC KEYWORD ERROR" fgColor="F1E309" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="bash">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="ERROR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="3" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="SCALAR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="PARAM" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="BACKTICKS" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="HERE DELIM" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="HERE Q" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="fortran">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="STRING2" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="STRINGEOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="9" desc="FUNCTION1" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="10" desc="FUNCTION2" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="11" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="OPERATOR2" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="LABEL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="CONTINUATION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="fortran77">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="STRING2" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="STRINGEOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="9" desc="FUNCTION1" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="10" desc="FUNCTION2" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="11" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="OPERATOR2" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="LABEL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="CONTINUATION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="lisp">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENTLINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="FUNCTION WORD" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="5" desc="SYMBOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="STRINGEOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="11" desc="SPECIAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="asm">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="CPU INSTRUCTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="7" desc="MATH INSTRUCTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="8" desc="REGISTER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="9" desc="DIRECTIVE" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="10" desc="DIRECTIVE OPERAND" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type3"/>
+    <styleInfo id="11" desc="COMMENT BLOCK" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="STRINGEOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="EXT INSTRUCTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type4"/>
+  </language>
+  <language id="ruby">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="ERROR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENTLINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="POD" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="CLASS NAME" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="DEF NAME" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="REGEX" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="GLOBAL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="SYMBOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="MODULE NAME" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="16" desc="INSTANCE VAR" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="17" desc="CLASS VAR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="18" desc="BACKTICKS" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="19" desc="DATA SECTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="24" desc="STRING Q" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="postscript">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="DSC COMMENT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="DSC VALUE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="Name" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="INSTRUCTION" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="7" desc="LITERAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="IMMEVAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="PAREN ARRAY" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="PAREN DICT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="PAREN PROC" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="TEXT" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="HEX STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="BASE85 STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="BAD STRING CHAR" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="vhdl">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LIne" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="STRING EOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="INSTRUCTION" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="9" desc="STD OPERATOR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="10" desc="ATTRIBUTE" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="9" desc="DIRECTIVE" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="DIRECTIVE OPERAND" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="STD FUNCTION" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="12" desc="STD PACKAGE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type3"/>
+    <styleInfo id="13" desc="STD TYPE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type4"/>
+    <styleInfo id="14" desc="USER DEFINE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type5"/>
+  </language>
+  <language id="smalltalk">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="SYMBOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="BINARY" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="BOOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="SELF" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="SUPER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="NIL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="GLOBAL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="RETURN" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="SPECIAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="KWS END" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="ASSIGN" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="16" desc="SPECIAL SELECTOR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="caml">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="TAGNAME" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="4" desc="BUILIN FUNC &amp; TYPE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="5" desc="TYPE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="6" desc="LINENUM" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="COMMENT DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENT LINE DOC" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="verilog">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="TAGNAME" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="7" desc="KEYWORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="10" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="COMMENT LINE BANG" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="STRING EOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="19" desc="USER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="kix">
+    <styleInfo id="31" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING2" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="VAR" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="MACRO" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="7" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="8" desc="FUNCTION" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="9" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="autoit">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="FUNCTION" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="5" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="6" desc="MACRO" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="7" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="VARIABLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="SENT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="11" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type3"/>
+    <styleInfo id="12" desc="SPECIAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type4"/>
+    <styleInfo id="13" desc="EXPAND" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type5"/>
+    <styleInfo id="14" desc="COMOBJ" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="ada">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="2" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="DELIMITER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="CHARACTER EOL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="STRING EOL" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="LABEL" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="COMMENT LINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="ILLEGAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="matlab">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="COMMAND" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="INSTRUCTION WORD" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="5" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="DOUBLE QUOTE STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="haskell">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="KEYWORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="STRING" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="CHARACTER" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="6" desc="CLASS" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="MODULE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="CAPITAL" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="9" desc="DATA" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="IMPORT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="OPERATOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="INSTANCE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="COMMENTLINE" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="COMMENTBLOCK" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="15" desc="COMMENTBLOCK2" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="16" desc="COMMENTBLOCK3" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="inno">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="KEYWORD" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre2"/>
+    <styleInfo id="3" desc="PARAMETER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="4" desc="SECTION" fgColor="E46972" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="5" desc="PREPROCESSOR" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type2"/>
+    <styleInfo id="6" desc="PREPROCESSOR INLINE" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="COMMENT PASCAL" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="KEYWORD PASCAL" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type3"/>
+    <styleInfo id="9" desc="KEYWORD USER" fgColor="56B6C2" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type4"/>
+    <styleInfo id="10" desc="STRING DOUBLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="STRING SINGLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="IDENTIFIER" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="cmake">
+    <styleInfo id="0" desc="DEFAULT" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="1" desc="COMMENT" fgColor="646C7C" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="2" desc="STRING D" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="3" desc="STRING L" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="4" desc="STRING R" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="5" desc="COMMAND" fgColor="ABB2BF" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="instre1"/>
+    <styleInfo id="6" desc="PARAMETER" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="7" desc="VARIABLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="8" desc="USER DEFINED" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11" keywordClass="type1"/>
+    <styleInfo id="9" desc="WHILEDEF" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="10" desc="FOREACHDEF" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="11" desc="IFDEF" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="12" desc="MACRODEF" fgColor="E3E7F0" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="13" desc="STRING VARIABLE" fgColor="E5C07B" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+    <styleInfo id="14" desc="NUMBER" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize="11"/>
+  </language>
+  <language id="searchResult">
+    <styleInfo id="1" desc="Search Header" fgColor="FFFFFF" bgColor="133F81" fontName="" fontStyle="1" fontSize=""/>
+    <styleInfo id="2" desc="File Header" fgColor="FFFFFF" bgColor="5C8113" fontName="" fontStyle="1" fontSize=""/>
+    <styleInfo id="3" desc="Line Number" fgColor="C678DD" bgColor="282C35" fontName="" fontStyle="0" fontSize=""/>
+    <styleInfo id="4" desc="Hit Word" fgColor="F1E309" bgColor="E46972" fontName="" fontStyle="0" fontSize=""/>
+    <styleInfo id="5" desc="Selected Line" fgColor="9AC57B" bgColor="56B6C2" fontName="" fontStyle="0" fontSize=""/>
+    <styleInfo id="6" desc="Current line background colour" bgColor="3B404A" fgColor="EAE984" fontSize="" fontStyle="0"/>
+  </language>
+</languages>
+</colorscheme>

@@ -1,0 +1,24 @@
+{
+  "name": "nview-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-template": "^6.25.0",
+    "de-indent": "^1.0.2",
+    "esprima": "^4.0.0",
+    "fs-extra": "^3.0.1",
+    "glob": "^7.1.2",
+    "merge": "^1.2.0",
+    "source-map": "^0.6.1",
+    "strip-json-comments": "^2.0.1",
+    "yargs": "^8.0.1"
+  },
+  "devDependencies": {
+    "strip-html-comments": "^1.0.0"
+  },
+  "scripts": {},
+  "author": "fxy060608"
+}

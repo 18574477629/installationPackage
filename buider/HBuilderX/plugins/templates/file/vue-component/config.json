@@ -1,0 +1,21 @@
+{
+	"name":"vue组件模板",
+	"description":"vue组件模板",
+	"templates":[
+		{
+			"file": "默认模板.vue"
+		},
+		{
+			"file": "使用less的组件.vue"
+		},
+		{
+			"file": "使用scss的组件.vue"
+		},
+		{
+			"file": "使用stylus的组件.vue"
+		},
+		{
+			"file": "使用typescript的组件.vue"
+		}
+	]
+}

@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript>
+	<aliases>
+		<alias type="Class&lt;_&gt;" name="_"/>
+
+	</aliases>
+	<class type="_">
+		<description>Save the previous value of the `_` variable.</description>
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="_"/>
+				</return-types>
+			</constructor>
+		</constructors>
+		<methods>
+			<method name="after" scope="static" url="http://underscorejs.org/#after">
+				<description>Returns a function that will only be executed after being called N times.</description>
+				<parameters>
+					<parameter name="times" type="Number" usage="required"/>
+					<parameter name="func" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="bind" scope="static" url="http://underscorejs.org/#bind">
+				<description>Create a function bound to a given object (assigning `this`, and arguments, optionally).</description>
+				<parameters>
+					<parameter name="func" type="Object" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="bindAll" scope="static" url="http://underscorejs.org/#bindAll">
+				<description>Bind all of an object's methods to that object.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="names" type="Array&lt;String&gt;" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="chain" scope="static" url="http://underscorejs.org/#chain">
+				<description>Add a "chain" function, which will delegate to the wrapper.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="clone" scope="static" url="http://underscorejs.org/#clone">
+				<description>Create a (shallow-cloned) duplicate of an object.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="compact" scope="static" url="http://underscorejs.org/#compact">
+				<description>Trim out all falsy values from an array.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="compose" scope="static" url="http://underscorejs.org/#compose">
+				<description>Returns a function that is the composition of a list of functions, each consuming the return value of the function that follows.</description>
+				<parameters>
+					<parameter name="a" type="Function" usage="required"/>
+					<parameter name="b" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="contains" scope="static" url="http://underscorejs.org/#contains">
+				<description>Determine if the array or object contains a given value (using `===`).</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="target" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="countBy" scope="static" url="http://underscorejs.org/#countBy">
+				<description>Counts instances of an object that group by a certain criterion.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="debounce" scope="static" url="http://underscorejs.org/#debounce">
+				<description>Returns a function, that, as long as it continues to be invoked, will not be triggered.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+					<parameter name="wait" type="Number" usage="required"/>
+					<parameter name="immediate" type="Boolean" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="defaults" scope="static" url="http://underscorejs.org/#defaults">
+				<description>Fill in a given object with default properties.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="defaults" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="defer" scope="static" url="http://underscorejs.org/#defer">
+				<description>Defers a function, scheduling it to run after the current call stack has cleared.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="delay" scope="static" url="http://underscorejs.org/#delay">
+				<description>Delays a function for the given number of milliseconds, and then calls it with the arguments supplied.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+					<parameter name="wait" type="Number" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="difference" scope="static" url="http://underscorejs.org/#difference">
+				<description>Take the difference between one array and a number of other arrays.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="others" type="Array&lt;Object&gt;" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="each" scope="static" url="http://underscorejs.org/#each">
+				<description>Iterates over a list of elements, yielding each in turn to an iterator function.</description>
+				<parameters>
+					<parameter name="obj" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="escape" scope="static" url="http://underscorejs.org/#escape">
+				<description>Escapes a string for insertion into HTML.</description>
+				<parameters>
+					<parameter name="string" type="None" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="every" scope="static" url="http://underscorejs.org/#every">
+				<description>Determine whether all of the elements match a truth test.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="extend" scope="static" url="http://underscorejs.org/#extend">
+				<description>Extend a given object with all the properties in passed-in object(s).</description>
+				<parameters>
+					<parameter name="destination" type="Object" usage="required"/>
+					<parameter name="source1" type="Object" usage="required"/>
+					<parameter name="source2" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="filter" scope="static" url="http://underscorejs.org/#filter">
+				<description>Looks through each value in the list, returning an array of all the values that pass a truth test.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="test" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="find" scope="static" url="http://underscorejs.org/#find">
+				<description>Return the first value which passes a truth test.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="test" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="findWhere" scope="static" url="http://underscorejs.org/#findWhere">
+				<description>Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="attrs" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="first" scope="static" url="http://underscorejs.org/#first">
+				<description>Get the first element of an array. Passing n will return the first N values in the array.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="n" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="flatten" scope="static" url="http://underscorejs.org/#flatten">
+				<description>Return a completely flattened version of an array.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="shallow" type="Boolean" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="functions" scope="static" url="http://underscorejs.org/#functions">
+				<description>Return a sorted list of the function names available on the object.</description>
+				<parameters>
+					<parameter name="obj" type="_" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;String&gt;"/>
+				</return-types>
+			</method>
+			<method name="groupBy" scope="static" url="http://underscorejs.org/#groupBy">
+				<description>Groups the object's values by a criterion.</description>
+				<parameters>
+					<parameter name="obj" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="has" scope="static" url="http://underscorejs.org/#has">
+				<description>Shortcut function for checking if an object has a given property directly on itself (in other words, not on a prototype).</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="key" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="identity" scope="static" url="http://underscorejs.org/#identity">
+				<description>Returns the same value that is used as the argument.</description>
+				<parameters>
+					<parameter name="value" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="indexOf" scope="static" url="http://underscorejs.org/#indexOf">
+				<description>Returns the index at which value can be found in the array, or -1 if value is not present in the array.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="item" type="Object" usage="required"/>
+					<parameter name="isSorted" type="Boolean" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="initial" scope="static" url="http://underscorejs.org/#initial">
+				<description>Returns everything but the last entry of the array.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="n" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="intersection" scope="static" url="http://underscorejs.org/#intersection">
+				<description>Produce an array that contains every item shared between all the passed-in arrays.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="others" type="Array&lt;Object&gt;" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="invert" scope="static" url="http://underscorejs.org/#invert">
+				<description>Invert the keys and values of an object.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="invoke" scope="static" url="http://underscorejs.org/#invoke">
+				<description>Invoke a method (with arguments) on every item in a collection.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="method" type="String" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="isArguments" scope="static" url="http://underscorejs.org/#isArguments">
+				<description>Returns true if object is an Arguments object.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isArray" scope="static" url="http://underscorejs.org/#isArray">
+				<description>Is a given value an array? Delegates to ECMA5's native Array.isArray</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isBoolean" scope="static" url="http://underscorejs.org/#isBoolean">
+				<description>Is a given value a boolean?</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isDate" scope="static" url="http://underscorejs.org/#isDate">
+				<description>Returns true if object is a Date object.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isElement" scope="static" url="http://underscorejs.org/#isElement">
+				<description>Is a given value a DOM element?</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isEmpty" scope="static" url="http://underscorejs.org/#isEmpty">
+				<description>Is a given array, string, or object empty? An "empty" object has no enumerable own-properties.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isEqual" scope="static" url="http://underscorejs.org/#isEqual">
+				<description>Perform a deep comparison to check if two objects are equal.</description>
+				<parameters>
+					<parameter name="a" type="Object" usage="required"/>
+					<parameter name="b" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isFinite" scope="static" url="http://underscorejs.org/#isFinite">
+				<description>Is a given object a finite number?</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isFunction" scope="static" url="http://underscorejs.org/#isFunction">
+				<description>Returns true if object is a Function.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isNaN" scope="static" url="http://underscorejs.org/#isNaN">
+				<description>Is the given value `NaN`? (NaN is the only number which does not equal itself).</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isNull" scope="static" url="http://underscorejs.org/#isNull">
+				<description>Is a given value equal to null?</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isNumber" scope="static" url="http://underscorejs.org/#isNumber">
+				<description>Returns true if object is a Number (including NaN).</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isObject" scope="static" url="http://underscorejs.org/#isObject">
+				<description>Is a given variable an object?</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isRegExp" scope="static" url="http://underscorejs.org/#isRegExp">
+				<description>Returns true if object is a regular expression.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isString" scope="static" url="http://underscorejs.org/#isString">
+				<description>Returns true if object is a String.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="isUndefined" scope="static" url="http://underscorejs.org/#isUndefined">
+				<description>Is a given variable undefined?</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="keys" scope="static" url="http://underscorejs.org/#keys">
+				<description>Retrieve the names of an object's properties. Delegates to ECMAScript 5's native `Object.keys`</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;String&gt;"/>
+				</return-types>
+			</method>
+			<method name="last" scope="static" url="http://underscorejs.org/#last">
+				<description>Get the last element of an array.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="n" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="lastIndexOf" scope="static" url="http://underscorejs.org/#lastIndexOf">
+				<description>Returns the index of the last occurrence of value in the array, or -1 if value is not present.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="item" type="Object" usage="required"/>
+					<parameter name="from" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="map" scope="static" url="http://underscorejs.org/#map">
+				<description>Produces a new array of values by mapping each value in list through a transformation function (iterator).</description>
+				<parameters>
+					<parameter name="obj" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="max" scope="static" url="http://underscorejs.org/#max">
+				<description>Returns the maximum value in list.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="optional"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="memoize" scope="static" url="http://underscorejs.org/#memoize">
+				<description>Memoize an expensive function by storing its results.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+					<parameter name="hasher" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="min" scope="static" url="http://underscorejs.org/#min">
+				<description>Returns the minimum value in list.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="optional"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="mixin" scope="static" url="http://underscorejs.org/#mixin">
+				<description>Add your own custom functions to the Underscore object.</description>
+				<parameters>
+					<parameter name="obj" type="_" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="noConflict" scope="static" url="http://underscorejs.org/#noConflict">
+				<description>Run Underscore.js in *noConflict* mode, returning the `_` variable to its previous owner. Returns a reference to the Underscore object.</description>
+				<return-types>
+					<return-type type="Class&lt;_&gt;"/>
+				</return-types>
+			</method>
+			<method name="object" scope="static" url="http://underscorejs.org/#object">
+				<description>Converts lists into objects.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="values" type="Array&lt;Object&gt;" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="omit" scope="static" url="http://underscorejs.org/#omit">
+				<description>Return a copy of the object without the blacklisted properties.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="keys" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="once" scope="static" url="http://underscorejs.org/#once">
+				<description>Returns a function that will be executed at most one time, no matter how often you call it.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="pairs" scope="static" url="http://underscorejs.org/#pairs">
+				<description>Convert an object into a list of `[key, value]` pairs.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Array&lt;Object&gt;&gt;"/>
+				</return-types>
+			</method>
+			<method name="partial" scope="static" url="http://underscorejs.org/#partial">
+				<description>Partially apply a function by creating a version that has had some of its arguments pre-filled, without changing its dynamic `this` context.</description>
+				<parameters>
+					<parameter name="func" type="Object" usage="required"/>
+					<parameter name="args" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="pick" scope="static" url="http://underscorejs.org/#pick">
+				<description>Return a copy of the object only containing the whitelisted properties.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="keys" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="pluck" scope="static" url="http://underscorejs.org/#pluck">
+				<description>Convenience version of a common use case of `map`: fetching a property.</description>
+				<parameters>
+					<parameter name="obj" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="key" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="pop">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="push">
+				<parameters>
+					<parameter name="newelt" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="reverse">
+				<return-types/>
+			</method>
+			<method name="shift">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="sort">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="splice">
+				<parameters>
+					<parameter name="pos" type="Number" usage="required"/>
+					<parameter name="amount" type="Number" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="unshift">
+				<parameters>
+					<parameter name="elt" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="concat">
+				<parameters>
+					<parameter name="other" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="join">
+				<parameters>
+					<parameter name="separator" type="String" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="slice">
+				<parameters>
+					<parameter name="from" type="Number" usage="required"/>
+					<parameter name="to" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="random" scope="static" url="http://underscorejs.org/#random">
+				<description>Return a random integer between min and max (inclusive).</description>
+				<parameters>
+					<parameter name="min" type="Number" usage="required"/>
+					<parameter name="max" type="Number" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="range" scope="static" url="http://underscorejs.org/#range">
+				<description>A function to create flexibly-numbered lists of integers.</description>
+				<parameters>
+					<parameter name="start" type="Number" usage="optional"/>
+					<parameter name="stop" type="Number" usage="required"/>
+					<parameter name="step" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Number&gt;"/>
+				</return-types>
+			</method>
+			<method name="reduce" scope="static" url="http://underscorejs.org/#reduce">
+				<description>reduce boils down a list of values into a single value.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="init" type="Object" usage="optional"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="reduceRight" scope="static" url="http://underscorejs.org/#reduceRight">
+				<description>The right-associative version of reduce, also known as `foldr`.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="init" type="Object" usage="optional"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="reject" scope="static" url="http://underscorejs.org/#reject">
+				<description>Returns the values in list without the elements that the truth test (iterator) passes. The opposite of filter.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="rest" scope="static" url="http://underscorejs.org/#rest">
+				<description>Returns the rest of the elements in an array.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="n" type="Number" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="result" scope="static" url="http://underscorejs.org/#result">
+				<description>If the value of the named `property` is a function then invoke it with the `object` as context; otherwise, return it.</description>
+				<parameters>
+					<parameter name="object" type="Object" usage="required"/>
+					<parameter name="property" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="shuffle" scope="static" url="http://underscorejs.org/#shuffle">
+				<description>Shuffle an array.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="size" scope="static" url="http://underscorejs.org/#size">
+				<description>Return the number of elements in an object.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="some" scope="static" url="http://underscorejs.org/#some">
+				<description>Returns true if any of the values in the list pass the iterator truth test.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+			</method>
+			<method name="sortBy" scope="static" url="http://underscorejs.org/#sortBy">
+				<description>Sort the object's values by a criterion produced by an iterator.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="sortedIndex" scope="static" url="http://underscorejs.org/#sortedIndex">
+				<description>Use a comparator function to figure out the smallest index at which an object should be inserted so as to maintain order.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Number"/>
+				</return-types>
+			</method>
+			<method name="tap" scope="static" url="http://underscorejs.org/#tap">
+				<description>Invokes interceptor with the obj, and then returns obj.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+					<parameter name="interceptor" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="template" scope="static" url="http://underscorejs.org/#template">
+				<description>Compiles JavaScript templates into functions that can be evaluated for rendering.</description>
+				<parameters>
+					<parameter name="text" type="String" usage="required"/>
+					<parameter name="data" type="Object" usage="optional"/>
+					<parameter name="settings" type="_.templateSettings" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Function"/>
+				</return-types>
+			</method>
+			<method name="throttle" scope="static" url="http://underscorejs.org/#throttle">
+				<description>Returns a function, that, when invoked, will only be triggered at most once during a given window of time.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+					<parameter name="wait" type="Number" usage="required"/>
+					<parameter name="options" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="times" scope="static" url="http://underscorejs.org/#times">
+				<description>Run a function n times.</description>
+				<parameters>
+					<parameter name="n" type="Number" usage="required"/>
+					<parameter name="iterator" type="Function" usage="required"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="toArray" scope="static" url="http://underscorejs.org/#toArray">
+				<description>Safely create a real, live array from anything iterable.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="unescape" scope="static" url="http://underscorejs.org/#unescape">
+				<description>The opposite of escape.</description>
+				<parameters>
+					<parameter name="string" type="None" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="union" scope="static" url="http://underscorejs.org/#union">
+				<description>Produce an array that contains the union: each distinct element from all of the passed-in arrays.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="array2" type="Array&lt;Object&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="uniq" scope="static" url="http://underscorejs.org/#uniq">
+				<description>Produce a duplicate-free version of the array.</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="isSorted" type="Boolean" usage="optional"/>
+					<parameter name="iterator" type="Function" usage="optional"/>
+					<parameter name="context" type="Object" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="uniqueId" scope="static" url="http://underscorejs.org/#uniqueId">
+				<description>Generate a unique integer id (unique within the entire client session). Useful for temporary DOM ids.</description>
+				<parameters>
+					<parameter name="prefix" type="String" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+			</method>
+			<method name="values" scope="static" url="http://underscorejs.org/#values">
+				<description>Retrieve the values of an object's properties.</description>
+				<parameters>
+					<parameter name="obj" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+			<method name="where" scope="static" url="http://underscorejs.org/#where">
+				<description>Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.</description>
+				<parameters>
+					<parameter name="list" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="attrs" type="Object" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="without" scope="static" url="http://underscorejs.org/#without">
+				<description>Return a version of the array that does not contain the specified value(s).</description>
+				<parameters>
+					<parameter name="array" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="values" type="Array&lt;Object&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="wrap" scope="static" url="http://underscorejs.org/#wrap">
+				<description>Returns the first function passed as an argument to the second, allowing you to adjust arguments, run code before and after, and conditionally execute the original function.</description>
+				<parameters>
+					<parameter name="func" type="Function" usage="required"/>
+					<parameter name="wrapper" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+			<method name="zip" scope="static" url="http://underscorejs.org/#zip">
+				<description>Zip together multiple lists into a single array -- elements that share an index go together.</description>
+				<parameters>
+					<parameter name="array1" type="Array&lt;Object&gt;" usage="required"/>
+					<parameter name="array2" type="Array&lt;Object&gt;" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Array&lt;Object&gt;"/>
+				</return-types>
+			</method>
+		</methods>
+		<properties>
+			<property name="all" type="_.every"/>
+			<property name="any" type="_.some"/>
+			<property name="collect" type="_.map"/>
+			<property name="detect" type="_.find"/>
+			<property name="drop" type="_.rest"/>
+			<property name="foldl" type="_.reduce"/>
+			<property name="foldr" type="_.reduceRight"/>
+			<property name="forEach" type="_.each"/>
+			<property name="head" type="_.first"/>
+			<property name="include" type="_.contains"/>
+			<property name="inject" type="_.reduce"/>
+			<property name="methods" type="_.functions"/>
+			<property name="select" type="_.filter"/>
+			<property name="tail" type="_.rest"/>
+			<property name="take" type="_.first"/>
+			<property name="unique" type="_.uniq"/>
+		</properties>
+	</class>
+	<class type="_.templateSettings" url="http://underscorejs.org/#templateSettings">
+		<description>By default, Underscore uses ERB-style template delimiters, change the following template settings to use alternative delimiters.</description>
+		<properties>
+			<property name="escape" type="RegExp"/>
+			<property name="evaluate" type="RegExp"/>
+			<property name="interpolate" type="RegExp"/>
+		</properties>
+	</class>
+</javascript>

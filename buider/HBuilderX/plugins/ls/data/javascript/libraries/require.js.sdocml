@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript>
+	<class type="module">
+		<properties>
+			<property name="id" type="String"/>
+			<property name="uri" type="String"/>
+		</properties>
+		<methods>
+			<method name="config">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+	</class>
+	<class type="config" url="http://requirejs.org/docs/api.html#config">
+		<properties>
+			<property name="baseUrl" type="String"/>
+			<property name="paths" type="Object"/>
+			<property name="shim" type="Object"/>
+			<property name="map" type="Object"/>
+			<property name="config" type="Object"/>
+			<property name="packages" type="Object"/>
+			<property name="nodeIdCompat" type="Object"/>
+			<property name="waitSeconds" type="Number"/>
+			<property name="context" type="Number"/>
+			<property name="deps" type="Object"/>
+			<property name="enforceDefine" type="Boolean"/>
+			<property name="xhtml" type="Boolean"/>
+			<property name="urlArgs" type="String"/>
+			<property name="scriptType" type="String"/>
+			<property name="skipDataMain" type="Boolean"/>
+		</properties>
+		<methods>
+			<method name="callback" scope="static" url="http://requirejs.org/docs/api.html#config-callback">
+				<description>A function to execute after deps have been loaded. Useful when require is defined as a config object before require.js is loaded, and you want to specify a function to require after the configuration's deps array has been loaded.</description>
+				<return-types/>
+			</method>
+		</methods>
+	</class>
+	<class type="RequireJSError" superclass="Error"/>
+	<class type="requirejs">
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="deps" type="Array&lt;String&gt;" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+					<parameter name="errback" type="Function" usage="optional"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</constructor>
+		</constructors>
+		<methods>
+			<method name="onError" scope="static" url="http://requirejs.org/docs/api.html#requirejsonerror">
+				<description>To detect errors that are not caught by local errbacks, you can override requirejs.onError()</description>
+				<parameters>
+					<parameter name="err" type="RequireJSError" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="load" scope="static" url="null">
+				<description>null</description>
+				<parameters>
+					<parameter name="context" type="Object" usage="required"/>
+					<parameter name="moduleName" type="String" usage="required"/>
+					<parameter name="url" type="String" usage="required"/>
+				</parameters>
+				<return-types/>
+			</method>
+			<method name="config">
+				<parameters>
+					<parameter name="config" type="config" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</method>
+		</methods>
+		<properties>
+			<property name="version" type="String"/>
+			<property name="isBrowser" type="Boolean"/>
+		</properties>
+	</class>
+	<aliases>
+		<alias name="require" type="requirejs"/>
+	</aliases>
+	<class type="define">
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="deps" type="Array&lt;String&gt;" usage="required"/>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+			</constructor>
+		</constructors>
+	</class>
+	<class type="define.amd">
+		<properties>
+			<property name="jQuery" type="Boolean"/>
+		</properties>
+	</class>
+</javascript>

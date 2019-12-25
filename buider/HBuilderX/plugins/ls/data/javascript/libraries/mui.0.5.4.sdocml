@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<javascript website="http://dev.dcloud.net.cn/mui/">
+	<aliases>
+		<alias name="$" type="mui"/>
+		<alias type="Class&lt;mui&gt;" name="mui"/>
+	</aliases>
+	<class type="mui" superclass="Object">
+		<constructors>
+			<constructor>
+				<parameters>
+					<parameter name="selector" type="Selector|SelectorString" usage="required">
+						<description>CSS Selector</description>
+					</parameter>
+				</parameters>
+				<parameters>
+					<parameter name="context" type="mui.fn" usage="optional">
+						<description>在给定上下文中查找</description>
+					</parameter>
+				</parameters>
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<description>返回匹配的元素集合(CSS Selector)</description>
+			</constructor>
+			<constructor>
+				<parameters>
+					<parameter name="node" type="HTMLElement" usage="required"></parameter>
+				</parameters>
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<description>包装当前Node为mui对象</description>
+			</constructor>
+		</constructors>
+		<methods>
+			<method name="init" scope="static">
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="options" type="mui.init.options" usage="required"/>
+				</parameters>
+				<description>初始化mui</description>
+			</method>
+			<method name="ready" scope="static">
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<description>DOMContentLoaded</description>
+			</method>
+			<method name="plusReady" scope="static" >
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="callback" type="Function" usage="required"/>
+				</parameters>
+				<description>[5+]:5+ is ready</description>
+			</method>
+			<method name="each" scope="static" url="util/#each">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+				<parameters>
+					<parameter name="collection" type="Array|Object" usage="">
+						<description>需遍历的对象或数组；若为对象，仅遍历对象根节点下的key</description>
+					</parameter>
+					<parameter name="callback" type="Function(Number,Object)" usage="">
+						<description>为每个元素执行的回调函数；其中，index表示当前元素的下标或key，element表示当前匹配元素</description>
+					</parameter>
+				</parameters>
+				<description>遍历数组或json对象</description>
+			</method>
+			<method name="extend" scope="static" url="util/#extend">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+				<parameters>
+					<parameter name="target" type="Object" usage="">
+						<description>需合并的目标对象</description>
+					</parameter>
+					<parameter name="source" type="Object" usage="">
+						<description>需合并的对象</description>
+					</parameter>
+					<parameter name="deep" type="Boolean" usage="">
+						<description>是否递归合并.若为true，则递归合并</description>
+					</parameter>
+				</parameters>
+				<description>将两个对象合并成一个对象。</description>
+			</method>
+			<method name="isArray" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="Object" usage=""/>
+				</parameters>
+				<description>True if the object is an array.</description>
+			</method>
+			<method name="isFunction" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="Object" usage=""/>
+				</parameters>
+				<description>True if the object is a function.</description>
+			</method>
+			<method name="isPlainObject" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="Object" usage=""/>
+				</parameters>
+				<description>True if the object is a “plain” JavaScript object, which is only true for object literals and objects created with new Object.</description>
+			</method>
+			<method name="isWindow" scope="static">
+				<return-types>
+					<return-type type="Boolean"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="Object" usage=""/>
+				</parameters>
+				<description>True if the object is a window object. This is useful for iframes where each one has its own window, and where these objects fail the regular obj === window check.</description>
+			</method>
+			<method name="map" scope="static">
+				<return-types>
+					<return-type type="Array"/>
+				</return-types>
+				<parameters>
+					<parameter name="array" type="Array" usage=""/>
+					<parameter name="callback" type="Function(Object,Number)" usage=""/>
+				</parameters>
+				<description>Iterate through elements of collection and return all results of running the iterator function, with null and undefined values filtered out.</description>
+			</method>
+			<method name="on" scope="static" >
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="events" type="EventString|String" usage="">
+						<description>需监听的事件名称，例如：'tap'</description>
+					</parameter>
+					<parameter name="selector" type="String|SelectorString" usage="optional">
+						<description>选择器</description>
+					</parameter>
+					<parameter name="handler" type="Function(mui.Event)" usage="">
+						<description>事件触发时的回调函数，通过回调中的event参数可以获得事件详情</description>
+					</parameter>
+				</parameters>
+				<description>批量元素的事件绑定</description>
+			</method>
+			<method name="trigger" url="event/#trigger" scope="static">
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="element" type="HTMLElement" usage="">
+						<description>触发事件的DOM元素</description>
+					</parameter>
+					<parameter name="eventType" type="EventString|String" usage="">
+						<description>事件名字，例如：'tap'、'swipeleft'</description>
+					</parameter>
+					<parameter name="params" type="Object" usage="">
+						<description>需要传递给事件的业务参数</description>
+					</parameter>
+				</parameters>
+				<example>
+					var btn = document.getElementById("submit");
+//监听点击事件
+btn.addEventListener("tap",function () {
+  console.log("tap event trigger");
+});
+//触发submit按钮的点击事件
+mui.trigger(btn,'tap');
+				</example>
+				<description>动态触发特定DOM元素上的事件</description>
+			</method>
+			<method name="data" scope="static">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+				<parameters>
+					<parameter name="key" type="String" usage=""/>
+					<parameter name="value" type="Object" usage=""/>
+				</parameters>
+			</method>
+			<method name="type" scope="static">
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="Object" usage=""/>
+				</parameters>
+				<description>Get string type of an object. Possible types are: null undefined boolean number string function array date regexp object error.</description>
+			</method>
+			<method name="alert" scope="static">
+				<parameters>
+					<parameter name="message" type="String" usage="">
+						<description>提示对话框上显示的内容</description>
+					</parameter>
+					<parameter name="title" type="String" usage="">
+						<description>提示对话框上显示的标题</description>
+					</parameter>
+					<parameter name="btnValue" type="String" usage="">
+						<description>提示对话框上按钮显示的内容</description>
+					</parameter>
+					<parameter name="callback" type="Function" usage="">
+						<description>提示对话框上关闭后的回调函数</description>
+					</parameter>
+				</parameters>
+				<description>警告消息框</description>
+			</method>
+			<method name="confirm" scope="static">
+				<parameters>
+					<parameter name="message" type="String" usage="">
+						<description>提示对话框上显示的内容</description>
+					</parameter>
+					<parameter name="title" type="String" usage="">
+						<description>提示对话框上显示的标题</description>
+					</parameter>
+					<parameter name="btnValue" type="String" usage="">
+						<description>提示对话框上按钮显示的内容</description>
+					</parameter>
+					<parameter name="callback" type="Function" usage="">
+						<description>提示对话框上关闭后的回调函数</description>
+					</parameter>
+				</parameters>
+				<description>确认消息框</description>
+			</method>
+			<method name="prompt" scope="static">
+				<parameters>
+					<parameter name="text" type="String" usage="">
+						<description>输入对话框上显示的内容</description>
+					</parameter>
+					<parameter name="defaultText" type="String" usage="">
+						<description>输入对话框上编辑框显示的提示文字</description>
+					</parameter>
+					<parameter name="title" type="String" usage="">
+						<description>输入对话框上显示的标题</description>
+					</parameter>
+					<parameter name="btnArray" type="Array&lt;String&gt;" usage="">
+						<description>输入对话框上显示的按钮数组</description>
+					</parameter>
+					<parameter name="callback" type="Function" usage="">
+						<description> 关闭输入对话框的回调函数
+回调函数中包括Event参数，可通过其index属性（Number类型）获取用户点击按钮的索引值，通过其value属性（String类型）获取用户输入的内容。</description>
+					</parameter>
+				</parameters>
+				<description>输入对话框</description>
+			</method>
+			<method name="toast" scope="static">
+				<parameters>
+					<parameter name="message" type="String" usage="">
+						<description>提示消息上显示的文字内容</description>
+					</parameter>
+				</parameters>
+				<description>自动消失提示框</description>
+			</method>
+			<method name="parseJSON" scope="static">
+				<return-types>
+					<return-type type="Object"/>
+				</return-types>
+				<parameters>
+					<parameter name="json" type="String" usage="">
+						<description>要解析的 JSON 字符串。标准格式:'{"name":"John"}'</description>
+					</parameter>
+				</parameters>
+				<description>接受一个标准格式的 JSON 字符串，并返回解析后的 JavaScript 值</description>
+			</method>
+			<method name="ajax" scope="static" url="ajax">
+				<return-types>
+					<return-type type="XMLHttpRequest"/>
+				</return-types>
+				<parameters>
+					<parameter name="url" type="URIString|String" usage="">
+						<description>请求发送的目标地址</description>
+					</parameter>
+					<parameter name="option" type="AjaxOptions" usage="">
+						<description>key/value格式的json对象，用来配置ajax请求参数，支持的完整参数参考</description>
+					</parameter>
+				</parameters>
+				<description>执行异步 HTTP (Ajax) 请求。</description>
+			</method>
+			<method name="get" scope="static" url="ajax/#get">
+				<return-types>
+					<return-type type="XMLHttpRequest"/>
+				</return-types>
+				<parameters>
+					<parameter name="url" type="URIString|String" usage=""/>
+					<parameter name="data" type="Object" usage="optional"/>
+					<parameter name="success" type="Function(String,String,XMLHttpRequest)" usage=""/>
+					<parameter name="dataType" type="String" usage="optional"/>
+				</parameters>
+				<description>使用 HTTP GET 请求从服务器加载数据。</description>
+			</method>
+			<method name="getJSON" scope="static" url="ajax/#getJSON">
+				<return-types>
+					<return-type type="XMLHttpRequest"/>
+				</return-types>
+				<parameters>
+					<parameter name="url" type="URIString|String" usage=""/>
+					<parameter name="data" type="Object" usage="optional"/>
+					<parameter name="success" type="Function(Object,String,XMLHttpRequest)" usage=""/>
+				</parameters>
+				<description>使用 HTTP GET 请求从服务器加载 JSON 编码数据。</description>
+			</method>
+			<method name="param" scope="static">
+				<return-types>
+					<return-type type="String"/>
+				</return-types>
+				<parameters>
+					<parameter name="obj" type="Object" usage=""/>
+				</parameters>
+				<description>创建数组或对象的序列化表示，适合在 URL 查询字符串或 Ajax 请求中使用。</description>
+			</method>
+			<method name="post" scope="static" url="ajax/#post">
+				<return-types>
+					<return-type type="XMLHttpRequest"/>
+				</return-types>
+				<parameters>
+					<parameter name="url" type="String|URIString" usage=""/>
+					<parameter name="data" type="Object" usage="optional"/>
+					<parameter name="success" type="Function(String,String,XMLHttpRequest)" usage=""/>
+					<parameter name="dataType" type="String" usage="optional"/>
+				</parameters>
+				<description>使用 HTTP POST 请求从服务器加载数据。</description>
+			</method>
+			<method name="openWindow" scope="static" url="window/#openwindow">
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="url" type="String|URIString" usage="required">
+						<description>新打开Webview窗口要加载的HTML页面地址，可支持本地地址和网络地址</description>
+					</parameter>
+					<parameter name="id" type="String" usage="optional">
+						<description>窗口标识，为了保持窗口标识的唯一性，应该避免使用相同的标识来创建多个Webview窗口</description>
+					</parameter>
+					<parameter name="options" type="mui.webview.options" usage="optional">
+						<description>加载动画，窗口显示动画，窗口样式，参数等配置</description>
+					</parameter>
+				</parameters>
+				<description>[5+]:打开一个新窗口</description>
+			</method>
+			<method name="openWindowWithTitle" scope="static" url="window/#openWindowWithTitle">
+				<return-types>
+					<return-type type="mui"/>
+				</return-types>
+				<parameters>
+					<parameter name="webview" type="mui.webview.options" usage="required">
+						<description>新打开Webview窗口要加载的窗口参数,URL,ID,样式等</description>
+					</parameter>
+					<parameter name="options" type="mui.webview.titleConfig" usage="optional">
+						<description>导航栏样式,标题,返回箭头等样式配置</description>
+					</parameter>
+				</parameters>
+				<description>[5+]:打开一个带原生导航栏的新窗口</description>
+			</method>
+			<method name="preload" scope="static" url="window/#preload">
+				<return-types>
+					<return-type type="plus.webview.Webview"/>
+				</return-types>
+				<parameters>
+					<parameter name="options" type="mui.webview.options" usage="optional">
+						<description>加载动画，窗口显示动画，窗口样式，参数等配置</description>
+					</parameter>
+				</parameters>
+				<description>[5+]:预加载一个新窗口</description>
+			</method>
+			<method name="back" scope="static" url="window/#closewindow">
+				<description>[5+]:后退</description>
+			</method>
+			
+		</methods>
+		<properties>
+			<property type="mui.os" name="os" scope="static">
+				<description>os对象</description>
+			</property>
+			<property type="mui.fn" name="fn" scope="static">
+				<description>mui对象</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.os">
+		<properties>
+			<property type="Boolean" name="ios" scope="instance">
+				<description>是否为iOS</description>
+			</property>
+			<property type="Boolean" name="ipad" scope="instance">
+				<description>是否为iPad</description>
+			</property>
+			<property type="Boolean" name="iphone" scope="instance">
+				<description>是否为iPhone</description>
+			</property>
+			<property type="Boolean" name="android" scope="instance">
+				<description>是否为Android</description>
+			</property>
+			<property type="Boolean" name="plus" scope="instance">
+				<description>是否为5+</description>
+			</property>
+			<property type="String" name="version" scope="instance">
+				<description>当前运行环境的版本号</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.fn" superclass="Object">
+		<methods>
+			<method name="input" >
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<description>文本域清除按钮，语音，搜索，滑块控件</description>
+			</method>
+			<method name="slider" url="ui/#slide">
+				<return-types>
+					<return-type type="mui.plugin.slider"/>
+				</return-types>
+				<parameters>
+					<parameter name="options" type="mui.plugin.slider.options" usage=""/>
+				</parameters>
+				<description>滑动控件(图片轮播，滑动选项卡，滑动九宫格，滑动图文列表)</description>
+			</method>
+			<method name="pullRefresh" url="pulldown">
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<parameters>
+					<parameter name="options" type="mui.plugin.pullRefresh.options" usage=""/>
+				</parameters>
+				<description>上拉，下拉刷新控件</description>
+			</method>
+			<method name="popover" url="ui/#ui_popover">
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<parameters>
+					<parameter name="method" type="String" usage="">
+					  <description>支持参数：'show','hide','toggle'，显示或隐藏当前popover</description>
+			            <values>
+			              <value name="show" description="显示当前popover" />
+			              <value name="hide" description="隐藏当前popover" />
+			              <value name="toggle" description="mui自动识别处理" />
+			            </values>
+            		 </parameter>
+				</parameters>
+				<description>支持参数：'show','hide','toggle'，显示或隐藏当前popover</description>
+			</method>
+			<method name="offCanvas" url="ui/#offcanvas">
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<parameters>
+					<parameter name="method" type="String" usage=""/>
+				</parameters>
+				<description>支持参数：'show','hide','toggle'，显示或隐藏当前侧滑菜单</description>
+			</method>
+			<method name="scroll" url="ui/#scroll">
+				<return-types>
+					<return-type type="mui.fn"/>
+				</return-types>
+				<parameters>
+					<parameter name="options" type="mui.plugin.scroll.options" usage=""/>
+				</parameters>
+				<description>区域滚动控件</description>
+			</method>
+		</methods>
+	</class>
+	<class type="mui.init.options">
+		<interfaces>
+    	 <interface type="aaa" />
+		</interfaces>
+		<properties>
+			<property type="mui.init.options.gestures" name="gestures" scope="instance">
+				<description>手势事件开关</description>
+			</property>
+			<property type="Boolean" name="optimize" scope="instance">
+				<description>[5+]:是否启用5+优化,默认:true</description>
+			</property>
+			<property type="Boolean" name="showAfterLoad" scope="instance">
+				<description>[5+]:openWindow时是否等待窗口加载完毕后才显示(同步显示加载动画),默认:true</description>
+			</property>
+			<property type="Number" name="preloadLimit" scope="instance">
+				<description>[5+]:并存的预加载窗口最大限制(超出后，先进先出),默认:10</description>
+			</property>
+			<property type="Array&lt;mui.webview.options&gt;" name="preloadPages" scope="instance">
+				<description>[5+]:预加载的窗口配置</description>
+			</property>
+			<property type="Array&lt;mui.webview.options&gt;" name="subpages" scope="instance">
+				<description>[5+]:子页面配置</description>
+			</property>
+			<property type="mui.webview.options.show" name="show" scope="instance">
+				<description>[5+]:新窗口的显示动画配置</description>
+			</property>
+			<property type="mui.plugin.pullRefresh.options" name="pullRefresh" scope="instance">
+				<description>[5+]:下拉刷新，上拉显示更多配置</description>
+			</property>
+
+		</properties>
+	</class>
+	<class type="mui.init.options.gestures">
+		<properties>
+			<property type="Boolean" name="tap" scope="instance">
+				<description>是否启用tap事件,默认:true</description>
+			</property>
+			<property type="Boolean" name="doubletap" scope="instance">
+				<description>是否启用doubletap事件,默认:true</description>
+			</property>
+			<property type="Boolean" name="longtap" scope="instance">
+				<description>是否启用longtap事件,默认:true</description>
+			</property>
+			<property type="Boolean" name="swipe" scope="instance">
+				<description>是否启用swipe事件,默认:true</description>
+			</property>
+			<property type="Boolean" name="drag" scope="instance">
+				<description>是否启用drag事件,默认:true</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.webview.options">
+		<properties>
+			<property type="String|URIString" name="url" scope="instance">
+				<description>[5+]:窗口URL</description>
+			</property>
+			<property type="String" name="id" scope="instance">
+				<description>[5+]:窗口ID(可选)</description>
+			</property>
+			<property type="plus.nativeUI.WaitingOption" name="waiting" scope="instance">
+				<description>[5+]:打开窗口时的加载动画配置</description>
+			</property>
+			<property type="mui.webview.options.show" name="show" scope="instance">
+				<description>[5+]:窗口动画效果配置</description>
+			</property>
+			<property type="plus.webview.WebviewStyle" name="styles" scope="instance">
+				<description>[5+]:窗口样式配置</description>
+			</property>
+			<property type="Object" name="params" scope="instance">
+				<description>[5+]:窗口自定义参数</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.webview.options.show">
+		<properties>
+			<property type="plus.webview.AnimationTypeShow" name="aniShow" scope="instance">
+				<description>[5+]:窗口动画效果,默认:"slide-in-right"</description>
+			</property>
+			<property type="Number" name="duration" scope="instance">
+				<description>[5+]:动画持续时间,默认:100</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.plugin.slider">
+		<methods>
+			<method name="gotoItem" scope="static">
+				<parameters>
+					<parameter name="index" type="Number" usage="required"/>
+				</parameters>
+				<description>显示指定轮播项</description>
+			</method>
+			<method name="nextItem" scope="static">
+				<description>显示下一个轮播</description>
+			</method>
+			<method name="prevItem" scope="static">
+				<description>显示上一个轮播</description>
+			</method>
+		</methods>
+	</class>
+	<class type="mui.plugin.pullRefresh.options">
+		<properties>
+			<property type="mui.plugin.pullRefresh.options.down" name="down" scope="instance">
+				<description>[5+]:下拉刷新配置</description>
+			</property>
+			<property type="mui.plugin.pullRefresh.options.up" name="up" scope="instance">
+				<description>[5+]:上拉显示更多配置</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.plugin.pullRefresh.options.down">
+		<properties>
+			<property type="String" name="contentdown" scope="instance">
+				<description>在下拉可刷新状态时控件上显示的标题内容，默认：下拉可以刷新</description>
+			</property>
+			<property type="String" name="contentover" scope="instance">
+				<description>在释放可刷新状态时控件上显示的标题内容，默认：释放立即刷新</description>
+			</property>
+			<property type="String" name="contentrefresh" scope="instance">
+				<description>在正在刷新状态时控件上显示的标题内容，默认：正在刷新...</description>
+			</property>
+			<property type="Function(callback)" name="callback" scope="instance">
+				<description>下拉刷新时的回调函数</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.plugin.pullRefresh.options.up">
+		<properties>
+			<property type="String" name="contentdown" scope="instance">
+				<description>在上拉可刷新状态时控件上显示的标题内容，默认：上拉显示更多</description>
+			</property>
+			<property type="String" name="contentover" scope="instance">
+				<description>在释放可刷新状态时控件上显示的标题内容，默认：释放立即刷新</description>
+			</property>
+			<property type="String" name="contentrefresh" scope="instance">
+				<description>在正在刷新状态时控件上显示的标题内容，默认：正在刷新...</description>
+			</property>
+			<property type="Function(callback)" name="callback" scope="instance">
+				<description>上拉显示更多时的回调函数</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.plugin.slider.options">
+		<properties>
+			<property type="Number" name="slideshowDelay" scope="instance">
+				<description>定时切换间隔时间(毫秒)，默认值为：0，即不定时轮播</description>
+			</property>
+		</properties>
+	</class>
+	<class type="mui.plugin.scroll.options">
+		<properties>
+			<property type="scrollY" name="Boolean" scope="instance">
+				<description>是否竖向滚动,默认为：true</description>
+			</property>
+			<property type="scrollX" name="Boolean" scope="instance">
+				<description>是否横向滚动,默认为：false</description>
+			</property>
+			<property type="startX" name="Boolean" scope="instance">
+				<description>自动滚动到坐标点x值,默认为：0</description>
+			</property>
+			<property type="startY" name="Boolean" scope="instance">
+				<description>自动滚动到坐标点y值,默认为：0</description>
+			</property>
+			<property type="indicators" name="Boolean" scope="instance">
+				<description>是否提供滚动条,默认值为：true</description>
+			</property>
+			<property type="deceleration" name="Number" scope="instance">
+				<description>减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006</description>
+			</property>
+		</properties>
+	</class>
+	<class type="AjaxOptions" >
+		<properties>
+			<property type="String" name="type"></property>
+			<property type="String|URIString" name="url" ></property>
+			<property type="Object" name="data" ></property>
+			<property type="Boolean" name="processData" ></property>
+			<property type="String" name="contentType" ></property>
+			<property type="String" name="mimeType" ></property>
+			<property type="String" name="dataType" ></property>
+			<!--<property type="String" name="jsonp" ></property>-->
+			<!--<property type="String|Function" name="jsonpCallback" ></property>-->
+			<property type="Number" name="timeout" ></property>
+			<property type="Object" name="headers" ></property>
+			<!--<property type="Boolean" name="async" ></property>-->
+			<!--<property type="Boolean" name="global" ></property>-->
+			<property type="Object" name="context" ></property>
+			<property type="Boolean" name="traditional" ></property>
+			<property type="Boolean" name="cache" ></property>
+			<property type="Object" name="xhrFields" ></property>
+			<property type="String" name="username" ></property>
+			<property type="String" name="password" ></property>
+		</properties>
+		<methods>
+			<!--<method name="beforeSend">
+			<parameters>
+			<parameter name="xhr" type="XMLHttpRequest" usage=""></parameter>
+			<parameter name="settings" type="AjaxOptions" usage=""></parameter>
+			</parameters>
+			<return-types>
+			<return-type type="Boolean"/>
+			</return-types>
+			</method>-->
+			<method name="success">
+				<parameters>
+					<parameter name="data" type="Object" usage=""></parameter>
+					<parameter name="status" type="String" usage=""></parameter>
+					<parameter name="xhr" type="XMLHttpRequest" usage=""></parameter>
+				</parameters>
+			</method>
+			<method name="error">
+				<parameters>
+					<parameter name="xhr" type="XMLHttpRequest" usage=""></parameter>
+					<parameter name="errorType" type="String" usage=""></parameter>
+					<parameter name="error" type="Number" usage=""></parameter>
+				</parameters>
+			</method>
+			<method name="complete">
+				<parameters>
+					<parameter name="xhr" type="XMLHttpRequest" usage=""></parameter>
+					<parameter name="status" type="String" usage=""></parameter>
+				</parameters>
+			</method>
+		</methods>
+	</class>
+</javascript>

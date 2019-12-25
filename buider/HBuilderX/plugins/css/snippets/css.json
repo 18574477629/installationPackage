@@ -1,0 +1,370 @@
+{
+  "@-webkit-keyframes": {
+    "body": [
+      "@-webkit-keyframes ${1:name}{",
+      "\tfrom{$2}",
+      "\tto{$3}",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@keyframes"
+  },
+  "height px": {
+    "body": [
+      "height: ${1}px;$0"
+    ],
+    "triggerAssist": false,
+    "prefix": "hpx"
+  },
+  "width upx": {
+    "body": [
+      "width: ${1}upx;$0"
+    ],
+    "triggerAssist": false,
+    "prefix": "wupx",
+    "project": "UniApp_Vue"
+  },
+  "height --status-bar-height": {
+    "body": [
+      "height: var(--status-bar-height);"
+    ],
+    "prefix": "heightstatusbar",
+    "project": "UniApp_Vue"
+  },
+  "height --window-top": {
+    "body": [
+      "height: var(--window-top);"
+    ],
+    "prefix": "heightwindowtop",
+    "project": "UniApp_Vue"
+  },
+  "height --window-bottom": {
+    "body": [
+      "height: var(--window-bottom);"
+    ],
+    "prefix": "heightwindowbottom",
+    "project": "UniApp_Vue"
+  },
+  "userselect:none": {
+    "body": [
+      "-webkit-user-select: none;",
+      "-moz-user-select: none;",
+      "-ms-user-select: none;",
+      "user-select: none;"
+    ],
+    "triggerAssist": false,
+    "prefix": "usn"
+  },
+  "-ms-": {
+    "body": [
+      "-ms-"
+    ],
+    "triggerAssist": true,
+    "prefix": "ms"
+  },
+  "text-align: right": {
+    "body": [
+      "text-align: right;"
+    ],
+    "triggerAssist": false,
+    "prefix": "tar"
+  },
+  "border-style": {
+    "body": [
+      "border-style: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "bs"
+  },
+  "background-color: #": {
+    "body": [
+      "background-color: #$1"
+    ],
+    "triggerAssist": true,
+    "prefix": "bch"
+  },
+  "@-moz-keyframes": {
+    "body": [
+      "@-moz-keyframes ${1:name}{",
+      "\tfrom{$2}",
+      "\tto{$3}",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@keyframes"
+  },
+  "@charset": {
+    "body": [
+      "@charset \"${1:utf-8}\";"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@charset"
+  },
+  "scrollbar": {
+    "body": [
+      "scrollbar-base-color:       ${1:#CCCCCC};",
+      "scrollbar-arrow-color:      ${2:#000000};",
+      "scrollbar-track-color:      ${3:#999999};",
+      "scrollbar-3dlight-color:    ${4:#EEEEEE};",
+      "scrollbar-highlight-color:  ${5:#FFFFFF};",
+      "scrollbar-face-color:       ${6:#CCCCCC};",
+      "scrollbar-shadow-color:     ${7:#999999};",
+      "scrollbar-darkshadow-color: ${8:#666666};"
+    ],
+    "triggerAssist": false,
+    "prefix": "scrollbarr"
+  },
+  "@document": {
+    "body": [
+      "@document ${1:url}(\"$2\") {",
+      "\t$3",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@document"
+  },
+  "list-style-image: url": {
+    "body": [
+      "list-style-image: url($1);"
+    ],
+    "triggerAssist": true,
+    "prefix": "lsi"
+  },
+  "background: image repeat attachment position": {
+    "body": [
+      "background: url($1) ${2:repeat} ${3:fixed} ${4:center};$0"
+    ],
+    "triggerAssist": true,
+    "prefix": "bg"
+  },
+  "border-width": {
+    "body": [
+      "border-width: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "bw"
+  },
+  "background-color: rgb": {
+    "body": [
+      "background-color: rgb(${1:255},${2:255},${3:255})"
+    ],
+    "triggerAssist": false,
+    "prefix": "bcr"
+  },
+  "background-position": {
+    "body": [
+      "background-position: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "bp"
+  },
+  "background-image": {
+    "body": [
+      "background-image: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "bi"
+  },
+  "@keyframes": {
+    "body": [
+      "@keyframes ${1:name}{",
+      "\tfrom{$2}",
+      "\tto{$3}",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@keyframes"
+  },
+  "-moz-": {
+    "body": [
+      "-moz-"
+    ],
+    "triggerAssist": true,
+    "prefix": "moz"
+  },
+  "text-align: center": {
+    "body": [
+      "text-align: center;"
+    ],
+    "triggerAssist": false,
+    "prefix": "tac"
+  },
+  "background-image: url": {
+    "body": [
+      "background-image: url($1)"
+    ],
+    "triggerAssist": true,
+    "prefix": "biu"
+  },
+  "background-color": {
+    "body": [
+      "background-color: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "bc"
+  },
+  "border-color": {
+    "body": [
+      "border-color: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "boc"
+  },
+  "@media": {
+    "body": [
+      "@media $1 {",
+      "\t$2",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@media"
+  },
+  "width length": {
+    "body": [
+      "width: ${1}px;$0"
+    ],
+    "triggerAssist": false,
+    "prefix": "widthlength"
+  },
+  "@font-face": {
+    "body": [
+      "@font-face {",
+      "\tfont-family:$1;",
+      "\tsrc: url($2);",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@fontface"
+  },
+  "font-family: family": {
+    "body": [
+      "font-family: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "ff"
+  },
+  "@supports": {
+    "body": [
+      "@supports(${1:prop}:${2:value}) {",
+      "\t$3",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@supports"
+  },
+  "font-size: size": {
+    "body": [
+      "font-size: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "fsize"
+  },
+  "@namespace": {
+    "body": [
+      "@namespace ${1:prefix} \"$2\";"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@namespace"
+  },
+  "display: none": {
+    "body": [
+      "display: none;"
+    ],
+    "triggerAssist": false,
+    "prefix": "dn"
+  },
+  "text-align: left": {
+    "body": [
+      "text-align: left;"
+    ],
+    "triggerAssist": false,
+    "prefix": "tal"
+  },
+  "justify-content: center": {
+    "body": [
+      "justify-content: center;"
+    ],
+    "triggerAssist": false,
+    "prefix": "jcc"
+  },
+  "width_length": {
+    "body": [
+      "width: ${1}px;$0"
+    ],
+    "triggerAssist": false,
+    "prefix": "wlength"
+  },
+  "@import": {
+    "body": [
+      "@import url(\"$1\");"
+    ],
+    "triggerAssist": true,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@import"
+  },
+  "text-transform": {
+    "body": [
+      "text-transform: $1"
+    ],
+    "triggerAssist": true,
+    "prefix": "tt"
+  },
+  "@page": {
+    "body": [
+      "@page:${1:first}{",
+      "\t",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@page"
+  },
+  "display: block": {
+    "body": [
+      "display: block;"
+    ],
+    "triggerAssist": false,
+    "prefix": "db"
+  },
+  "display: flex": {
+    "body": [
+      "display: flex;"
+    ],
+    "triggerAssist": false,
+    "prefix": "df"
+  },
+  "flex-direction: row": {
+    "body": [
+      "flex-direction: row;"
+    ],
+    "triggerAssist": false,
+    "prefix": "fdr"
+  },
+  "-webkit-": {
+    "body": [
+      "-webkit-"
+    ],
+    "triggerAssist": true,
+    "prefix": "webkit"
+  },
+  "@-ms-keyframes": {
+    "body": [
+      "@-ms-keyframes ${1:name}{",
+      "\tfrom{$2}",
+      "\tto{$3}",
+      "}"
+    ],
+    "triggerAssist": false,
+    "scope": "CSS_OUTRULE",
+    "prefix": "@keyframes"
+  }
+}
